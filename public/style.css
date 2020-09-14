@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 2em 1em;
+  line-height: 1.5em;
+}
+
+code {
+  font: 100%/1.2 'Source Code Pro',menlo,monaco,monospace;
+}
+
+ul li {
+  list-style: none;
+}

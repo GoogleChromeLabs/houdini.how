@@ -1,0 +1,148 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.card {
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
+  margin-bottom: 2rem;
+}
+
+.demoArea {
+  display: grid;
+  background: white;
+}
+
+.demoText {
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 0 auto;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+.links {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  justify-content: end;
+  padding: 0.75rem;
+  width: 100%;
+  background: #e1e1e1;
+}
+
+.cardAction {
+  background: white;
+  border: 1px solid lightgray;
+  color: #222;
+  border-radius: 5px;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  transition-duration: 0.25s;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.cardAction:hover {
+  color: white;
+  background: #77f;
+  border-color: #337;
+}
+
+/* .copied:after {
+  content: 'copied!';
+  position: absolute;
+  bottom: -1.2rem;
+  left: 0;
+  right: 0;
+  font-size: 80%;
+  color: #77f;
+} */
+
+.inputVal {
+  display: inline-block;
+  margin: 0 0.25rem 0 1rem;
+  color: #00DDFF;
+  border-bottom: dotted 2px magenta;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.rangeSlider {
+  max-width: 100px;
+  justify-self: end;
+}
+
+.customProps {
+  margin: 0;
+  padding: 0;
+  background: #222;
+  color: white;
+  font: 100%/1.2 'Source Code Pro',menlo,monaco,monospace;
+  font-size: 1rem;
+  counter-reset: section;
+}
+
+.customProps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 0.5rem 1.25rem 0.5rem 3rem;
+  position: relative;
+}
+
+.customProps li:nth-child(even) {
+  background: #333;
+}
+
+.customProps li:first-child,
+.customProps li:last-child {
+  padding-left: 2rem;
+}
+
+.customProps li:before {
+  counter-increment: section;
+  content: counters(section, ".") " ";
+  position: absolute;
+  left: .75rem;
+  margin-top: 9px;
+  color: dimgray;
+}
+
+.inputVal {
+  position: relative;
+}
+
+.inputVal:after {
+  content: ';';
+  color: white;
+  position: absolute;
+}
+
+.name {
+  margin: 0;
+}
+
+.demoContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media (max-width: 600px) {
+  .demoText {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}

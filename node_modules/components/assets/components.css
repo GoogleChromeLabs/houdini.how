@@ -1,0 +1,618 @@
+/*!
+/* CSS Buttons */
+/* --------------------------------------------------------- */
+/* Button psuedo states */
+/* ------------------------- */
+/* Easily pump out default styles, as well as :hover, :focus, :active, */
+/* and disabled options for all buttons */
+/* Base styles */
+/* -------------------------------------------------- */
+/* Core styles */
+.btn {
+  display: inline-block;
+  padding: 14px 28.8px;
+  margin-bottom: 0;
+  /* For input.btn */
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  /* ensure that buttons do not have a border */
+
+  border-radius: 100px;
+  white-space: nowrap;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: color, background-color;
+  -moz-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -moz-transition-timing-function: cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -o-transition-timing-function: cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition-timing-function: cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  cursor: default;
+  pointer-events: none;
+  /* Future-proof disabling of clicks */
+
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* Alternate buttons */
+/* -------------------------------------------------- */
+.btn-default {
+  color: #222222;
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+}
+.btn-primary {
+  color: #fcfcfc;
+  background-color: #33b5e5;
+  border-color: #33b5e5;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #1a9bcb;
+  border-color: #1a9bcb;
+}
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #33b5e5;
+  border-color: #33b5e5;
+}
+/* Warning appears as orange */
+.btn-warning {
+  color: #fcfcfc;
+  background-color: #ffbb33;
+  border-color: #ffbb33;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #ffaa00;
+  border-color: #ffaa00;
+}
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled:active,
+.btn-warning[disabled]:active,
+fieldset[disabled] .btn-warning:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning.active {
+  background-color: #ffbb33;
+  border-color: #ffbb33;
+}
+/* Danger and error appear as red */
+.btn-danger {
+  color: #fcfcfc;
+  background-color: #ff4444;
+  border-color: #ff4444;
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active {
+  background-color: #ff1111;
+  border-color: #ff1111;
+}
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active {
+  background-color: #ff4444;
+  border-color: #ff4444;
+}
+/* Success appears as green */
+.btn-success {
+  color: #fcfcfc;
+  background-color: #99cc00;
+  border-color: #99cc00;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active {
+  background-color: #739900;
+  border-color: #739900;
+}
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+  background-color: #99cc00;
+  border-color: #99cc00;
+}
+/* Info appears as blue-green */
+.btn-info {
+  color: #fcfcfc;
+  background-color: #aa66cc;
+  border-color: #aa66cc;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active {
+  background-color: #9540bf;
+  border-color: #9540bf;
+}
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+  background-color: #aa66cc;
+  border-color: #aa66cc;
+}
+/* Jade appears as green-blue */
+.btn-jade {
+  color: #fcfcfc;
+  background-color: #62c98f;
+  border-color: #62c98f;
+}
+.btn-jade:hover,
+.btn-jade:focus,
+.btn-jade:active,
+.btn-jade.active {
+  background-color: #3fb974;
+  border-color: #3fb974;
+}
+.btn-jade.disabled:hover,
+.btn-jade[disabled]:hover,
+fieldset[disabled] .btn-jade:hover,
+.btn-jade.disabled:focus,
+.btn-jade[disabled]:focus,
+fieldset[disabled] .btn-jade:focus,
+.btn-jade.disabled:active,
+.btn-jade[disabled]:active,
+fieldset[disabled] .btn-jade:active,
+.btn-jade.disabled.active,
+.btn-jade[disabled].active,
+fieldset[disabled] .btn-jade.active {
+  background-color: #62c98f;
+  border-color: #62c98f;
+}
+/* Inverse appears as white */
+.btn-inverse {
+  color: #262829;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active {
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+.btn-inverse.disabled:hover,
+.btn-inverse[disabled]:hover,
+fieldset[disabled] .btn-inverse:hover,
+.btn-inverse.disabled:focus,
+.btn-inverse[disabled]:focus,
+fieldset[disabled] .btn-inverse:focus,
+.btn-inverse.disabled:active,
+.btn-inverse[disabled]:active,
+fieldset[disabled] .btn-inverse:active,
+.btn-inverse.disabled.active,
+.btn-inverse[disabled].active,
+fieldset[disabled] .btn-inverse.active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active {
+  color: #262829;
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+/* Link buttons */
+/* ------------------------- */
+/* Make a button look and behave like a link */
+.btn-link,
+.btn-link:active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-link,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+  border-color: transparent;
+}
+.btn-link {
+  color: #33b5e5;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #1a9bcb;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.btn-link[disabled]:hover,
+fieldset[disabled] .btn-link:hover,
+.btn-link[disabled]:focus,
+fieldset[disabled] .btn-link:focus {
+  color: #333333;
+  text-decoration: none;
+}
+/* Button Sizes */
+/* -------------------------------------------------- */
+.btn-jumbo {
+  padding: 26.599999999999998px 54px;
+  font-size: 18px;
+}
+.btn-large {
+  padding: 21px 45px;
+  font-size: 18px;
+}
+.btn-small {
+  padding: 5px 18px;
+  font-size: 12px;
+  line-height: 1.5;
+  /* ensure proper height of button next to small input */
+
+}
+.btn-mini {
+  padding: 3px 16px;
+  font-size: 11px;
+  line-height: 1;
+  /* ensure proper height of button next to small input */
+
+}
+/* Button Sizes */
+/* -------------------------------------------------- */
+/* Large button */
+.button-large {
+  width: 100%;
+  font-family: "Open Sans", 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 0 30px;
+  font-size: 17px;
+  line-height: 64px;
+  letter-spacing: 1px;
+  border-radius: 40px;
+}
+/* Small button */
+.button-small {
+  padding: 9px 25px;
+  font-size: 12px;
+}
+/* Mini button */
+.button-mini {
+  padding: 6px 20px;
+  font-size: 10px;
+}
+/* Block button */
+/* -------------------------------------------------- */
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* Vertically space out multiple block buttons */
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+/* Specificity overrides */
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}
+/* Centered button */
+.button-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+/* Alternate styles */
+/* -------------------------------------------------- */
+.button-jade {
+  color: #fcfcfc;
+  background: #62c98f;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.button-jade:hover {
+  color: #fcfcfc;
+  background: #20c97b;
+}
+/* Cool gray */
+.button-coolgray {
+  color: #fff;
+  background-color: #3f4546;
+}
+.button-white {
+  color: #222;
+  background: #fff;
+}
+.button-white:hover {
+  color: #222;
+  background: #e5e5e5;
+}
+.button-dark {
+  color: #fff;
+  background-color: #222;
+}
+.button-dark:hover {
+  background-color: #444;
+}
+/* Buttons */
+/* -------------------------------- */
+.btn-facebook {
+  display: block;
+  width: 180px;
+  padding-left: 24px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 56px;
+  text-decoration: none;
+  background-color: #3a5898;
+  background-position: 12px center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.btn-facebook:hover {
+  background-color: #2f4a84;
+}
+/*!
+/* CSS Section
+/* ----------------------------------------- */
+/* Base Palette */
+/* Base Typography */
+/* Spacing */
+.section {
+  font-family: "Open Sans", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 50px 0 40px;
+  background-color: #ffffff;
+  text-shadow: none;
+  /* Add vertical spacing to Bootstrap grid columns */
+
+  /* Headigns */
+
+  /* Paragraph and button styles. */
+
+  /* ------------------------------------------- */
+
+  /* We use .label instead of .btn since less code is required for customizations. */
+
+}
+.section .col {
+  padding: 0 70px;
+}
+.section h2,
+.section h3 {
+  color: #222;
+  padding: 15px 0 5px 0;
+  margin: 0;
+  font-weight: 300;
+}
+.section h3 {
+  font-size: 26px;
+  line-height: 32px;
+}
+.section p,
+.section .label {
+  color: #222;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 24px;
+  font-size: 14px;
+}
+.section .label {
+  padding: 0 12px;
+  font-size: 11px;
+  font-weight: 300;
+  text-shadow: none;
+  text-transform: uppercase;
+  background: #e6e6e6;
+}
+.section .label:hover {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+}
+.section-aqua {
+  background-color: #30beda;
+}
+.section-aqua h1,
+.section-aqua h2,
+.section-aqua h3 {
+  color: #ffffff;
+}
+.section-aqua p,
+.section-aqua .label,
+.section-aqua .label:hover {
+  color: #c7eef5;
+}
+.section-aqua .label {
+  background: #219eb6;
+}
+.section-aqua .label:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+.section-blue {
+  background-color: #008fd5;
+}
+.section-blue h1,
+.section-blue h2,
+.section-blue h3 {
+  color: #ffffff;
+}
+.section-blue p,
+.section-blue .label,
+.section-blue .label:hover {
+  color: #88d8ff;
+}
+.section-blue .label {
+  background: #006da2;
+}
+.section-blue .label:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+.section-slate {
+  background-color: #4b5c66;
+}
+.section-slate h1,
+.section-slate h2,
+.section-slate h3 {
+  color: #ffffff;
+}
+.section-slate p,
+.section-slate .label,
+.section-slate .label:hover {
+  color: #a6b5be;
+}
+.section-slate .label {
+  background: #354149;
+}
+.section-slate .label:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+.section-violet {
+  background-color: #5a62d2;
+}
+.section-violet h1,
+.section-violet h2,
+.section-violet h3 {
+  color: #ffffff;
+}
+.section-violet p,
+.section-violet .label,
+.section-violet .label:hover {
+  color: #e6e7f8;
+}
+.section-violet .label {
+  background: #353fc4;
+}
+.section-violet .label:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+.section-gray {
+  background-color: #89949b;
+}
+.section-gray h1,
+.section-gray h2,
+.section-gray h3 {
+  color: #ffffff;
+}
+.section-gray p,
+.section-gray .label,
+.section-gray .label:hover {
+  color: #eaeced;
+}
+.section-gray .label {
+  background: #6f7b82;
+}
+.section-gray .label:hover {
+  background: rgba(0, 0, 0, 0.35);
+}

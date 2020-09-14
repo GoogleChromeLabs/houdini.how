@@ -1,0 +1,22 @@
+.author {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  margin-bottom: 1rem;
+}
+
+.meta p,
+.meta h2 {
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

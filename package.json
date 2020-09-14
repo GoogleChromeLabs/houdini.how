@@ -1,0 +1,9 @@
+{
+  "version": "0.0.1",
+  "scripts": {
+    "start": "wmr"
+  },
+  "dependencies": {
+    "wmr": "^0.0.8"
+  }
+}

@@ -1,0 +1,147 @@
+/*
+ * Banded Sections
+ * ----------------------------------------- */
+/* Base Palette */
+/* Base Typography */
+/* Spacing */
+.section {
+  font-family: "Open Sans", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 50px 0 40px;
+  background-color: #ffffff;
+  text-shadow: none;
+  /* Add vertical spacing to Bootstrap grid columns */
+
+  /* Headigns */
+
+  /* Paragraph and button styles. We use .label instead of
+     .btn since less code is required for customizations. */
+
+}
+.section .col {
+  padding: 0 70px;
+}
+.section h2,
+.section h3 {
+  color: #222;
+  padding: 15px 0 5px 0;
+  margin: 0;
+  font-weight: 300;
+}
+.section h3 {
+  font-size: 26px;
+  line-height: 32px;
+}
+.section p,
+.section .label {
+  color: #222;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 24px;
+  font-size: 14px;
+}
+.section .label {
+  padding: 0 12px;
+  font-size: 11px;
+  font-weight: 300;
+  text-shadow: none;
+  text-transform: uppercase;
+  background: #e6e6e6;
+}
+.section .label:hover {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+}
+.section-aqua {
+  background-color: #30beda;
+}
+.section-aqua h1,
+.section-aqua h2,
+.section-aqua h3 {
+  color: #ffffff;
+}
+.section-aqua p,
+.section-aqua .label,
+.section-aqua .label:hover {
+  color: #c7eef5;
+}
+.section-aqua .label {
+  background: #219eb6;
+}
+.section-aqua .label:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+.section-blue {
+  background-color: #008fd5;
+}
+.section-blue h1,
+.section-blue h2,
+.section-blue h3 {
+  color: #ffffff;
+}
+.section-blue p,
+.section-blue .label,
+.section-blue .label:hover {
+  color: #88d8ff;
+}
+.section-blue .label {
+  background: #006da2;
+}
+.section-blue .label:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+.section-slate {
+  background-color: #4b5c66;
+}
+.section-slate h1,
+.section-slate h2,
+.section-slate h3 {
+  color: #ffffff;
+}
+.section-slate p,
+.section-slate .label,
+.section-slate .label:hover {
+  color: #a6b5be;
+}
+.section-slate .label {
+  background: #354149;
+}
+.section-slate .label:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+.section-violet {
+  background-color: #5a62d2;
+}
+.section-violet h1,
+.section-violet h2,
+.section-violet h3 {
+  color: #ffffff;
+}
+.section-violet p,
+.section-violet .label,
+.section-violet .label:hover {
+  color: #e6e7f8;
+}
+.section-violet .label {
+  background: #353fc4;
+}
+.section-violet .label:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+.section-gray {
+  background-color: #89949b;
+}
+.section-gray h1,
+.section-gray h2,
+.section-gray h3 {
+  color: #ffffff;
+}
+.section-gray p,
+.section-gray .label,
+.section-gray .label:hover {
+  color: #eaeced;
+}
+.section-gray .label {
+  background: #6f7b82;
+}
+.section-gray .label:hover {
+  background: rgba(0, 0, 0, 0.35);
+}

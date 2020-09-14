@@ -1,0 +1,22 @@
+.author_1y7cwda {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.meta_1y7cwda {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  margin-bottom: 1rem;
+}
+
+.meta_1y7cwda p,
+.meta_1y7cwda h2 {
+  margin: 0;
+}
+
+.title_1y7cwda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

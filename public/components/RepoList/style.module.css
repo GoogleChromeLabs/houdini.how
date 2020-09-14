@@ -1,0 +1,19 @@
+.repoList header {
+  padding: 5px;
+  background: #eee;
+}
+
+.repo {
+  padding: 5px;
+  margin: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.repo p {
+  margin: 0;
+  font-size: .8rem;
+}
+
+.repo a {
+  color: darkblue;
+}
