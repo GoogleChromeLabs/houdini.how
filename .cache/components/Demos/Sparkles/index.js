@@ -23,7 +23,7 @@ export default class Sparkles extends Component {
 
   render() {
     return (
-      html`<${Card} name="Sparkles" authorName="@una" authorLink="https://twitter.com/una" authorImg="https://webdev.imgix.net/images/authors/una@2x.jpg" penLink='MRxgNN'>
+      html`<${Card} name="sparkles" authorName="@una" authorLink="https://twitter.com/una" authorImg="https://webdev.imgix.net/images/authors/una@2x.jpg" penLink='MRxgNN' paint="true" properties="true" layout="false">
         <div className=${CardStyle.demoContainer}>
           <div className=${CardStyle.demoArea} style=${{
               '--extra-sparkleHue': this.state.hue,

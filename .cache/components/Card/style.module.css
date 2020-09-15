@@ -1,6 +1,6 @@
 .container_cwjn7n {
   max-width: 800px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 4rem;
 }
 
 .card_cwjn7n {
@@ -72,7 +72,7 @@
 .inputVal_cwjn7n {
   display: inline-block;
   margin: 0 0.25rem 0 1rem;
-  color: #00DDFF;
+  color: var(--brightBlue);
   border-bottom: dotted 2px magenta;
 }
 
@@ -84,6 +84,47 @@
 .rangeSlider_cwjn7n {
   max-width: 100px;
   justify-self: end;
+  align-self: center;
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background: darkgray;
+  outline: none;
+}
+
+.rangeSlider_cwjn7n::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%; 
+  background: var(--brightBlue);
+  cursor: pointer;
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}
+
+.rangeSlider_cwjn7n:focus {
+  background: white;
+}
+
+.rangeSlider_cwjn7n::-webkit-slider-thumb:active {
+  transform: scale(1);
+  background: #5cc9f5;
+}
+
+.rangeSlider_cwjn7n::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--brightBlue);
+  cursor: pointer;
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}
+
+.rangeSlider_cwjn7n::-moz-range-thumb:active {
+  transform: scale(1);
+  background: #5cc9f5;
 }
 
 .customProps_cwjn7n {

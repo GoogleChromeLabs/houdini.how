@@ -12,6 +12,12 @@ export default class CardLinks extends Component {
         <h2 className=${style.name}>${props.name}</h2>
         <p>Submitted by <a href=${props.authorLink}>${props.authorName}</a></p>
       </div>
+      <div className=${style.tags}>
+        <ul>
+          <li className=${style.paint}><a href="#">Paint</a></li>
+          <li className=${style.props}><a href="#">Properties & Values</a></li>
+        </ul>
+      </div>
     </div>`
    )
   }

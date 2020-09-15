@@ -1,0 +1,39 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.head h1 {
+  margin: 1rem 0;
+}
+
+.head h2 {
+  font-family: var(--monoType);
+  font-size: 1.25rem;
+  margin: 0;
+  display: inline;
+  border-radius: 48px;
+  padding: 0.2rem 0.5rem;
+}
+
+.nav {
+  text-align: right;
+}
+
+.nav a {
+  font-family: var(--monoType);
+  text-decoration: none;
+  color: #222;
+  display: inline-block;
+}
+
+.logo {
+  font-size: 2.5rem;
+}
+
+.active {
+  outline: 2px solid rgb(255, 183, 0);
+}

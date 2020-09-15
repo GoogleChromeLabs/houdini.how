@@ -1,17 +1,19 @@
 import { createHotContext as $createHotContext$ } from '/_wmr.js';const $IMPORT_META_HOT$ = $createHotContext$(import.meta.url);import { html } from "/@npm/htm/preact";
-import Sparkles from '../components/Demos/Sparkles/index.js'
-import Nav from '../components/Nav/index.js'
-import style from './style.module.css.js'
+import { Component } from '/@npm/preact'
+import Nav from '../../components/Nav';
+import styles from './style.module.css.js';
 
-export default function Home() {
-  return (
-    html`<div className=${style.container}>
-      <${Nav} page="Worklet Library" />
-      <${Sparkles} />
-      <${Sparkles} />
-    </div>`
-  );
+export default class AboutPage extends Component {
+  render(props) {
+    return (
+      html`<div>
+        <${Nav} page="About" />
+        <h2>Worklets and resources for modern CSS with Houdini. Well, what is Houdini you ask?</h2>
+      </div>`
+    );
+  }
 }
+
 
 import '/@npm/@prefresh/core';
 if ($IMPORT_META_HOT$) {

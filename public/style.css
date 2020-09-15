@@ -1,15 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+
+:root {
+  --brightBlue: #00ddff;
+  --monoType: 'Roboto Mono', 'Source Code Pro', Menlo, Monaco, monospace;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: system-ui, sans-serif;
   margin: 2em 1em;
   line-height: 1.5em;
 }
 
+h1 {
+  font-family: var(--monoType);
+  font-weight: 400;
+}
+
 code {
-  font: 100%/1.2 'Source Code Pro',menlo,monaco,monospace;
+  font: 100%/1.2 var(--monoType);
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
 }
 
 ul li {

@@ -3,6 +3,7 @@ import { Loc, Router } from '../lib/loc.js'; // or use preact-router, or react-r
 
 // you can import routes synchronously:
 import HomePage from '../pages/home.js';
+// import AboutPage from '../pages/about/index.js';
 
 // ... or lazy load them:
 import lazy from '../lib/lazy.js';
@@ -15,6 +16,7 @@ export default function App() {
         <${Router}>
           <${HomePage} path="/" />
           <${ReposPage} path="/repos" />
+		  
         <//>
 			</div>
 		<//>`
