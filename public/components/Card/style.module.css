@@ -11,6 +11,7 @@
 .demoArea {
   display: grid;
   background: white;
+  place-items: center;
 }
 
 .demoText {

@@ -1,4 +1,5 @@
-import { Component } from 'preact'
+import { html as parseHtml } from 'htm/preact';
+import { cloneElement, Component } from 'preact'
 import Card from '../Card/index.js'
 import CardStyle from '../Card/style.module.css'
 
@@ -33,10 +34,38 @@ export default class Demo extends Component {
   }
 
 	render() {
-    const { workletName, packageName, author, demoUrl, customProps } = this.props.worklet
+    const { workletName, packageName, author, demoUrl, customProps, html: demoHtml } = this.props.worklet
     const { propValues } = this.state
 
-    const paintWorkletId = packageName
+    const demoStyle = {
+      ...propValues,
+      background: `paint(${packageName})`
+    };
+
+    let preview;
+
+    // if we have custom HTML to show, parse it and inject the styles onto the root element.
+    if (demoHtml) {
+      let customPreview;
+      try {
+        // @ts-ignore-next
+        customPreview = cloneElement(parseHtml([demoHtml]), {
+          style: demoStyle
+        });
+      } catch (e) {
+        console.error(`Custom preview HTML failed to parse: ${e}`);
+      }
+      preview = (
+        <div className={CardStyle.demoArea}>
+          {customPreview}
+        </div>
+      );
+    }
+
+    // if there's no custom preview HTML or it failed to parse, just style the preview div itself:
+    if (!preview) {
+      preview = <div className={CardStyle.demoArea} style={demoStyle} />
+    }
 
 	  return (
       <Card
@@ -50,10 +79,8 @@ export default class Demo extends Component {
         layout={false}
       >
           <div className={CardStyle.demoContainer}>
-            <div className={CardStyle.demoArea} style={{
-                ...propValues,
-                background: `paint(${paintWorkletId})`
-                }}></div>
+            {preview}
+            
             <ol className={CardStyle.customProps}>
               <li>.demo	&#123;</li>
               {Object.keys(customProps).map(propName => {
