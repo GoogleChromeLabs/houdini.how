@@ -34,7 +34,7 @@ export default class Demo extends Component {
   }
 
 	render() {
-    const { workletName, packageName, author, demoUrl, customProps, html: demoHtml } = this.props.worklet
+    const { workletName, packageName, author, demoUrl, customProps, usage, html: demoHtml } = this.props.worklet
     const { propValues } = this.state
 
     const demoStyle = {
@@ -83,6 +83,7 @@ export default class Demo extends Component {
         paint={true}
         properties={true}
         layout={false}
+        usage={usage}
       >
           <div className={CardStyle.demoContainer}>
             {preview}
@@ -111,6 +112,7 @@ export default class Demo extends Component {
                   />
                 )
               })}
+              <li>{usage};</li>
               <li>&#125;</li>
             </ol>
           </div>
