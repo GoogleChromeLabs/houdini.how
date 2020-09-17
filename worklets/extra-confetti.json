@@ -1,0 +1,31 @@
+{
+    "workletName": "Confetti",
+    "packageName": "extra-confetti",
+    "npmURL": "",
+    "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/confetti/worklet.js",
+    "cdnUrl": "https://unpkg.com/extra.css@1.2.0/confetti.js",
+    "demoUrl": "https://glitch.com/~confetti",
+    "customProps": {
+      "--extra-confettiNumber" : {
+        "type": "number",
+        "default": "30",
+        "range": [0, 500]
+      },
+      "--extra-confettiLengthVariance" : {
+        "type": "number",
+        "default": "15",
+        "range": [0, 100]
+      },
+      "--extra-confettiWeightVariance": {
+        "type": "number",
+        "default": "4",
+        "range": [0, 100]
+      }
+    },
+    "html": "",
+    "author": {
+      "name": "@Una",
+      "url": "https://twitter.com/una",
+      "image": "https://webdev.imgix.net/images/authors/una@2x.jpg"
+    }
+  }

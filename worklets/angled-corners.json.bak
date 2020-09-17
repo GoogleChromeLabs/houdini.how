@@ -3,6 +3,7 @@
   "packageName": "angled-corners",
   "npmURL": "https://www.npmjs.com/package/angled-corners",
   "workletUrl": "https://raw.githubusercontent.com/una/angled-corners/master/angled-corners.js",
+  "cdnUrl": "https://unpkg.com/extra.css@1.2.0/angled-corners.js",
   "demoUrl": "https://glitch.com/~angled-corners",
   "customProps": {
     "--corner-radius" : {
