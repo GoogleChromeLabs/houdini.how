@@ -59,22 +59,23 @@ export default class Demo extends Component {
               {Object.keys(customProps).map(propName => {
                 const definition = customProps[propName]
                 const currentValue = propValues[propName]
+                const id = workletName + propName; // avoids collisions between worklets
+                const setValue = value => {
+                  if (value instanceof Event) value = value.target[/check|rad/.test(value.target.type)?'checked':'value']
+                  this.setPropValue(propName, value)
+                }
+
+                let EditorComponent = PROPERTY_TYPES[definition.type] || PROPERTY_TYPES.default
+                if (definition.options) EditorComponent = PROPERTY_TYPES.options;
+
                 return (
-                  <li>
-                    <label htmlFor={propName}>{propName}:</label>
-                    <div className={CardStyle.input}>
-                      <div className={CardStyle.inputVal}>{currentValue}</div>
-                      <input
-                        className={CardStyle.rangeSlider}
-                        type="range"
-                        min={definition.range && definition.range[0]}
-                        max={definition.range && definition.range[1]}
-                        value={currentValue}
-                        id={propName}
-                        onInput={e => this.setPropValue(e.target.id, e.target.value)}
-                      />
-                    </div>
-                  </li>
+                  <EditorComponent
+                    id={id}
+                    propName={propName}
+                    value={currentValue}
+                    setValue={setValue}
+                    definition={definition}
+                  />
                 )
               })}
               <li>&#125;</li>
@@ -84,3 +85,68 @@ export default class Demo extends Component {
 	  )
 	}
 }
+
+// components for each CSS property type
+const PROPERTY_TYPES = {};
+
+PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
+  <li>
+    <label htmlFor={id}>{propName}:</label>
+    <div className={CardStyle.input}>
+      {/* <div className={CardStyle.inputVal}>{value}</div> */}
+      <input
+        id={id}
+        className={CardStyle.inputVal}
+        type="number"
+        min={definition.range && definition.range[0]}
+        max={definition.range && definition.range[1]}
+        value={value}
+        onChange={setValue}
+      />
+      <input
+        id={id}
+        className={CardStyle.rangeSlider}
+        type="range"
+        min={definition.range && definition.range[0]}
+        max={definition.range && definition.range[1]}
+        value={value}
+        onInput={setValue}
+      />
+    </div>
+  </li>
+)
+
+PROPERTY_TYPES.options = ({ id, propName, value, setValue, definition }) => (
+  <li>
+    <label htmlFor={id}>{propName}:</label>
+    <div className={CardStyle.input}>
+      <select
+          id={id}
+          className={CardStyle.inputVal}
+          value={value}
+          onInput={e => setValue(e.target.value)}
+        >
+          {definition.options.map(option => (
+            <option value={option}>{option}</option>
+          ))}
+      </select>
+    </div>
+  </li>
+)
+
+// handles strings or anything else with no specific editing component.
+// It tries to use `definition.type` for the input type (works for things like "color")
+PROPERTY_TYPES.default = ({ id, propName, value, setValue, definition }) => (
+  <li>
+    <label htmlFor={id}>{propName}:</label>
+    <div className={CardStyle.input}>
+      <input
+        id={id}
+        className={CardStyle.inputVal}
+        type={definition.type}
+        value={value}
+        onInput={e => setValue(e.target.value)}
+      />
+    </div>
+  </li>
+)
