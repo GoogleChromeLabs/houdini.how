@@ -1,0 +1,41 @@
+{
+    "workletName": "Sparkles",
+    "packageName": "extra-sparkles",
+    "npmURL": "",
+    "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/sparkles/worklet.js",
+    "cdnUrl": "https://unpkg.com/extra.css@1.2.0/sparkles.js",
+    "demoUrl": "https://glitch.com/~angled-corners",
+    "customProps": {
+      "--extra-sparkleNumber" : {
+        "type": "number",
+        "default": "30",
+        "range": [0, 500]
+      },
+      "--extra-sparkleHue" : {
+        "type": "number",
+        "default": "60",
+        "range": [0, 360]
+      },
+      "--extra-sparkleHeightVariance": {
+        "type": "number",
+        "default": "9",
+        "range": [0, 20]
+      },
+      "--extra-sparkleWidthVariance": {
+        "type": "number",
+        "default": "12",
+        "range": [0, 20]
+      },
+      "--extra-sparkleWeightVariance": {
+        "type": "number",
+        "default": "2",
+        "range": [1, 12]
+      }
+    },
+    "html": "",
+    "author": {
+      "name": "@Una",
+      "url": "https://twitter.com/una",
+      "image": "https://webdev.imgix.net/images/authors/una@2x.jpg"
+    }
+  }
