@@ -93,7 +93,6 @@ PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
   <li>
     <label htmlFor={id}>{propName}:</label>
     <div className={CardStyle.input}>
-      {/* <div className={CardStyle.inputVal}>{value}</div> */}
       <input
         id={id}
         className={CardStyle.inputVal}
@@ -124,7 +123,7 @@ PROPERTY_TYPES.options = ({ id, propName, value, setValue, definition }) => (
           id={id}
           className={CardStyle.inputVal}
           value={value}
-          onInput={e => setValue(e.target.value)}
+          onInput={setValue}
         >
           {definition.options.map(option => (
             <option value={option}>{option}</option>
@@ -145,7 +144,7 @@ PROPERTY_TYPES.default = ({ id, propName, value, setValue, definition }) => (
         className={CardStyle.inputVal}
         type={definition.type}
         value={value}
-        onInput={e => setValue(e.target.value)}
+        onInput={setValue}
       />
     </div>
   </li>
