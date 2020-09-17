@@ -40,26 +40,32 @@ export default class Demo extends Component {
     const demoStyle = {
       ...propValues,
       background: `paint(${packageName})`
-    };
+    }
 
     let preview;
 
     // if we have custom HTML to show, parse it and inject the styles onto the root element.
     if (demoHtml) {
-      let customPreview;
+      let customPreview
       try {
         // @ts-ignore-next
-        customPreview = cloneElement(parseHtml([demoHtml]), {
-          style: demoStyle
-        });
+        customPreview = parseHtml([demoHtml])
       } catch (e) {
-        console.error(`Custom preview HTML failed to parse: ${e}`);
+        console.error(`Custom preview HTML failed to parse: ${e}`)
+      }
+      const root = Array.isArray(customPreview) ? customPreview[0] : customPreview;
+      // inject styles into root element:
+      let props = root.props
+      if (!props) props = root.props = {}
+      props.style = `${props.style || ''}; background:paint(${packageName});`
+      for (let p in propValues) {
+        props.style += ` ${p}: ${propValues[p]};`;
       }
       preview = (
         <div className={CardStyle.demoArea}>
           {customPreview}
         </div>
-      );
+      )
     }
 
     // if there's no custom preview HTML or it failed to parse, just style the preview div itself:
