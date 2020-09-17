@@ -1,1 +1,0 @@
-import{h as r}from"/@npm/preact";export{Component,h,render}from"/@npm/preact";import m from"/@npm/htm";var p=m.bind(r);export{p as html};
