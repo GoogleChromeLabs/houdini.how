@@ -2,6 +2,8 @@
   "version": "0.0.1",
   "scripts": {
     "start": "wmr & npm run -s worklets:watch",
+    "build": "npm run -s worklets && wmr build",
+    "prod": "npm run build && npx sirv dist",
     "worklets": "node ./worklets/_build.js",
     "worklets:watch": "node ./worklets/_build.js watch"
   },
