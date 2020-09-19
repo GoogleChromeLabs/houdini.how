@@ -7,7 +7,7 @@ console.log(worklets)
 
 export default function Home() {
   return (
-    <div className={style.container}>
+    <div>
       <Nav page="Worklet Library" />
       {Object.values(worklets).map(worklet => (
         <Demo worklet={worklet} />

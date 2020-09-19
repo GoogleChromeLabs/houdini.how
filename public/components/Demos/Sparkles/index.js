@@ -23,8 +23,8 @@ export default class Sparkles extends Component {
   render() {
     return (
       <Card name="sparkles" authorName="@una" authorLink="https://twitter.com/una" authorImg="https://webdev.imgix.net/images/authors/una@2x.jpg" penLink='MRxgNN' paint="true" properties="true" layout="false">
-        <div className={CardStyle.demoContainer}>
-          <div className={CardStyle.demoArea} style={{
+        <div class={CardStyle.demoContainer}>
+          <div class={CardStyle.demoArea} style={{
               '--extra-sparkleHue': this.state.hue,
               '--extra-sparkleNumber': this.state.number,
               '--extra-sparkleWidthVariance': this.state.widthVariance,
@@ -32,45 +32,45 @@ export default class Sparkles extends Component {
               '--extra-sparkleWeightVariance': this.state.weightVariance,
               background: 'paint(extra-sparkles)'
               }}></div>
-          <ol className={CardStyle.customProps}>
+          <ol class={CardStyle.customProps}>
             <li>.demo	&#123;</li>
             <li>
               <label htmlFor="--extra-sparkleNumber">--extra-sparkleNumber:</label>
-              <div className={CardStyle.input}>
-                <div className={CardStyle.inputVal}>{this.state.number}</div>
-                <input className={CardStyle.rangeSlider} type="range" value={this.state.number} id="--extra-sparkleNumber" ref={this.number} onInput={e => this.setState({ number: e.target.value })}/>
+              <div class={CardStyle.input}>
+                <div class={CardStyle.inputVal}>{this.state.number}</div>
+                <input class={CardStyle.rangeSlider} type="range" value={this.state.number} id="--extra-sparkleNumber" ref={this.number} onInput={e => this.setState({ number: e.target.value })}/>
               </div>
             </li>
             <li>
               <label htmlFor="--extra-sparkleHue">--extra-sparkleHue:</label>
-              <div className={CardStyle.input}>
-                <div className={CardStyle.inputVal}>{this.state.hue}</div>
-                <input className={CardStyle.rangeSlider} type="range" min="0" max="360" value={this.state.hue} id="--extra-sparkleHue"
+              <div class={CardStyle.input}>
+                <div class={CardStyle.inputVal}>{this.state.hue}</div>
+                <input class={CardStyle.rangeSlider} type="range" min="0" max="360" value={this.state.hue} id="--extra-sparkleHue"
                   onInput={e => this.setState({ hue: e.target.value })} />
                 </div>
             </li>
             <li>
               <label htmlFor="--extra-sparkleWidthVariance">--extra-sparkleWidthVariance:</label>
-              <div className={CardStyle.input}>
-                <div className={CardStyle.inputVal}>{this.state.widthVariance}</div>
-                <input className={CardStyle.rangeSlider} type="range" value={this.state.widthVariance} id="--extra-sparkleWidthVariance"
+              <div class={CardStyle.input}>
+                <div class={CardStyle.inputVal}>{this.state.widthVariance}</div>
+                <input class={CardStyle.rangeSlider} type="range" value={this.state.widthVariance} id="--extra-sparkleWidthVariance"
                   onInput={e => this.setState({ widthVariance: e.target.value })} />
                 </div>
             </li>
             <li>
               <label htmlFor="--extra-sparkleHeightVariance">--extra-sparkleHeightVariance:</label>
-              <div className={CardStyle.input}>
-                <div className={CardStyle.inputVal}>
+              <div class={CardStyle.input}>
+                <div class={CardStyle.inputVal}>
                 {this.state.heightVariance}</div>
-                <input className={CardStyle.rangeSlider} type="range" value={this.state.heightVariance} id="--extra-sparkleHeightVariance"
+                <input class={CardStyle.rangeSlider} type="range" value={this.state.heightVariance} id="--extra-sparkleHeightVariance"
                   onInput={e => this.setState({ heightVariance: e.target.value })} />
               </div>
             </li>
             <li>
               <label htmlFor="--extra-sparkleWeightVariance">--extra-sparkleWeightVariance:</label>
-              <div className={CardStyle.input}>
-                <div className={CardStyle.inputVal}>{this.state.weightVariance}</div>
-                <input className={CardStyle.rangeSlider} type="range" min="0" max="10" value={this.state.weightVariance} id="--extra-sparkleWeightVariance" ref={this.weightVariance} onInput={e => this.setState({ weightVariance: e.target.value })}/>
+              <div class={CardStyle.input}>
+                <div class={CardStyle.inputVal}>{this.state.weightVariance}</div>
+                <input class={CardStyle.rangeSlider} type="range" min="0" max="10" value={this.state.weightVariance} id="--extra-sparkleWeightVariance" ref={this.weightVariance} onInput={e => this.setState({ weightVariance: e.target.value })}/>
               </div>
             </li>
             <li>&#125;</li>

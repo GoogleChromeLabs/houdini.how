@@ -62,7 +62,7 @@ export default class Demo extends Component {
         props.style += ` ${p}: ${propValues[p]};`;
       }
       preview = (
-        <div className={CardStyle.demoArea}>
+        <div class={CardStyle.demoArea}>
           {customPreview}
         </div>
       )
@@ -70,7 +70,7 @@ export default class Demo extends Component {
 
     // if there's no custom preview HTML or it failed to parse, just style the preview div itself:
     if (!preview) {
-      preview = <div className={CardStyle.demoArea} style={demoStyle} />
+      preview = <div class={CardStyle.demoArea} style={demoStyle} />
     }
 
 	  return (
@@ -85,10 +85,10 @@ export default class Demo extends Component {
         layout={false}
         usage={usage}
       >
-          <div className={CardStyle.demoContainer}>
+          <div class={CardStyle.demoContainer}>
             {preview}
             
-            <ol className={CardStyle.customProps}>
+            <ol class={CardStyle.customProps}>
               <li>.demo	&#123;</li>
               {Object.keys(customProps).map(propName => {
                 const definition = customProps[propName]
@@ -127,10 +127,10 @@ const PROPERTY_TYPES = {};
 PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
   <li>
     <label htmlFor={id}>{propName}:</label>
-    <div className={CardStyle.input}>
+    <div class={CardStyle.input}>
       <input
         id={id}
-        className={CardStyle.inputVal}
+        class={CardStyle.inputVal}
         type="number"
         min={definition.range && definition.range[0]}
         max={definition.range && definition.range[1]}
@@ -139,7 +139,7 @@ PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
       />
       <input
         id={id}
-        className={CardStyle.rangeSlider}
+        class={CardStyle.rangeSlider}
         type="range"
         min={definition.range && definition.range[0]}
         max={definition.range && definition.range[1]}
@@ -153,10 +153,10 @@ PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
 PROPERTY_TYPES.options = ({ id, propName, value, setValue, definition }) => (
   <li>
     <label htmlFor={id}>{propName}:</label>
-    <div className={CardStyle.input}>
+    <div class={CardStyle.input}>
       <select
           id={id}
-          className={CardStyle.inputVal}
+          class={CardStyle.inputVal}
           value={value}
           onInput={setValue}
         >
@@ -173,10 +173,10 @@ PROPERTY_TYPES.options = ({ id, propName, value, setValue, definition }) => (
 PROPERTY_TYPES.default = ({ id, propName, value, setValue, definition }) => (
   <li>
     <label htmlFor={id}>{propName}:</label>
-    <div className={CardStyle.input}>
+    <div class={CardStyle.input}>
       <input
         id={id}
-        className={CardStyle.inputVal}
+        class={CardStyle.inputVal}
         type={definition.type}
         value={value}
         onInput={setValue}
