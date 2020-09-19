@@ -26,7 +26,7 @@
     }
   },
   "usage": "border-image: paint(angled-corners, outlined)",
-  "html": "<button style='outline: none; border: none; padding: 1rem; font-size: 1.25rem;'>Button</button>",
+  "html": "<button contenteditable style='outline: none; border: none; padding: 1rem; font-size: 1.25rem;'>Button</button>",
   "author": {
     "name": "@Una",
     "url": "https://twitter.com/una",
