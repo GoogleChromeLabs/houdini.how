@@ -22,11 +22,13 @@ export default class Resource extends Component {
         layout={false}
         desc={desc}
       >
-        <div class={CardStyle.resourceContainer}>
-          <h3>{subtitle}</h3>
-          <p>{desc && desc}</p>
-          <button class={style.button}>View {type}</button>
-        </div>
+       <a class={style.resource} href={url}>
+         <div class={CardStyle.resourceContainer}>
+            <h3>{subtitle}</h3>
+            <p>{desc && desc}</p>
+            <a href={url} class={style.button}>View {type}</a>
+          </div>
+        </a>
       </Card>
 	  )
   }

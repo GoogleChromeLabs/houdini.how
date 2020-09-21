@@ -1,10 +1,22 @@
 .button {
   text-align: right;
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
   border: none;
   outline: none;
   background: rgb(237, 237, 237);
   border: 1px solid gray;
   border-radius: 5px;
   justify-self: flex-end;
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.resource {
+  text-decoration: none;
+  color: initial;
 }
