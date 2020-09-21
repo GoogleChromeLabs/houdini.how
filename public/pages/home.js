@@ -1,6 +1,5 @@
 import Demo from '../components/Demo/index.js'
 import Nav from '../components/Nav/index.js'
-import style from './style.module.css'
 import worklets from '../worklet-data.js'
 
 console.log(worklets)

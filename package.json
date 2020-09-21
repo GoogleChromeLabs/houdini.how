@@ -3,7 +3,9 @@
   "scripts": {
     "start": "wmr & npm run -s worklets:watch",
     "worklets": "node ./worklets/_build.js",
-    "worklets:watch": "node ./worklets/_build.js watch"
+    "worklets:watch": "node ./worklets/_build.js watch",
+    "resources": "node ./resources/_build.js",
+    "resources:watch": "node ./resources/_build.js watch"
   },
   "dependencies": {
     "wmr": "^0.0.8"

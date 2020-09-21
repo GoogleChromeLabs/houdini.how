@@ -1,0 +1,10 @@
+.button {
+  text-align: right;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background: rgb(237, 237, 237);
+  border: 1px solid gray;
+  border-radius: 5px;
+  justify-self: flex-end;
+}

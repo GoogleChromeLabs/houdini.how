@@ -191,6 +191,12 @@
   grid-template-columns: 1fr 2fr;
 }
 
+.resourceContainer {
+  padding: 2rem;
+  position: relative;
+  display: grid;
+}
+
 @media (max-width: 600px) {
   .demoText {
     font-size: 2rem;

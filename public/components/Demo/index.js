@@ -1,6 +1,7 @@
 import { html as parseHtml } from 'htm/preact';
 import { cloneElement, Component } from 'preact'
 import Card from '../Card/index.js'
+import DemoLinks from '../DemoLinks/index.js'
 import CardStyle from '../Card/style.module.css'
 
 export default class Demo extends Component {
@@ -79,7 +80,6 @@ export default class Demo extends Component {
         authorName={author.name}
         authorLink={author.url}
         authorImg={author.image}
-        penLink={demoUrl}
         paint={true}
         properties={true}
         layout={false}
@@ -116,6 +116,7 @@ export default class Demo extends Component {
               <li>&#125;</li>
             </ol>
           </div>
+          <DemoLinks name={packageName} penLink={demoUrl}/>
       </Card>
 	  )
 	}
