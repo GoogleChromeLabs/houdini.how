@@ -1,0 +1,23 @@
+.html::after,
+.js::after,
+.sh::after {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--brightBlue);
+  padding: 0.25rem;
+  border-radius: 0 5px;
+}
+
+.html::after {
+  content: '.html';
+}
+
+.js::after {
+  content: '.js';
+}
+
+.sh::after {
+  content: '.sh';
+}
