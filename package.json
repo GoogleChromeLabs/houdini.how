@@ -8,6 +8,7 @@
     "resources:watch": "node ./resources/_build.js watch"
   },
   "dependencies": {
+    "css-paint-polyfill": "^3.0.1",
     "wmr": "^0.0.8"
   }
 }

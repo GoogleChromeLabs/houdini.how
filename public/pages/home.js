@@ -1,6 +1,7 @@
 import Demo from '../components/Demo/index.js'
 import Nav from '../components/Nav/index.js'
 import worklets from '../worklet-data.js'
+import 'css-paint-polyfill'
 
 console.log(worklets)
 
