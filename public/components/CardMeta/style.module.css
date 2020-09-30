@@ -8,6 +8,7 @@
   display: grid;
   grid-template-columns: 70px 1fr auto;
   margin-bottom: 1rem;
+  align-items: center;
 }
 
 .meta p,
@@ -72,4 +73,13 @@
 .layout {
   border-color: #7eb8e4;
   background: #e0edfe;
+}
+
+[metaType="resource"] {
+  padding: 2rem 2rem 0;
+}
+
+[metaType="resource"] .title {
+  max-width: 36ch;
+  line-height: 1.4;
 }
