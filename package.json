@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "css-paint-polyfill": "^3.0.1",
-    "wmr": "^0.0.8"
+    "wmr": "^0.0.9"
   }
 }
