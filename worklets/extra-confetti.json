@@ -5,6 +5,7 @@
     "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/confetti/worklet.js",
     "cdnUrl": "https://unpkg.com/extra.css@1.2.0/confetti.js",
     "demoUrl": "https://glitch.com/~confetti",
+    "tags": ["paint", "properties and values"],
     "customProps": {
       "--extra-confettiNumber" : {
         "type": "number",

@@ -6,7 +6,7 @@
 
 .meta {
   display: grid;
-  grid-template-columns: 70px 1fr auto;
+  grid-template-columns: 70px 40ch auto;
   margin-bottom: 1rem;
   align-items: center;
 }
@@ -38,6 +38,8 @@
 
 .tags ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 10px;
   margin: 0;
   padding: 0;
@@ -73,6 +75,16 @@
 .layout {
   border-color: #7eb8e4;
   background: #e0edfe;
+}
+
+.animation {
+  border-color: #7bbf95;
+  background: #ccebd1;
+}
+
+.typed {
+  border-color: #c193e3;
+  background: #f1eaff;
 }
 
 [metaType="resource"] {
