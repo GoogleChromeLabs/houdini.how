@@ -1,6 +1,12 @@
 .footer {
   background: #222;
   color: white;
-  padding: 2rem;
+  padding: 3rem 2rem 4rem;
   width: 100%;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    padding: 2rem 0 3rem;
+  }
 }
