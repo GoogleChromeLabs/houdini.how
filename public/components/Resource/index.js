@@ -5,7 +5,7 @@ import style from './style.module.css'
 
 export default class Resource extends Component {
 	render() {
-    const { url, type, title, subtitle, pubDate, author, desc } = this.props.resource
+    const { url, type, title, tags, pubDate, author, desc } = this.props.resource
 
 	  return (
       <Card
@@ -20,7 +20,8 @@ export default class Resource extends Component {
         properties={true}
         layout={false}
         desc={desc}
-        type='resource'
+        tags={tags}
+        type="resource"
       >
        <a class={style.link} href={url}>
          <div class={CardStyle.resourceContainer}>

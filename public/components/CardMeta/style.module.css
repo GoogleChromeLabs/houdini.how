@@ -75,6 +75,16 @@
   background: #e0edfe;
 }
 
+.animation {
+  border-color: #7bbf95;
+  background: #ccebd1;
+}
+
+.typed {
+  border-color: #c193e3;
+  background: #f1eaff;
+}
+
 [metaType="resource"] {
   padding: 2rem 2rem 0;
 }

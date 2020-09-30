@@ -5,6 +5,7 @@
     "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/sparkles/worklet.js",
     "cdnUrl": "https://unpkg.com/extra.css@1.2.0/sparkles.js",
     "demoUrl": "https://glitch.com/~sparkles",
+    "tags": ["paint", "properties and values"],
     "customProps": {
       "--extra-sparkleNumber" : {
         "type": "number",
