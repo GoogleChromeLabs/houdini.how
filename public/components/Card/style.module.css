@@ -1,5 +1,5 @@
 .container {
-  max-width: 800px;
+  max-width: var(--cardMax);
   margin: 0 auto 4rem;
 }
 
@@ -199,6 +199,9 @@
 .demoContainer {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  border-left: 1px solid #b8b8b8;
+  border-right: 1px solid #b8b8b8;
+  border-top: 1px solid #b8b8b8;
 }
 
 .resourceContainer {
@@ -215,9 +218,38 @@
   max-width: 46ch;;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+  .customProps {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 700px) {
   .demoText {
     font-size: 2rem;
     padding: 1rem;
+  }
+
+  .demoContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .demoArea {
+    min-height: 170px;
+  }
+}
+
+@media (max-width: 500px) {
+  .customProps li:first-child,
+  .customProps li:last-child {
+    padding-left: 0.5rem;
+}
+
+  .customProps li {
+    padding-left: 1rem;
+  }
+
+  .customProps li:before {
+    content: none;
   }
 }

@@ -16,7 +16,7 @@ export default function App() {
 	return (
 		<Loc>
 			<div class="app">
-				<div class={style.container}>
+				<div>
 					<Router>
 					<HomePage path="/" />
 					<ReposPage path="/repos" />

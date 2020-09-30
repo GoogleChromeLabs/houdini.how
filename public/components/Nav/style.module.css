@@ -4,6 +4,9 @@
   align-items: center;
   width: 100%;
   margin-bottom: 2rem;
+  max-width: var(--pageMax);
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .head h1 {

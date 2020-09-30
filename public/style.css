@@ -4,6 +4,8 @@
   --brightBlue: #00ddff;
   --skyBlue: color: #2196F3;
   --monoType: 'Roboto Mono', 'Source Code Pro', Menlo, Monaco, monospace;
+  --pageMax: 1100px;
+  --cardMax: 800px;
 }
 
 /**
@@ -36,6 +38,7 @@ pre {
   border: 1px solid #c2cee4;
   border-radius: 5px;
   position: relative;
+  overflow-y: auto;
 }
 
 code {
@@ -53,4 +56,10 @@ ul li {
 
 pre {
   white-space: pre-wrap;
+}
+
+@media screen and (max-width: 500px) {
+  code {
+    font: 90%/1.2 var(--monoType);
+  }
 }

@@ -1,15 +1,15 @@
 import {Component} from 'preact'
 import style from './style.module.css'
+import navStyle from '../Nav/style.module.css'
 
-export default class Footer extends Component {
+export default class Nav extends Component {
   render(props) {
     return (
-    <div class={style.head}>
+    <div class={style.footer}>
       <div>
-        <h1 class={style.logo}>Houdini.how</h1>
-        <h2>{props.page}</h2>
+        <h1 class={navStyle.logo}>Houdini.how</h1>
       </div>
-      <nav class={style.nav}>
+      <nav>
         <ul>
           <li><a href="/about">About</a></li>
           <li><a href="/usage">Usage</a></li>
