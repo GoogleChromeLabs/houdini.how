@@ -5,7 +5,7 @@ export default class CardLinks extends Component {
 
   render(props) {
     return (
-    <div class={style.meta}>
+    <div class={style.meta} metaType={props.type}>
       <img class={style.author} src={props.authorImg} alt="" />
       <div class={style.title}>
         <h2 class={style.name}>{props.name}</h2>

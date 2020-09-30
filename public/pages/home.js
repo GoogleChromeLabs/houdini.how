@@ -3,8 +3,6 @@ import Nav from '../components/Nav/index.js'
 import worklets from '../worklet-data.js'
 import 'css-paint-polyfill'
 
-console.log(worklets)
-
 export default function Home() {
   return (
     <div>

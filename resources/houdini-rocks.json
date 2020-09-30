@@ -2,8 +2,7 @@
   "url": "https://css-houdini.rocks/",
   "type": "website",
   "title": "CSS Houdini Rocks",
-  "subtitle": "CSS Houdini experiments by Vincent de Oliveira.",
-  "desc": "A set of experiements with the latest CSS Houdini Spec, including animated text effects, element queries, path layout, and many more.",
+  "desc": "A set of experiements with the latest CSS Houdini Spec by Vincent de Oliveira, including animated text effects, element queries, path layout, and many more.",
   "author": {
     "name": "@iamvdo",
     "url": "https://twitter.com/iamvdo",

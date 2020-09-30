@@ -2,7 +2,6 @@
   "url": "https://web.dev/at-property/",
   "type": "article",
   "title": "@property: giving superpowers to CSS variables",
-  "subtitle": "The Houdini Properties and Values API is coming to your CSS file in Chromium 85.",
   "pubDate": "July 21, 2020",
   "desc": "One of the most exciting additions to CSS within the Houdini umbrella is the Properties and Values API. This API supercharges your CSS custom properties (also commonly referred to as CSS variables) by giving them semantic meaning (defined by a syntax) and even fallback values, enabling CSS testing.",  "author": {
     "name": "@Una",

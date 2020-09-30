@@ -84,6 +84,7 @@ export default class Demo extends Component {
         properties={true}
         layout={false}
         usage={usage}
+        type='demo'
       >
           <div class={CardStyle.demoContainer}>
             {preview}

@@ -10,7 +10,6 @@ export default class Resource extends Component {
 	  return (
       <Card
         name={title}
-        subtitle={subtitle}
         type={type}
         date={pubDate}
         authorName={author.name}
@@ -21,10 +20,10 @@ export default class Resource extends Component {
         properties={true}
         layout={false}
         desc={desc}
+        type='resource'
       >
-       <a class={style.resource} href={url}>
+       <a class={style.link} href={url}>
          <div class={CardStyle.resourceContainer}>
-            <h3>{subtitle}</h3>
             <p>{desc && desc}</p>
             <a href={url} class={style.button}>View {type}</a>
           </div>
