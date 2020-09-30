@@ -6,7 +6,7 @@
 
 .meta {
   display: grid;
-  grid-template-columns: 70px 1fr auto;
+  grid-template-columns: 70px 40ch auto;
   margin-bottom: 1rem;
   align-items: center;
 }
@@ -38,6 +38,8 @@
 
 .tags ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 10px;
   margin: 0;
   padding: 0;
