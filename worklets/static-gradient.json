@@ -1,0 +1,32 @@
+{
+  "workletName": "Static Gradient",
+  "packageName": "static-gradient",
+  "npmURL": "https://www.npmjs.com/package/houdini-static-gradient",
+  "workletUrl": "https://unpkg.com/houdini-static-gradient@1.0.1/static-gradient.worklet.js",
+  "cdnUrl": "https://unpkg.com/houdini-static-gradient@1.0.1/static-gradient.worklet.js",
+  "demoUrl": "https://glitch.com/edit/#!/houdini-static-gradient",
+  "tags": ["paint", "properties and values"],
+  "customProps": {
+    "--direction" : {
+      "type": "string",
+      "default": "to-bottom",
+      "options": ["to-bottom", "to-top", "to-right", "to-left"]
+    },
+    "--color" : {
+      "type": "color",
+      "default": "#ff69b4"
+    },
+    "--size": {
+      "type": "number",
+      "default": 2,
+      "range": [1, 30]
+    }
+  },
+  "usage": "background: paint(static-gradient, to-top, hotpink, small)",
+  "html": "<div style='height:100%;width:100%;'><div style='background-image: paint(static-gradient, to-top, hotpink, small); height:100%;width:100%;'></div></div>",
+  "author": {
+    "name": "@argyleink",
+    "url": "https://twitter.com/argyleink",
+    "image": "https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/headshot-filtered.jpg"
+  }
+}
