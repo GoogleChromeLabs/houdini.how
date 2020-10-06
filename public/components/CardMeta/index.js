@@ -24,7 +24,7 @@ export default class CardLinks extends Component {
       <img class={style.author} src={props.authorImg} alt="" />
       <div class={style.title}>
         <h2 class={style.name}>{props.name}</h2>
-        <p>via <a href={props.authorLink}>{props.authorName}</a></p>
+        <p>by <a href={props.authorLink}>{props.authorName}</a></p>
       </div>
       <div class={style.tags}>
         <ul>

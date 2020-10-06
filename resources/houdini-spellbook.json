@@ -1,0 +1,13 @@
+{
+  "url": "https://houdini.glitch.me/",
+  "type": "website",
+  "title": "Houdini Spellbook",
+  "pubDate": "April 10, 2018",
+  "desc": "Built for one of Sam's talks on CSS Houdini, the Houdini Spellbook guides you through various Houdini APIs with interactive demos.", 
+  "tags": ["typed object model", "properties and values", "paint", "layout", "animation"],
+  "author": {
+    "name": "Sam Richard",
+    "url": "https://twitter.com/snugug",
+    "image": "https://webdev.imgix.net/images/authors/samrichard@2x.jpg"
+  }
+}

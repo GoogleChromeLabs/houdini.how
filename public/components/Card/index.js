@@ -1,6 +1,5 @@
 import style from './style.module.css'
 import CardMeta from '../CardMeta/index.js'
-import classnames from 'classnames'
 
 export default function Card(props) {
   return (
