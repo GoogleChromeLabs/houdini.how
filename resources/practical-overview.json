@@ -1,0 +1,13 @@
+{
+  "url": "https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/",
+  "type": "article",
+  "title": "A Practical Overview Of CSS Houdini",
+  "pubDate": "March 19, 2020",
+  "desc": "Houdini, an umbrella term for the collection of browser APIs, aims to bring significant improvements to the web development process and the development of CSS standards in general.", 
+  "tags": ["typed object model", "properties and values", "paint", "layout", "animation"],
+  "author": {
+    "name": "Adrian Bece",
+    "url": "https://www.smashingmagazine.com/author/adrian-bece/",
+    "image": "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/39c34c82-4536-4adc-8c7e-823f9bca5707/adrian-bece-200x200.jpg"
+  }
+}

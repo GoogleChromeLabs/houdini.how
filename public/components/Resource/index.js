@@ -16,9 +16,6 @@ export default class Resource extends Component {
         authorLink={author.url}
         authorImg={author.image}
         url={url}
-        paint={true} //TODO
-        properties={true}
-        layout={false}
         desc={desc}
         tags={tags}
         type="resource"
