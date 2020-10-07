@@ -1,12 +1,9 @@
-import Nav from '../../components/Nav/index.js'
-import Footer from '../../components/Footer/index.js'
 import style from './style.module.css'
 import pageStyle from '../style.module.css'
 
 export default function UsagePage() {
   return (
     <div>
-      <Nav page="Using Houdini" />
       <div class={pageStyle.container}>
 
         <h3>Option 1: Install from npm</h3>
@@ -66,7 +63,6 @@ export default function UsagePage() {
   &lt;/script&gt;` }}>
         </code></pre>
         </div>
-      <Footer />
     </div>
   );
 }

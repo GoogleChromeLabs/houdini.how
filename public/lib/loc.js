@@ -42,6 +42,17 @@ export const Router = (Loc.Router = props => {
 	return a.map(p => cloneElement(p, { path, query }));
 });
 
+export function Link({ activeClassName, ...props }) {
+	const { path } = useLoc();
+	let className = props.class;
+	if (props.href === path) {
+		className += ' ' + activeClassName;
+	}
+	return (
+		<a {...props} class={className} />
+	);
+}
+
 Loc.ctx = createContext();
 
 export const useLoc = () => useContext(Loc.ctx);

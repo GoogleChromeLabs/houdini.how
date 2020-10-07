@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
   "scripts": {
-    "start": "wmr & npm run -s worklets:watch",
+    "start": "wmr & npm run -s worklets:watch & npm run -s resources:watch",
     "worklets": "node ./worklets/_build.js",
     "worklets:watch": "node ./worklets/_build.js watch",
     "resources": "node ./resources/_build.js",
@@ -10,5 +10,8 @@
   "dependencies": {
     "css-paint-polyfill": "^3.0.1",
     "wmr": "^0.0.9"
+  },
+  "devDependencies": {
+    "json5": "^2.1.3"
   }
 }

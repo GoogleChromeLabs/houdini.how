@@ -1,29 +1,21 @@
-import { Loc, Router } from '../lib/loc.js'; // or use preact-router, or react-router, wouter, etc
-
-// you can import routes synchronously:
-import HomePage from '../pages/home.js';
-import AboutPage from '../pages/about/index.js';
-import UsagePage from '../pages/usage/index.js';
-import ResourcesPage from '../pages/resources/index.js';
-
+import { Loc, Router } from '../lib/loc.js';
 import style from '../pages/style.module.css'
-
-// ... or lazy load them:
-import lazy from '../lib/lazy.js';
-const ReposPage = lazy(() => import('../pages/repos/index.js'));
+import { routes } from './routes.js';
+import Footer from './Footer/index.js';
+import Nav from './Nav/index.js';
 
 export default function App() {
 	return (
 		<Loc>
 			<div class="app">
 				<div>
+					<Nav />
 					<Router>
-					<HomePage path="/" />
-					<ReposPage path="/repos" />
-					<AboutPage path="/about" />
-					<UsagePage path="/usage" />
-					<ResourcesPage path="/resources" />
+						{routes.map(({ Route, url }) => (
+							<Route path={url} />
+						))}
 					</Router>
+					<Footer />
 				</div>
 			</div>
 		</Loc>
