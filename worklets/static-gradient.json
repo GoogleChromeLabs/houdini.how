@@ -2,28 +2,27 @@
   "workletName": "Static Gradient",
   "packageName": "static-gradient",
   "npmURL": "https://www.npmjs.com/package/houdini-static-gradient",
-  "workletUrl": "https://unpkg.com/houdini-static-gradient@1.0.1/static-gradient.worklet.js",
-  "cdnUrl": "https://unpkg.com/houdini-static-gradient@1.0.1/static-gradient.worklet.js",
+  "workletUrl": "https://unpkg.com/houdini-static-gradient@1.0.2/static.gradient.worklet.js",
+  "cdnUrl": "https://unpkg.com/houdini-static-gradient@1.0.2/static.gradient.worklet.js",
   "demoUrl": "https://glitch.com/edit/#!/houdini-static-gradient",
   "tags": ["paint", "properties and values"],
   "customProps": {
-    "--direction" : {
+    "--static-gradient-direction" : {
       "type": "string",
-      "default": "to-bottom",
+      "default": "to-top",
       "options": ["to-bottom", "to-top", "to-right", "to-left"]
     },
-    "--color" : {
+    "--static-gradient-color" : {
       "type": "color",
       "default": "#ff69b4"
     },
-    "--size": {
+    "--static-gradient-size": {
       "type": "number",
       "default": 2,
       "range": [1, 30]
     }
   },
-  "usage": "background: paint(static-gradient, to-top, hotpink, small)",
-  "html": "<div style='height:100%;width:100%;'><div style='background-image: paint(static-gradient, to-top, hotpink, small); height:100%;width:100%;'></div></div>",
+  "usage": "background: paint(static-gradient)",
   "author": {
     "name": "@argyleink",
     "url": "https://twitter.com/argyleink",
