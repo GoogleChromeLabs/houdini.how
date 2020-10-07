@@ -1,64 +1,29 @@
 import {Component} from 'preact'
 import style from './style.module.css'
-
-const getHeader = (title) => {
-  if (title === "About Houdini") {
-    return (
-      <h2 class={style.magenta}>{title}</h2>
-    )
-  } else if (title === "Worklet Library") {
-    return (
-      <h2 class={style.yellow}>{title}</h2>
-    )
-  } else if (title === "Using Houdini") {
-    return (
-      <h2 class={style.blue}>{title}</h2>
-    )
-  } else if (title === "Links & Resources") {
-    return (
-      <h2 class={style.green}>{title}</h2>
-    )
-  }
-}
-
-const getActive = (title) => {
-  if (title === "About Houdini" && this.props.location === 'about') {
-    return (
-      style.magenta
-    )
-  } else if (title === "Worklet Library") {
-    return (
-      style.yellow
-    )
-  } else if (title === "Using Houdini") {
-    return (
-      style.blue
-    )
-  } else if (title === "Links & Resources") {
-    return (
-      style.green
-    )
-  }
-}
+import { Link, useLoc } from '../../lib/loc.js'
+import { routes } from '../routes.js';
 
 export default class Nav extends Component {
   render(props) {
-    console.log(this.props)
+    const { path } = useLoc();
+    const route = routes.find(route => route.url === path);
+
     return (
-    <div class={style.head}>
-      <div>
-        <h1 class={style.logo}>Houdini.how</h1>
-        {getHeader(props.page)}
+      <div class={`${style.head} ${style[route.color]}`}>
+        <div>
+          <h1 class={style.logo}>Houdini.how</h1>
+          <h2>{route.title}</h2>
+        </div>
+        <nav class={style.nav}>
+          <ul>
+            {routes.map(route => (
+              <li>
+                <Link activeClassName={style.active} href={route.url}>{route.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-      <nav class={style.nav}>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/usage">Usage</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/">Worklets</a></li>
-        </ul>
-      </nav>
-    </div>
-   )
+    )
   }
 }
