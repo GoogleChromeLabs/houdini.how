@@ -7,7 +7,6 @@
   box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
   border-radius: 10px;
-  width: calc(100% - 4rem);
   margin: 0 auto;
 }
 
@@ -219,6 +218,12 @@
 
 [type="resource"] h2 {
   max-width: 46ch;;
+}
+
+@media (max-width: 900px) {
+  [type="demo"] .card {
+    width: calc(100% - 4rem);
+  }
 }
 
 @media (max-width: 800px) {

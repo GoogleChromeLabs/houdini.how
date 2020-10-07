@@ -19,7 +19,7 @@
 
 body {
   font-family: system-ui, sans-serif;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 
 a {
@@ -55,6 +55,11 @@ ul li {
 
 pre {
   white-space: pre-wrap;
+}
+
+p {
+  line-height: 1.75;
+  max-width: 70ch;
 }
 
 @media screen and (max-width: 500px) {

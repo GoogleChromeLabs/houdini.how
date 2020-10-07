@@ -91,12 +91,22 @@
 }
 
 .meta {
+  padding: 2rem 0;
+}
+
+[type="resource"] .meta {
   padding: 2rem 2rem 0;
 }
 
 .meta .title {
   max-width: 36ch;
   line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .meta {
+    padding: 2rem 2rem 0;
+  }
 }
 
 @media (max-width: 800px) {
