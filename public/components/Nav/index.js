@@ -1,8 +1,6 @@
 import {Component} from 'preact'
 import style from './style.module.css'
 
-
-
 const getHeader = (title) => {
   if (title === "About Houdini") {
     return (
@@ -24,28 +22,28 @@ const getHeader = (title) => {
 }
 
 const getActive = (title) => {
-  if (title === "About Houdini") {
+  if (title === "About Houdini" && this.props.location === 'about') {
     return (
-      "class={style.magenta}"
+      style.magenta
     )
   } else if (title === "Worklet Library") {
     return (
-      "class={style.yellow}"
+      style.yellow
     )
   } else if (title === "Using Houdini") {
     return (
-      "class={style.blue}"
+      style.blue
     )
   } else if (title === "Links & Resources") {
     return (
-      "class={style.green}"
+      style.green
     )
   }
 }
 
 export default class Nav extends Component {
   render(props) {
-
+    console.log(this.props)
     return (
     <div class={style.head}>
       <div>
