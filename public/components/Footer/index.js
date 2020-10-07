@@ -3,7 +3,7 @@ import style from './style.module.css'
 import navStyle from '../Nav/style.module.css'
 import pageStyle from '../../pages/style.module.css'
 
-export default class Nav extends Component {
+export default class Footer extends Component {
   render(props) {
     return (
     <div class={style.footer}>

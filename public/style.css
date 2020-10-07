@@ -3,6 +3,9 @@
 :root {
   --brightBlue: #00ddff;
   --skyBlue: color: #2196F3;
+  --pink: #ff8dff;
+  --yellow: yellow;
+  --green: #66ff66;
   --monoType: 'Roboto Mono', 'Source Code Pro', Menlo, Monaco, monospace;
   --pageMax: 1100px;
   --cardMax: 800px;
