@@ -32,30 +32,36 @@
   text-decoration: none;
   color: #222;
   display: inline-block;
+  border-radius: 50px;
+  padding: 0 0.5rem;
 }
 
 .logo {
   font-size: 2.5rem;
 }
 
-.magenta h2,
-.magenta a.active {
-  background-color: var(--pink);
+.magenta {
+  --activeColor: var(--pink);
 }
 
-.yellow h2,
-.yellow a.active {
-  background-color: var(--yellow);
+.yellow {
+  --activeColor: var(--yellow);
 }
 
-.blue h2,
-.blue a.active {
-  background-color: var(--brightBlue);
+.blue {
+  --activeColor: var(--brightBlue);
 }
 
-.green h2,
-.green a.active {
-  background-color: var(--green);
+.green {
+  --activeColor: var(--green);
+}
+
+.head h2 {
+  background-color: var(--activeColor);
+}
+
+.active {
+  border: 2px solid var(--activeColor);
 }
 
 @media (max-width: 500px) {
