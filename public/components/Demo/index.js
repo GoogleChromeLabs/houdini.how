@@ -131,24 +131,28 @@ PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
   <li>
     <label htmlFor={id}>{propName}:</label>
     <div class={CardStyle.input}>
-      <input
-        id={id}
-        class={CardStyle.inputVal}
-        type="number"
-        min={definition.range && definition.range[0]}
-        max={definition.range && definition.range[1]}
-        value={value}
-        onChange={setValue}
-      />
-      <input
-        id={id}
-        class={CardStyle.rangeSlider}
-        type="range"
-        min={definition.range && definition.range[0]}
-        max={definition.range && definition.range[1]}
-        value={value}
-        onInput={setValue}
-      />
+      <span>
+        <input
+          id={id}
+          class={CardStyle.inputVal}
+          type="number"
+          min={definition.range && definition.range[0]}
+          max={definition.range && definition.range[1]}
+          value={value}
+          onChange={setValue}
+        />
+      </span>
+      <span class={CardStyle.rangeInputWrap}>
+        <input
+          id={id}
+          class={CardStyle.rangeSlider}
+          type="range"
+          min={definition.range && definition.range[0]}
+          max={definition.range && definition.range[1]}
+          value={value}
+          onInput={setValue}
+        />
+      </span>
     </div>
   </li>
 )
