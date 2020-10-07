@@ -5,7 +5,7 @@
   width: 100%;
   margin-bottom: 2rem;
   max-width: var(--pageMax);
-  margin: 0 auto;
+  margin: 1rem auto 2rem;
   padding: 0 2rem;
 }
 
@@ -39,4 +39,19 @@
 
 .active {
   outline: 2px solid rgb(255, 183, 0);
+}
+
+@media (max-width: 500px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .head {
+    padding: 0 1rem;
+  }
+
+  .head h2 {
+    padding: 0;
+    font-size: 1rem;
+  }
 }
