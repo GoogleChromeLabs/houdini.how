@@ -1,0 +1,31 @@
+{
+  "workletName": "Angled Corners (Filled)",
+  "packageName": "angled-corners",
+  "npmURL": "https://www.npmjs.com/package/angled-corners",
+  "workletUrl": "https://raw.githubusercontent.com/una/angled-corners/master/angled-corners.js",
+  "cdnUrl": "https://unpkg.com/angled-corners",
+  "demoUrl": "https://glitch.com/~angled-corners",
+  "tags": ["paint", "properties and values"],
+  "customProps": {
+    "--corner-radius" : {
+      "type": "string",
+      "default": "0 20 0 0"
+    },
+    "--paint-color" : {
+      "type": "color",
+      "default": "#6200ee"
+    },
+    "--fill-type" : {
+      "type": "string",
+      "default": "filled",
+      "options": ["filled"]
+    }
+  },
+  "usage": "-webkit-mask: paint(angled-corners, filled)",
+  "html": "<button contenteditable style='outline: none; border: none; padding: 1rem; font-size: 1.25rem;'>Button</button>",
+  "author": {
+    "name": "@Una",
+    "url": "https://twitter.com/una",
+    "image": "https://webdev.imgix.net/images/authors/una@2x.jpg"
+  }
+}
