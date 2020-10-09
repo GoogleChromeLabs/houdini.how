@@ -17,7 +17,7 @@
         "default": "red"
       }
     },
-    "html": "",
+    "html": "<div contenteditable style='outline: none; padding: 1rem; font-size: 1.25rem;'>Content!</div>",
     "usage": {
 		"border-image": "paint(border-radius-reverse)", 
 		"border-image-slice": "var(--border-radius-reverse);", 
