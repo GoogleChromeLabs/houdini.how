@@ -1,5 +1,5 @@
 {
-  "workletName": "Angled Corners",
+  "workletName": "Angled Corners (Outlined)",
   "packageName": "angled-corners",
   "npmURL": "https://www.npmjs.com/package/angled-corners",
   "workletUrl": "https://raw.githubusercontent.com/una/angled-corners/master/angled-corners.js",
@@ -23,7 +23,7 @@
     "--fill-type" : {
       "type": "string",
       "default": "filled",
-      "options": ["filled", "outline"]
+      "options": ["outline"]
     }
   },
   "usage": "border-image: paint(angled-corners, outlined)",
