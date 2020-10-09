@@ -5,7 +5,7 @@
   "workletUrl": "https://unpkg.com/houdini-static-gradient@1.0.2/static.gradient.worklet.js",
   "cdnUrl": "https://unpkg.com/houdini-static-gradient@1.0.2/static.gradient.worklet.js",
   "demoUrl": "https://glitch.com/edit/#!/houdini-static-gradient",
-  "tags": ["paint", "properties and values"],
+  "tags": ["paint"],
   "customProps": {
     "--static-gradient-direction" : {
       "type": "string",
