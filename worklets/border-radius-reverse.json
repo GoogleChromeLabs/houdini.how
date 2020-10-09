@@ -1,0 +1,31 @@
+{
+  "workletName": "border-radius-reverse",
+  "packageName": "@houdini-modules/border-radius-reverse",
+  "npmURL": "",
+  "workletUrl": "https://raw.githubusercontent.com/GoogleChromeLabs/houdini-samples/master/paint-worklet/border-radius-reverse/border-radius-reverse.js",
+  "cdnUrl": "https://unpkg.com/@houdini-modules/border-radius-reverse@0.0.1/border-radius-reverse.js",
+  "demoUrl": "https://googlechromelabs.github.io/houdini-samples/paint-worklet/border-radius-reverse/",
+  "tags": ["paint", "properties and values"],
+  "customProps": {
+    "--border-radius-reverse": {
+      "type": "number",
+      "default": "10",
+      "range": [0, 50]
+    },
+    "--border-radius-reverse-color": {
+      "type": "color",
+      "default": "#ffc14c"
+    }
+  },
+  "html": "<div contenteditable style='outline: none; padding: 1rem; font-size: 1.25rem;'>Content!</div>",
+  "usage": {
+    "border": "calc(var(--border-radius-reverse) * 1px) solid transparent;",
+    "border-image": "paint(border-radius-reverse)",
+    "border-image-slice": "var(--border-radius-reverse);"
+  },
+  "author": {
+    "name": "Surma",
+    "url": "https://twitter.com/dassurma",
+    "image": "https://s.gravatar.com/avatar/1777a77401673cf81beda26a2105b8e5?size=512"
+  }
+}
