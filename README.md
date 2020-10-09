@@ -8,8 +8,8 @@ Thank you for contributing to Houdini.how! This project was built to highlight y
 
 To run the website, 
 
-1. Install node dependancies using `npm i`. 
-2. Run development mode using `npm start`
+1. Install node dependencies using `npm i`. 
+2. Start the development server using `npm start`
 
 The website build lives within the `public/` folder, while JSON information pertaining to worklets and resources live in `worklets/` and `resources/` respectively.
 
