@@ -3,7 +3,7 @@
     "packageName": "@houdini-modules/border-radius-reverse",
     "npmURL": "",
     "workletUrl": "https://raw.githubusercontent.com/GoogleChromeLabs/houdini-samples/master/paint-worklet/border-radius-reverse/border-radius-reverse.js",
-    "cdnUrl": "https://unpkg.com/browse/@houdini-modules/border-radius-reverse@0.0.1/border-radius-reverse.js",
+    "cdnUrl": "https://unpkg.com/@houdini-modules/border-radius-reverse@0.0.1/border-radius-reverse.js",
     "demoUrl": "https://googlechromelabs.github.io/houdini-samples/paint-worklet/border-radius-reverse/",
     "tags": ["paint", "properties and values"],
     "customProps": {
@@ -18,7 +18,11 @@
       }
     },
     "html": "",
-    "usage": "border-image: paint(border-radius-reverse); border-image-slice: var(--border-radius-reverse); border-width: calc(var(--border-radius-reverse) * 1px);",
+    "usage": {
+		"border-image": "paint(border-radius-reverse)", 
+		"border-image-slice": "var(--border-radius-reverse);", 
+		"border-width": "calc(var(--border-radius-reverse) * 1px);"
+	},
     "author": {
       "name": "Surma",
       "url": "https://twitter.com/dassurma",

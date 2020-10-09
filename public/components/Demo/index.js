@@ -1,8 +1,17 @@
 import { html as parseHtml } from 'htm/preact';
-import { cloneElement, Component } from 'preact'
+import { cloneElement, Component, Fragment } from 'preact'
 import Card from '../Card/index.js'
 import DemoLinks from '../DemoLinks/index.js'
 import CardStyle from '../Card/style.module.css'
+
+function formatUsage(usage) {
+  if(typeof usage === "string") {
+      return <li>{usage}</li>
+  }
+  return <>
+      {Object.entries(usage).map(([key, value]) => <li>{key}: {value.replace(/;+$/, '')};</li>)}
+  </>
+}
 
 export default class Demo extends Component {
   constructor(props) {
@@ -34,7 +43,7 @@ export default class Demo extends Component {
     document.body.appendChild(workletScript)
   }
 
-	render() {
+  render() {
     const { workletName, packageName, author, demoUrl, customProps, usage, tags, html: demoHtml } = this.props.worklet
     const { propValues } = this.state
 
@@ -74,7 +83,7 @@ export default class Demo extends Component {
       preview = <div class={CardStyle.demoArea} style={demoStyle} />
     }
 
-	  return (
+    return (
       <Card
         name={workletName}
         authorName={author.name}
@@ -83,15 +92,13 @@ export default class Demo extends Component {
         paint={true}
         properties={true}
         layout={false}
-        usage={usage}
         tags={tags}
         type='demo'
       >
           <div class={CardStyle.demoContainer}>
             {preview}
-            
             <ol class={CardStyle.customProps}>
-              <li>.demo	&#123;</li>
+              <li>.demo &#123;</li>
               {Object.keys(customProps).map(propName => {
                 const definition = customProps[propName]
                 const currentValue = propValues[propName]
@@ -114,14 +121,14 @@ export default class Demo extends Component {
                   />
                 )
               })}
-              <li>{usage};</li>
+              {formatUsage(usage)}
               <li>&#125;</li>
             </ol>
           </div>
           <DemoLinks name={packageName} penLink={demoUrl}/>
       </Card>
-	  )
-	}
+      )
+    }
 }
 
 // components for each CSS property type
