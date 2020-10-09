@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "scripts": {
+    "build": "npm run -s worklets && npm run -s resources && wmr build",
     "start": "wmr & npm run -s worklets:watch & npm run -s resources:watch",
     "worklets": "node ./worklets/_build.js",
     "worklets:watch": "node ./worklets/_build.js watch",
