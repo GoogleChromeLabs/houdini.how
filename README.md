@@ -17,28 +17,38 @@ The website build lives within the `public/` folder, while JSON information pert
 
 To contribute a Houdini worklet, create a new file within `worklets/`. The information you are contributing will be in JSON format. Please use the following template:
 
-```json
+```jsonc
 {
-  "workletName": <title of worklet>,
-  "packageName": <name of npm package>,
-  "npmURL": <url of npm package>,
-  "workletUrl": <url of raw worklet file>,
-  "cdnUrl": <url of cdn-hosted package (if hosted on npm, use unpkg)>,
-  "demoUrl": <url of worklet demo>,
-  "tags": <array of worklet tags, i.e. ["paint"]. Options are: "paint", "layout", "animation">,
+  "workletName": "title of worklet",
+  "packageName": "name of npm package",
+  "npmURL": "url of npm package",
+  "workletUrl": "url of raw worklet file",
+  "cdnUrl": "url of cdn-hosted package",  // if hosted on npm, use unpkg
+  "demoUrl": "url of worklet demo",
+  // which type(s) of worklets this uses
+  "tags": ["paint", "layout", "animation"],
+  // CSS custom properties used by the worklet:
   "customProps": {
-      <propertyName> : {
-      "type": <property type (i.e. "string", "number", "color", "percentage", etc.)>,
-      "default": <default property value (i.e. ["30"])>,
-      "range": <array of property range (i.e. [0, 100]>
-      } ...
+    "<propertyName>" : {
+      "type": "number",  // property type (string, number, color, percentage, etc.)
+      "default": 30,  // default property value
+      "range": [0, 100]  // array of property range
+      }
+      // ...
   },
-  "html": <custom demo markup (optional for paint as a background)>,
-  "usage": <CSS to use worklet, i.e. "background": "paint(angled-corners)" (can span multiple lines. Use a comma to separate entries in an object)>,
+  // optional HTML to use when showing the worklet:
+  "html": "<button>example</button>",
+  // CSS to use worklet:
+  "usage": {
+    "background": "paint(angled-corners)"
+    // (multiple properties are supported)
+    "color": "red"
+  },
+  // Information about the author
   "author": {
-      "name": <author name to appear on site>,
-      "url": <link to author's website or other social page>,
-      "image": <link to author's avatar image>
+      "name": "author name to appear on site",
+      "url": "link to author's website or other social page",
+      "image": "link to author's avatar image"
   }
 }
 ```
@@ -51,18 +61,18 @@ Please see `worklets/` for examples. Feel free to open incomplete PRs and we can
 
 To contribute a Houdini resource, create a new file within `resources/`. The information you are contributing will be in JSON format. Please use the following template:
 
-```json
+```jsonc
 {
-  "url": <resource URL>,
-  "type": <resource type. Options include: "article", "website", "demo">,
-  "title": <resource title>,
-  "pubDate": <publish date>,
-  "desc": <short description>, 
-  "tags": <tags related to the resource. Options include: "typed object model", "properties and values", "paint", "layout", "animation">
+  "url": "<resource URL>",
+  "type": "article",  // A resource type. One of: "article", "website", "demo"
+  "title": "<resource title>",
+  "pubDate": "<publish date>", // format: "Apr 20, 2020"
+  "desc": "<short description>",
+  "tags": ["paint"], // tags related to the resource. Options: "typed object model", "properties and values", "paint", "layout", "animation"
   "author": {
-    "name": <author name to appear on site>,
-    "url": <link to author's website or other social page>,
-    "image": <link to author's avatar image>
+    "name": "<author name to appear on site>",
+    "url": "<link to author's website or other social page>",
+    "image": "<link to author's avatar image>"
   }
 }
 ```
