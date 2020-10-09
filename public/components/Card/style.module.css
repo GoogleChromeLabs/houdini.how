@@ -207,12 +207,6 @@
   position: relative;
 }
 
-.inputVal:after {
-  content: ';';
-  color: white;
-  position: absolute;
-}
-
 .name {
   margin: 0;
 }
