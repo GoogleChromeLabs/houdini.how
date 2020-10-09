@@ -2,15 +2,21 @@ import {Component} from 'preact'
 import CardStyle from '../Card/style.module.css'
 import classnames from 'classnames'
 
-export default class CardLinks extends Component {
+const getCdnLink = (link, name) => {
+  return link ? link : `https://unpkg.com/extra.css/${name}.js`
+}
 
+export default class CardLinks extends Component {
   render(props) {
     return (
     <ul class={CardStyle.links}>
-      <li><a class={CardStyle.cardAction} href={`https://codepen.io/una/pen/${this.props.penLink}`} target="_blank" rel="noopener noreferrer">Demo</a></li>
+      <li><a class={CardStyle.cardAction} href={this.props.demoUrl} target="_blank" rel="noopener noreferrer">Demo</a></li>
       <li>
-      <a href={`https://unpkg.com/extra.css/${this.props.name}.js`} class={classnames(CardStyle.cardAction, this.state.copied === 'props' && CardStyle.copied)}>CDN Link</a>
+      <a href={getCdnLink(this.props.cdnUrl, this.props.name)} class={classnames(CardStyle.cardAction, this.state.copied === 'props' && CardStyle.copied)}>CDN Link</a>
       </li>
+      {this.props.npmUrl && <li>
+        <a href={this.props.npmUrl} class={classnames(CardStyle.cardAction, this.state.copied === 'props' && CardStyle.copied)}>NPM Link</a>
+      </li>}
     </ul>
   )
 }

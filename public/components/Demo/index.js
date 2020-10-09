@@ -60,7 +60,7 @@ export default class Demo extends Component {
   }
 
   render() {
-    const { workletName, packageName, author, demoUrl, customProps, usage, tags, html: demoHtml } = this.props.worklet
+    const { workletName, packageName, author, demoUrl, npmUrl, cdnUrl, customProps, usage, tags, html: demoHtml } = this.props.worklet
     const { propValues } = this.state
 
         const usageStyles = usageToStyleObject(usage);
@@ -106,9 +106,6 @@ export default class Demo extends Component {
         authorName={author.name}
         authorLink={author.url}
         authorImg={author.image}
-        paint={true}
-        properties={true}
-        layout={false}
         tags={tags}
         type='demo'
       >
@@ -142,7 +139,7 @@ export default class Demo extends Component {
               <li>&#125;</li>
             </ol>
           </div>
-          <DemoLinks name={packageName} penLink={demoUrl}/>
+          <DemoLinks name={packageName} demoUrl={demoUrl} npmUrl={npmUrl} cdnUrl={cdnUrl}/>
       </Card>
       )
     }
