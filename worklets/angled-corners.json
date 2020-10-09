@@ -7,11 +7,11 @@
   "demoUrl": "https://glitch.com/~angled-corners",
   "tags": ["paint", "properties and values"],
   "customProps": {
-    "--corner-radius" : {
+    "--corner-radius": {
       "type": "string",
       "default": "0 20 0 0"
     },
-    "--paint-color" : {
+    "--paint-color": {
       "type": "color",
       "default": "#6200ee"
     },
@@ -20,13 +20,17 @@
       "default": "4",
       "range": [0, 15]
     },
-    "--fill-type" : {
+    "--fill-type": {
       "type": "string",
       "default": "filled",
       "options": ["filled", "outline"]
     }
   },
-  "usage": "border-image: paint(angled-corners, outlined)",
+  "usage": {
+    "border": "calc(var(--stroke-weight) * 1px) solid transparent;",
+    "border-image": "paint(angled-corners)",
+    "border-image-slice": "var(--stroke-weight);"
+  },
   "html": "<button contenteditable style='outline: none; border: none; padding: 1rem; font-size: 1.25rem;'>Button</button>",
   "author": {
     "name": "@Una",

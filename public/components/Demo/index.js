@@ -6,11 +6,27 @@ import CardStyle from '../Card/style.module.css'
 
 function formatUsage(usage) {
   if(typeof usage === "string") {
-      return <li>{usage}</li>
+    return <li>{usage}</li>
   }
   return <>
-      {Object.entries(usage).map(([key, value]) => <li>{key}: {value.replace(/;+$/, '')};</li>)}
+    {Object.entries(usage).map(([key, value]) => <li>{key}: {value.replace(/;+$/, '')};</li>)}
   </>
+}
+
+function usageToStyleObject(usage) {
+  // If `usage` is an object, we are already done
+  if(typeof usage === "object") {
+    return usage;
+  }
+  // If it’s a string, we need to do a bit of processing
+  const [prop, ...rest] = usage.split(":");
+  return {
+    [prop]: rest.join(":")
+  };
+}
+
+function styleObjectToString(styleObj) {
+  return Object.entries(styleObj).map(([key, value]) => `${key}: ${value};`).join("");
 }
 
 export default class Demo extends Component {
@@ -47,9 +63,10 @@ export default class Demo extends Component {
     const { workletName, packageName, author, demoUrl, customProps, usage, tags, html: demoHtml } = this.props.worklet
     const { propValues } = this.state
 
+        const usageStyles = usageToStyleObject(usage);
     const demoStyle = {
       ...propValues,
-      background: `paint(${packageName})`
+      ...usageStyles,
     }
 
     let preview;
@@ -67,10 +84,10 @@ export default class Demo extends Component {
       // inject styles into root element:
       let props = root.props
       if (!props) props = root.props = {}
-      props.style = `${props.style || ''}; background:paint(${packageName});`
       for (let p in propValues) {
         props.style += ` ${p}: ${propValues[p]};`;
       }
+      props.style = `${props.style || ''}; ${styleObjectToString(usageStyles)}`;
       preview = (
         <div class={CardStyle.demoArea}>
           {customPreview}
