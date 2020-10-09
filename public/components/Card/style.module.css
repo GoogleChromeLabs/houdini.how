@@ -8,12 +8,12 @@
   margin-bottom: 4rem;
   border-radius: 10px;
   margin: 0 auto;
-  transition-duration: 0.5s;
+  transition: transform 0.5s;
+  will-change: transform;
 }
 
 [type="demo"] .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 30px 35px 0px rgba(0, 0, 0, 0.15);
 }
 
 [type="resource"] {
@@ -22,12 +22,12 @@
   background-color: #f5f5f5;
   border-radius: 10px;
   width: calc(100% - 4rem);
-  transition-duration: 0.5s;
+  transition: transform 0.5s;
+  will-change: transform;
 }
 
 [type="resource"]:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 30px 35px 0px rgba(0, 0, 0, 0.15);
 }
 
 .demoArea {
