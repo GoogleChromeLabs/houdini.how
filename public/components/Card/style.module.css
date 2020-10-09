@@ -49,10 +49,10 @@
 
 .links {
   margin: 0;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 10px;
-  justify-content: end;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
   padding: 0.75rem;
   width: 100%;
   background: #e1e1e1;
