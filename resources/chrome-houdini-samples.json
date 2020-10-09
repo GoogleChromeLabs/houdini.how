@@ -1,6 +1,6 @@
 {
   "url": "https://googlechromelabs.github.io/houdini-samples/",
-  "type": "demos",
+  "type": "demo",
   "title": "Chrome Labs Houdini Samples",
   "desc": "Sample repo of Houdini paint, layout, and animation demos from the Google Chrome Labs team.", 
   "tags": ["properties and values", "paint", "layout", "animation"],
