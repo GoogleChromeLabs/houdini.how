@@ -22,14 +22,12 @@
     },
     "--fill-type": {
       "type": "string",
-      "default": "filled",
-      "options": ["filled", "outline"]
+      "default": "outlined",
+      "options": ["filled", "outlined"]
     }
   },
   "usage": {
-    "border": "calc(var(--stroke-weight) * 1px) solid transparent;",
-    "border-image": "paint(angled-corners)",
-    "border-image-slice": "var(--stroke-weight);"
+    "background": "paint(angled-corners)"
   },
   "html": "<button contenteditable style='outline: none; border: none; padding: 1rem; font-size: 1.25rem;'>Button</button>",
   "author": {
