@@ -14,7 +14,7 @@
     },
     "--border-radius-reverse-color": {
       "type": "color",
-      "default": "#6200ee"
+      "default": "#ffc14c"
     }
   },
   "html": "<div contenteditable style='outline: none; padding: 1rem; font-size: 1.25rem;'>Content!</div>",
