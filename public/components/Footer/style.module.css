@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.footer a {
+  color: #eaeaea;
+}
+
 @media (max-width: 500px) {
   .footer {
     padding: 2rem 0 3rem;

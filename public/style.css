@@ -2,7 +2,7 @@
 
 :root {
   --brightBlue: #00ddff;
-  --skyBlue: #2196F3;
+  --skyBlue: #0678d4;
   --pink: #ff8dff;
   --yellow: yellow;
   --green: #66ff66;
@@ -32,6 +32,16 @@ a {
 h1 {
   font-family: var(--monoType);
   font-weight: 400;
+}
+
+h3 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  background: #eaeaea;
+  display: inline-block;
+  padding: 0 0.25em;
+  margin-bottom: 0;
 }
 
 pre {
