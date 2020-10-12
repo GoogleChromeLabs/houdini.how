@@ -3,3 +3,19 @@
   height: 560px;
   border: 1px solid;
 }
+
+.apiList {
+  margin-left: 2rem;
+  max-width: 60ch;
+}
+
+.apiList li {
+  list-style: disc;
+  margin-bottom: 1rem;
+}
+
+.apiList a {
+  font-weight: 600;
+  display: block;
+  font-size: 1.1rem;
+}
