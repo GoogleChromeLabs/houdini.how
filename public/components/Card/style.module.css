@@ -96,7 +96,6 @@
 
 .inputVal {
   display: inline-block;
-  max-width: 4em;
   margin: 0 0.25rem 0 1rem;
   padding: 0 0.25rem;
   color: var(--brightBlue);
@@ -104,6 +103,10 @@
   border: 2px solid rgba(255, 255, 255, 0.05);
   border-bottom: dotted 2px magenta;
   outline: none;
+}
+
+.inputVal[type="number"] {
+  max-width: 4em;
 }
 
 .inputVal:focus {
