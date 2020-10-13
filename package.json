@@ -10,9 +10,10 @@
   },
   "dependencies": {
     "css-paint-polyfill": "^3.0.1",
-    "wmr": "^0.0.9"
+    "wmr": "0.0.10"
   },
   "devDependencies": {
+    "clsx": "^1.1.1",
     "json5": "^2.1.3"
   }
 }

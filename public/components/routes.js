@@ -1,7 +1,9 @@
-import HomePage from '../pages/home.js';
-import AboutPage from '../pages/about/index.js';
-import UsagePage from '../pages/usage/index.js';
-import ResourcesPage from '../pages/resources/index.js';
+import lazy from '../lib/lazy.js';
+const HomePage = lazy(() => import('../pages/home.js'));
+const AboutPage = lazy(() => import('../pages/about/index.js'));
+const UsagePage = lazy(() => import('../pages/usage/index.js'));
+const ResourcesPage = lazy(() => import('../pages/resources/index.js'));
+
 
 export const routes = [
 	{

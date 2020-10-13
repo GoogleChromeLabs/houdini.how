@@ -1,6 +1,5 @@
 import Demo from '../components/Demo/index.js'
 import worklets from '../worklet-data.js'
-import 'css-paint-polyfill'
 
 export default function Home() {
   return (

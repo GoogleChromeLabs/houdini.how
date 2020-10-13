@@ -1,6 +1,6 @@
 import {Component} from 'preact'
 import CardStyle from '../Card/style.module.css'
-import classnames from 'classnames'
+import classnames from 'clsx'
 
 const getCdnLink = (link, name) => {
   return link ? link : `https://unpkg.com/extra.css/${name}.js`
