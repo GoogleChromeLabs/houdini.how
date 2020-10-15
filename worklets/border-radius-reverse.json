@@ -17,7 +17,7 @@
       "default": "#ffc14c"
     }
   },
-  "html": "<div contenteditable style='outline: none; padding: 1rem; font-size: 1.25rem;'>Content!</div>",
+  "html": "<h2 contenteditable style='outline: none; padding: 1rem; font-size: 1.25rem;'>Content!</h2>",
   "usage": {
     "border": "calc(var(--border-radius-reverse) * 1px) solid transparent;",
     "border-image": "paint(border-radius-reverse)",
