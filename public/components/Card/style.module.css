@@ -47,6 +47,53 @@
   overflow: hidden;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #e1e1e1;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #b8b8b8;
+}
+
+.compat {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0.5rem 0.4rem;
+  margin: 0;
+  list-style: none;
+  line-height: 1.4;
+}
+.compat li {
+  flex: 1;
+  color: #555;
+  font-size: 0.7rem;
+}
+.compat li.supported {
+  color: #000;
+}
+.compat li.unsupported {
+  opacity: 0.4;
+}
+.compat li.canary,
+.compat li.polyfilled {
+  color: #888;
+}
+.compat img {
+  width: 32px;
+  height: 32px;
+  margin: 0 .35rem;
+}
+.compat h6 {
+  margin: 0;
+  text-align: center;
+  font-size: 100%;
+  font-weight: 500;
+}
+
 .links {
   margin: 0;
   display: flex;
@@ -54,10 +101,6 @@
   gap: 10px;
   justify-content: flex-end;
   padding: 0.75rem;
-  width: 100%;
-  background: #e1e1e1;
-  border-radius: 0 0 10px 10px;
-  border: 1px solid #b8b8b8;
 }
 
 .cardAction {

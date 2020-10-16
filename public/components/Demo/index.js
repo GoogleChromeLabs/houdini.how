@@ -3,13 +3,16 @@ import { Component } from 'preact'
 import Card from '../Card/index.js'
 import DemoLinks from '../DemoLinks/index.js'
 import CardStyle from '../Card/style.module.css'
+import Compat from '../Compat/index.js'
+
+const normalizeValue = s => s.trim().replace(/;+$/g, '');
 
 function formatUsage(usage) {
   if(typeof usage === "string") {
     return <li>{usage}</li>
   }
   return <>
-    {Object.entries(usage).map(([key, value]) => <li>{key}: {value.replace(/;+$/, '')};</li>)}
+    {Object.entries(usage).map(([key, value]) => <li>{key}: {normalizeValue(value)};</li>)}
   </>
 }
 
@@ -19,14 +22,14 @@ function usageToStyleObject(usage) {
     return usage;
   }
   // If it’s a string, we need to do a bit of processing
-  const [prop, ...rest] = usage.split(":");
+  const [prop, ...rest] = usage.split(":")
   return {
-    [prop]: rest.join(":")
+    [prop]: normalizeValue(rest.join(":"))
   };
 }
 
 function styleObjectToString(styleObj) {
-  return Object.entries(styleObj).map(([key, value]) => `${key}: ${value};`).join("");
+  return Object.entries(styleObj).map(([key, value]) => `${key}: ${normalizeValue(value)};`).join("")
 }
 
 const injected = new Map()
@@ -76,7 +79,7 @@ export default class Demo extends Component {
     const { workletName, packageName, author, demoUrl, npmUrl, cdnUrl, customProps, usage, tags, html: demoHtml } = this.props.worklet
     const { propValues } = this.state
 
-        const usageStyles = usageToStyleObject(usage);
+    const usageStyles = usageToStyleObject(usage)
     const demoStyle = {
       ...propValues,
       ...usageStyles,
@@ -93,14 +96,16 @@ export default class Demo extends Component {
       } catch (e) {
         console.error(`Custom preview HTML failed to parse: ${e}`)
       }
-      const root = Array.isArray(customPreview) ? customPreview[0] : customPreview;
+      const root = Array.isArray(customPreview) ? customPreview[0] : customPreview
       // inject styles into root element:
       let props = root.props
       if (!props) props = root.props = {}
+      props.contenteditable = true;
+      props.style = props.style || ''
       for (let p in propValues) {
-        props.style += ` ${p}: ${propValues[p]};`;
+        props.style += ` ${p}: ${propValues[p]};`
       }
-      props.style = `${props.style || ''}; ${styleObjectToString(usageStyles)}`;
+      props.style = `${props.style ? props.style+'; ' : ''}${styleObjectToString(usageStyles)}`
       preview = (
         <div class={CardStyle.demoArea}>
           {customPreview}
@@ -152,7 +157,10 @@ export default class Demo extends Component {
               <li>&#125;</li>
             </ol>
           </div>
-          <DemoLinks name={packageName} demoUrl={demoUrl} npmUrl={npmUrl} cdnUrl={cdnUrl}/>
+          <footer class={CardStyle.footer}>
+            <Compat {...this.props.worklet.compat} />
+            <DemoLinks name={packageName} demoUrl={demoUrl} npmUrl={npmUrl} cdnUrl={cdnUrl}/>
+          </footer>
       </Card>
       )
     }
