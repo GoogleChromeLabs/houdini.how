@@ -3,6 +3,7 @@ import { Component } from 'preact'
 import Card from '../Card/index.js'
 import DemoLinks from '../DemoLinks/index.js'
 import CardStyle from '../Card/style.module.css'
+import Compat from '../Compat/index.js'
 
 const normalizeValue = s => s.trim().replace(/;+$/g, '');
 
@@ -156,7 +157,10 @@ export default class Demo extends Component {
               <li>&#125;</li>
             </ol>
           </div>
-          <DemoLinks name={packageName} demoUrl={demoUrl} npmUrl={npmUrl} cdnUrl={cdnUrl}/>
+          <footer class={CardStyle.footer}>
+            <Compat {...this.props.worklet.compat} />
+            <DemoLinks name={packageName} demoUrl={demoUrl} npmUrl={npmUrl} cdnUrl={cdnUrl}/>
+          </footer>
       </Card>
       )
     }
