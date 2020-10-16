@@ -1,18 +1,18 @@
 {
     "workletName": "Sparkles",
     "packageName": "extra-sparkles",
-    "npmUrl": "",
     "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/sparkles/worklet.js",
-    "cdnUrl": "https://unpkg.com/extra.css@1.2.0/sparkles.js",
-    "demoUrl": "https://glitch.com/~sparkles",
+    "cdnUrl": "https://unpkg.com/extra-sparkles@1.2.0/worklet.js",
+    "npmUrl": "https://www.npmjs.com/package/extra-sparkles",
+    "demoUrl": "https://codepen.io/una/pen/MRxgNN",
     "tags": ["paint"],
     "customProps": {
-      "--extra-sparkleNumber" : {
+      "--extra-sparkleNumber": {
         "type": "number",
         "default": "30",
         "range": [0, 500]
       },
-      "--extra-sparkleHue" : {
+      "--extra-sparkleHue": {
         "type": "number",
         "default": "200",
         "range": [0, 360]
