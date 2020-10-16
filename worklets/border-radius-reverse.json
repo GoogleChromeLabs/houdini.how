@@ -19,9 +19,9 @@
   },
   "html": "<h2 contenteditable style='outline: none; padding: 1rem; font-size: 1.25rem;'>Content!</h2>",
   "usage": {
-    "border": "calc(var(--border-radius-reverse) * 1px) solid transparent;",
+    "border": "calc(var(--border-radius-reverse) * 1px) solid transparent",
     "border-image": "paint(border-radius-reverse)",
-    "border-image-slice": "var(--border-radius-reverse);"
+    "border-image-slice": "var(--border-radius-reverse)"
   },
   "author": {
     "name": "Surma",

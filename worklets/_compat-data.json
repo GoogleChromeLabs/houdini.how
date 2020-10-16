@@ -1,0 +1,233 @@
+{
+  "browser": [
+    {
+      "tag": "chrome",
+      "name": "Google Chrome",
+      "renderingEngine": "Blink"
+    },
+    {
+      "tag": "firefox",
+      "name": "Mozilla Firefox",
+      "renderingEngine": "Gecko"
+    },
+    {
+      "tag": "opera",
+      "name": "Opera",
+      "renderingEngine": "Blink"
+    },
+    {
+      "tag": "edge",
+      "name": "Microsoft Edge",
+      "renderingEngine": "Blink"
+    },
+    {
+      "tag": "samsung",
+      "name": "Samsung Internet",
+      "renderingEngine": "Blink"
+    },
+    {
+      "tag": "safari",
+      "name": "Apple Safari",
+      "renderingEngine": "WebKit"
+    }
+  ],
+  "api": [
+    {
+      "tag": "layout",
+      "name": "Layout API",
+      "spec": "https://drafts.css-houdini.org/css-layout-api/",
+      "demos": "https://github.com/GoogleChromeLabs/houdini-samples/tree/master/layout-worklet",
+      "explainer": "https://github.com/w3c/css-houdini-drafts/blob/master/css-layout-api/EXPLAINER.md",
+      "status": "fpwd"
+    },
+    {
+      "tag": "painting",
+      "name": "Paint API",
+      "spec": "https://drafts.css-houdini.org/css-paint-api/",
+      "demos": "https://github.com/GoogleChrome/houdini-samples/tree/master/paint-worklet",
+      "explainer": "https://github.com/w3c/css-houdini-drafts/blob/master/css-paint-api/EXPLAINER.md",
+      "article": "https://developers.google.com/web/updates/2018/01/paintapi",
+      "status": "cr"
+    },
+    {
+      "tag": "parser",
+      "name": "Parser API",
+      "spec": "https://drafts.css-houdini.org/css-parser-api/",
+      "explainer": "https://github.com/WICG/CSS-Parser-API/blob/master/README.md",
+      "status": "ed"
+    },
+    {
+      "tag": "propertiesandvalues",
+      "name": "Properties & Values API",
+      "spec": "https://drafts.css-houdini.org/css-properties-values-api/",
+      "demos": "https://github.com/GoogleChromeLabs/houdini-samples/tree/master/properties-and-values/",
+      "article": "https://web.dev/css-props-and-vals/",
+      "status": "wd"
+    },
+    {
+      "tag": "animation",
+      "name": "AnimationWorklet",
+      "explainer": "https://github.com/w3c/css-houdini-drafts/blob/master/css-animationworklet/README.md",
+      "spec": "https://wicg.github.io/animation-worklet/",
+      "demos": "https://github.com/GoogleChrome/houdini-samples/tree/master/animation-worklet",
+      "article": "https://developers.google.com/web/updates/2018/10/animation-worklet",
+      "status": "fpwd"
+    },
+    {
+      "tag": "typedom",
+      "name": "Typed OM",
+      "spec": "https://drafts.css-houdini.org/css-typed-om/",
+      "article": "https://developers.google.com/web/updates/2018/03/cssom",
+      "explainer": "https://github.com/w3c/css-houdini-drafts/blob/master/css-typed-om/README.md",
+      "status": "wd"
+    },
+    {
+      "tag": "fontmetrics",
+      "name": "Font Metrics API",
+      "spec": "https://drafts.css-houdini.org/font-metrics-api-1/",
+      "explainer": "https://github.com/w3c/css-houdini-drafts/blob/master/font-metrics-api/README.md",
+      "status": "ed"
+    }
+  ],
+  "status": {
+    "layout": {
+      "chrome": {
+        "completeness": "partially",
+        "since": "Canary",
+        "has_details": true
+      },
+      "edge": {
+        "completeness": "partially",
+        "since": "Canary",
+        "has_details": true
+      },
+      "opera": {
+        "completeness": "partially",
+        "since": "Developer",
+        "has_details": true
+      },
+      "firefox": {
+        "completeness": "consideration",
+        "has_details": true
+      }
+    },
+    "painting": {
+      "chrome": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Chrome 65"
+      },
+      "edge": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Edge 79"
+      },
+      "opera": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Opera 52"
+      },
+      "firefox": {
+        "completeness": "consideration",
+        "has_details": true
+      },
+      "safari": {
+        "completeness": "development",
+        "has_details": true
+      },
+      "samsung": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Internet 9.2"
+      },
+      "polyfill": {
+        "completeness": "yes",
+        "since": "polyfill"
+      }
+    },
+    "parser": {
+      "completeness": "intent"
+    },
+    "propertiesandvalues": {
+      "chrome": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Chrome 78"
+      },
+      "edge": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Edge 79"
+      },
+      "opera": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Opera 65"
+      },
+      "firefox": {
+        "completeness": "consideration",
+        "has_details": true
+      },
+      "safari": {
+        "completeness": "partially",
+        "has_details": true,
+        "since": "Safari TP 67"
+      },
+      "samsung": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Internet 12.0"
+      }
+    },
+    "typedom": {
+      "chrome": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Chrome 66"
+      },
+      "edge": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Edge 79"
+      },
+      "firefox": {
+        "completeness": "consideration",
+        "has_details": true
+      },
+      "safari": {
+        "completeness": "development",
+        "has_details": true
+      },
+      "samsung": {
+        "completeness": "yes",
+        "has_details": true,
+        "since": "Internet 9.2"
+      },
+      "opera": {
+        "completeness": "yes",
+        "since": "Opera 53",
+        "has_details": true
+      }
+    },
+    "animation": {
+      "chrome": {
+        "completeness": "partially",
+        "has_details": true,
+        "since": "Chrome 71"
+      },
+      "edge": {
+        "completeness": "partially",
+        "since": "Edge 79"
+      },
+      "samsung": {
+        "completeness": "partially",
+        "since": "Internet 10.2 Beta"
+      },
+      "opera": {
+        "completeness": "partially",
+        "since": "Opera 58"
+      }
+    },
+    "fontmetrics": {}
+  }
+}
