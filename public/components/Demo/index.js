@@ -1,5 +1,5 @@
 import { html as parseHtml } from 'htm/preact';
-import { cloneElement, Component, Fragment } from 'preact'
+import { Component } from 'preact'
 import Card from '../Card/index.js'
 import DemoLinks from '../DemoLinks/index.js'
 import CardStyle from '../Card/style.module.css'
@@ -29,6 +29,21 @@ function styleObjectToString(styleObj) {
   return Object.entries(styleObj).map(([key, value]) => `${key}: ${value};`).join("");
 }
 
+const injected = new Map()
+function injectWorkletScript(url) {
+  let p = injected.get(url)
+  if (p) return p
+  p = new Promise((resolve, reject) => {
+    const script = document.createElement("script")
+    script.src = url
+    script.onload = resolve
+    script.onerror = reject
+    document.body.appendChild(script)
+  })
+  injected.set(url, p)
+  return p
+}
+
 export default class Demo extends Component {
   constructor(props) {
     super(props)
@@ -54,9 +69,7 @@ export default class Demo extends Component {
 
   componentDidMount () {
     const { worklet } = this.props
-    const workletScript = document.createElement("script")
-    workletScript.src = worklet.cdnUrl || worklet.workletUrl
-    document.body.appendChild(workletScript)
+    injectWorkletScript(worklet.cdnUrl || worklet.workletUrl)
   }
 
   render() {
