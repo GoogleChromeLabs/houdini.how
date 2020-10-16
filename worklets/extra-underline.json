@@ -27,7 +27,7 @@
         "range": [0, 30]
       }
     },
-    "html": "<h2>Underlined</h2>",
+    "html": "<h2 style='padding: 1rem 1.5rem;'>Underlined</h2>",
     "usage": "background: paint(extra-superUnderline);",
     "author": {
       "name": "@Una",

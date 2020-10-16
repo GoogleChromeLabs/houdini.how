@@ -13,7 +13,7 @@
       },
       "--extra-scallopRadius": {
         "type": "number",
-        "default": "9",
+        "default": "5",
         "range": [0, 20]
       },
       "--extra-scallopWeight": {
@@ -22,7 +22,7 @@
         "range": [0, 20]
       }
     },
-    "html": "<h2>Scalloped</h2>",
+    "html": "<h2 style='padding: 1rem 1.5rem;'>Scalloped</h2>",
     "usage": "background: paint(extra-scallopedBorder);",
     "author": {
       "name": "@Una",

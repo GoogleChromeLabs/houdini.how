@@ -96,7 +96,7 @@
 
 .inputVal {
   display: inline-block;
-  max-width: 4em;
+  max-width: 6em;
   margin: 0 0.25rem 0 1rem;
   padding: 0 0.25rem;
   color: var(--brightBlue);
