@@ -120,7 +120,7 @@ export default class Demo extends Component {
 
     return (
       <Card
-        packageName={packageName}
+        name={packageName}
         authorName={author.name}
         authorLink={author.url}
         authorImg={author.image}

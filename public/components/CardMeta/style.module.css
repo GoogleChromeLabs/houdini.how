@@ -92,6 +92,7 @@
 
 [type="resource"] .meta {
   padding: 2rem 2rem 0;
+  grid-template-columns: 70px 40ch auto;
 }
 
 .meta .title {
