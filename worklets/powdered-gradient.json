@@ -1,0 +1,31 @@
+{
+  "workletName": "Powdered Gradient",
+  "packageName": "powdered-gradient",
+  "npmUrl": "https://www.npmjs.com/package/houdini-powdered-gradient",
+  "workletUrl": "https://unpkg.com/houdini-powdered-gradient@1.0.0/worklet.js",
+  "cdnUrl": "https://unpkg.com/houdini-powdered-gradient@1.0.0/worklet.js",
+  "demoUrl": "https://glitch.com/edit/#!/houdini-powdered-gradient",
+  "tags": ["paint"],
+  "customProps": {
+    "--powdered-gradient-direction" : {
+      "type": "string",
+      "default": "to-top",
+      "options": ["to-bottom", "to-top", "to-right", "to-left"]
+    },
+    "--powdered-gradient-color" : {
+      "type": "color",
+      "default": "#ffffff"
+    },
+    "--powdered-gradient-size": {
+      "type": "number",
+      "default": 1,
+      "range": [1, 30]
+    }
+  },
+  "usage": "background: paint(powdered-gradient), #111",
+  "author": {
+    "name": "@argyleink",
+    "url": "https://twitter.com/argyleink",
+    "image": "https://webdev.imgix.net/images/authors/adamargyle@2x.jpg"
+  }
+}
