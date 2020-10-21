@@ -2,8 +2,8 @@
   "workletName": "Static Gradient",
   "packageName": "static-gradient",
   "npmUrl": "https://www.npmjs.com/package/houdini-static-gradient",
-  "workletUrl": "https://unpkg.com/houdini-static-gradient@1.0.2/static.gradient.worklet.js",
-  "cdnUrl": "https://unpkg.com/houdini-static-gradient@1.0.2/static.gradient.worklet.js",
+  "workletUrl": "https://unpkg.com/houdini-static-gradient@1.1.0/worklet.js",
+  "cdnUrl": "https://unpkg.com/houdini-static-gradient@1.1.0/worklet.js",
   "demoUrl": "https://glitch.com/edit/#!/houdini-static-gradient",
   "tags": ["paint"],
   "customProps": {
