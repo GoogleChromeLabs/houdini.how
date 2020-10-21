@@ -76,7 +76,7 @@ export default class Demo extends Component {
   }
 
   render() {
-    const { workletName, packageName, author, demoUrl, npmUrl, cdnUrl, customProps, usage, tags, html: demoHtml } = this.props.worklet
+    const { packageName, author, demoUrl, npmUrl, cdnUrl, customProps, usage, tags, html: demoHtml } = this.props.worklet
     const { propValues } = this.state
 
     const usageStyles = usageToStyleObject(usage)
@@ -120,7 +120,7 @@ export default class Demo extends Component {
 
     return (
       <Card
-        name={workletName}
+        packageName={packageName}
         authorName={author.name}
         authorLink={author.url}
         authorImg={author.image}
@@ -134,7 +134,7 @@ export default class Demo extends Component {
               {Object.keys(customProps).map(propName => {
                 const definition = customProps[propName]
                 const currentValue = propValues[propName]
-                const id = workletName + propName; // avoids collisions between worklets
+                const id = packageName + propName; // avoids collisions between worklets
                 const setValue = value => {
                   if (value instanceof Event) value = value.target[/check|rad/.test(value.target.type)?'checked':'value']
                   this.setPropValue(propName, value)
