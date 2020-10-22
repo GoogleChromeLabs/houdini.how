@@ -11,6 +11,7 @@ export default class Nav extends Component {
     return (
       <div class={`${style.head} ${style[route.color]}`}>
         <div>
+          <p class={style.superHeader}>Brought to you by <img class={style.webdev} src="../img/webdev.svg" alt="web.dev"></img></p>
           <h1 class={style.logo}>Houdini.how</h1>
           <h2>{route.title}</h2>
         </div>
