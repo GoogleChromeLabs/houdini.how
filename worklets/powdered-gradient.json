@@ -1,6 +1,6 @@
 {
   "workletName": "Powdered Gradient",
-  "packageName": "powdered-gradient",
+  "packageName": "houdini-powdered-gradient",
   "npmUrl": "https://www.npmjs.com/package/houdini-powdered-gradient",
   "workletUrl": "https://unpkg.com/houdini-powdered-gradient@1.0.0/worklet.js",
   "cdnUrl": "https://unpkg.com/houdini-powdered-gradient@1.0.0/worklet.js",

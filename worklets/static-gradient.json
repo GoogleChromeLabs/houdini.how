@@ -1,6 +1,6 @@
 {
   "workletName": "Static Gradient",
-  "packageName": "static-gradient",
+  "packageName": "houdini-static-gradient",
   "npmUrl": "https://www.npmjs.com/package/houdini-static-gradient",
   "workletUrl": "https://unpkg.com/houdini-static-gradient@1.1.0/worklet.js",
   "cdnUrl": "https://unpkg.com/houdini-static-gradient@1.1.0/worklet.js",
