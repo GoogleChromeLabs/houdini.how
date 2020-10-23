@@ -6,62 +6,63 @@ export default function UsagePage() {
     <div>
       <div class={pageStyle.container}>
 
-        <h3>Option 1: Install from npm</h3>
+        <p>Houdini worklets must either be run via a server locally, or on HTTPS in production. In order to work with a Houdini worklet, you will need to either install it locally or use a content delivery network (CDN) like <a href="http://unpkg.com/">unpkg</a> to serve the files. You will then need to register the worklet locally.</p>
 
-        <pre class={style.sh}><code>npm install angled-corners</code></pre>
+        <p>When using Paint worklets, we highly recommend you also use the <a href="https://github.com/GoogleChromeLabs/css-paint-polyfill">CSS Paint Polyfill</a> to ensure that all modern browsers can run the styles seamlessly. Read on for instructions.</p>
 
-        <h3>Option 2: Usage in Bundlers</h3>
+        <h3>Option 1: Install from npm and register</h3>
 
-        <p>Importing this package will register custom properties, but does not automatically inject the paint worklet. To inject the worklet, you'll need to generate a URL that resolves to <code>angled-corners/worklet.js</code>, and register that.</p>
+        <p>Install your worklet from npm:</p>
 
-        <pre class={style.js}><code>
-  import 'angled-corners';
+        <pre class={style.sh}><code dangerouslySetInnerHTML={{ __html: `npm install &lt;package-name&gt;` }}></code></pre>
 
-  // for Webpack:
-  import workletUrl from 'url-loader!angled-corners/worklet.js';
-  CSS.paintWorklet.addModule(workletUrl);
+        <p>Importing this package does not automatically inject the paint worklet. To install the worklet, you'll need to generate a URL that resolves to the package's <code>worklet.js</code>, and register that. You do so with:</p>
 
-  // for Rollup or Parcel:
-  import workletUrl from 'url:angled-corners/worklet.js';
-  CSS.paintWorklet.addModule(workletUrl);
-        </code></pre>
+        <pre class={style.js}><code dangerouslySetInnerHTML={{ __html: `CSS.paintWorklet.addModule(..file-path/worklet.js)` }}></code></pre>
 
-        <p>Alternatively, you can import the single-file bundled version and everything will be done for you. This is easier, but can cause <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">CSP issues</a> since it defines the worklet using a Blob URL.</p>
+        <p>You will be using <code>paintWorklet</code> for paint, <code>layoutWorklet</code> for layout, and <code>animationWorklet</code> for animation worklets respectively.</p>
 
-        <pre class={style.js}><code> import 'angled-corners/standalone.js';</code></pre>
+        <aside>The npm package name and link can be found on each worklet card.</aside>
 
-        <h3>Option 3: Manual usage</h3>
+        <h3>Option 2: Register from unpkg</h3>
 
-        <p>Copy the <code>index.js</code> and <code>worklet.js</code> files from this package into your project, or otherwise make them available at a URL. The <code>index.js</code> module contains main-thread code, registering any custom CSS properties. The <code>worklet.js</code> module then needs to be registered using <code>CSS.paintWorklet.addModule()</code>.</p>
+        <p>When registering from unpkg, you can link directly to the <code>worklet.js</code> file without needing to locally install the worklet. Unpkg will not cause CORS issues, as it is served over HTTPS.</p>
 
-  <pre class={style.html}><code dangerouslySetInnerHTML={{ __html: `&lt;script src="/@npm/angled-corners/index.js"&gt;&lt;/script&gt;
+        <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
+          `CSS.paintWorklet.addModule("https://unpkg.com/&lt;package-name&gt;/worklet.js");`}}></code></pre>
 
-  &lt;script&gt;
-    CSS.paintWorklet.addModule('/@npm/angled-corners/index.js');
-  &lt;/script&gt;` }}>
-    </code></pre>
+        <p>Note that this does not register the custom properties for syntax and fallback values. Instead, they each have fallback values embedded into the worklet.</p>
 
-        <h3>Option 4: Hotlinking from unpkg</h3>
+        <p>To optionally register the custom properties, include the <code>properties.js</code> file as well.</p>
 
-        <p>A single script tag can be used to load and install the worklet from the unpkg CDN. The script will register any custom CSS properties, then automatically register the <code>angled-corners</code> worklet (using the URL <code>https://unpkg.com/angled-corners/worklet.js</code>).</p>
+        <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
+          `&lt;script src="https://unpkg.com/&lt;package-name&gt;/properties.js"&gt;&lt;/script&gt;`}}></code></pre>
 
-        <pre class={style.html}><code dangerouslySetInnerHTML={{ __html: `&lt;script src="https://unpkg.com/angled-corners"&gt;&lt;/script&gt;` }}>
-        </code></pre>
+        <h3>Usage in Bundlers</h3>
 
-        <p>As with bundlers, we can alternatively choose to use a single-file version of the code that includes an inlined copy of the worklet. Because the worklet code is contained in a Blob URL, this can cause <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">CSP issues</a>:</p>
+        <p>Here is an example of how to use Houdini in modern bundlers:</p>
 
-        <pre class={style.html}><code dangerouslySetInnerHTML={{ __html: `&lt;script src="script src="https://unpkg.com/angled-corners/standalone.js"&gt;&lt;/script&gt;` }}>
-        </code></pre>
+        <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
+          `import "&lt;package-name&gt;/properties.js"; // optionally register properties
+import workletURL from "url:&lt;package-name&gt;/worklet.js";
 
-        <h3>Option 5: Loading from unpkg</h3>
+CSS.paintWorklet.addModule(workletURL);`}}></code></pre>
 
-        <p>We can load this package's <code>"module"</code> entry from unpkg to get its main-thread code, which registers any custom CSS properties. In addition, we need to register the worklet file (<code>/worklet.js</code>) separately:</p>
+        <h3>Install the Paint Polyfill</h3>
 
-        <pre class={style.html}><code dangerouslySetInnerHTML={{ __html: `&lt;script type="module"&gt;
-    import 'https://unpkg.com/angled-corners?module';
-    CSS.paintWorklet.addModule('https://unpkg.com/angled-corners/worklet.js');
-  &lt;/script&gt;` }}>
-        </code></pre>
+        <p>As previously mentioned, when using the Paint worklet, you should also include the CSS Paint Polyfill.</p>
+
+        <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
+          `&lt;script src="css-paint-polyfill.js">&lt;/script&gt;
+          
+// or with unpkg:
+&lt;script src="https://unpkg.com/css-paint-polyfill"&gt;&lt;/script&gt;`}}></code></pre>
+
+          <p>With a bundler or ES modules:</p>
+
+          <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
+          `import 'css-paint-polyfill';`}}></code></pre>
+
         </div>
     </div>
   );
