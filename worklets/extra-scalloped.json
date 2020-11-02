@@ -2,7 +2,7 @@
     "workletName": "Scalloped Border",
     "packageName": "extra-scalloped-border",
     "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/extra-scalloped-border/worklet.js",
-    "cdnUrl": "https://unpkg.com/extra-scalloped-border@1.1.1/worklet.js",
+    "cdnUrl": "https://unpkg.com/extra-scalloped-border@1.1.2/worklet.js",
     "npmUrl": "https://www.npmjs.com/package/extra-scalloped-border",
     "demoUrl": "https://codepen.io/una/pen/MRxWgN",
     "tags": ["paint"],
