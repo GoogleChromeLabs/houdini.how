@@ -26,10 +26,10 @@ export default function UsagePage() {
 
         <h3>Option 2: Register from unpkg</h3>
 
-        <p>When registering from unpkg, you can link directly to the <code>worklet.js</code> file without needing to locally install the worklet. Unpkg will not cause CORS issues, as it is served over HTTPS.</p>
+        <p>When registering from unpkg, you can link directly to the <code>worklet.js</code> file without needing to locally install the worklet. Unpkg will resolve to the <code>worklet.js</code> as the main script, or you can specify it yourself. Unpkg will not cause CORS issues, as it is served over HTTPS.</p>
 
         <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
-          `CSS.paintWorklet.addModule("https://unpkg.com/&lt;package-name&gt;/worklet.js");`}}></code></pre>
+          `CSS.paintWorklet.addModule("https://unpkg.com/&lt;package-name&gt;");`}}></code></pre>
 
         <p>Note that this does not register the custom properties for syntax and fallback values. Instead, they each have fallback values embedded into the worklet.</p>
 
@@ -44,7 +44,7 @@ export default function UsagePage() {
 
         <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
           `import "&lt;package-name&gt;/properties.js"; // optionally register properties
-import workletURL from "url:&lt;package-name&gt;/worklet.js";
+import workletURL from "url:&lt;package-name&gt;";
 
 CSS.paintWorklet.addModule(workletURL);`}}></code></pre>
 

@@ -1,8 +1,8 @@
 {
     "workletName": "Scalloped Border",
-    "packageName": "extra-underline",
-    "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/superUnderline/worklet.js",
-    "cdnUrl": "https://unpkg.com/extra-scalloped-border@1.1.0/worklet.js",
+    "packageName": "extra-scalloped-border",
+    "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/extra-scalloped-border/worklet.js",
+    "cdnUrl": "https://unpkg.com/extra-scalloped-border@1.1.1/worklet.js",
     "npmUrl": "https://www.npmjs.com/package/extra-scalloped-border",
     "demoUrl": "https://codepen.io/una/pen/MRxWgN",
     "tags": ["paint"],
