@@ -1,0 +1,21 @@
+{
+  "url": "https://dassur.ma/things/houdini-intro/",
+  "type": "article",
+  "title": "New ways to make your web app jank with Houdini – An introduction",
+  "pubDate": "Feb 1, 2016",
+  "desc": "An introduction to Houdini, what is it and an over view of all the APIs (on the post date).",
+  "tags": [
+    "animation",
+    "font metrics",
+    "layout",
+    "paint",
+    "properties and values",
+    "typed object model",
+    "worklets"
+  ],
+  "author": {
+    "name": "Surma",
+    "url": "https://twitter.com/DasSurma",
+    "image": "https://webdev.imgix.net/images/authors/surma@2x.jpg"
+  }
+}
