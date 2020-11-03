@@ -1,0 +1,13 @@
+{
+  "url": "https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/",
+  "type": "article",
+  "title": "What Houdini Means for Animating Transforms",
+  "pubDate": "Mar 15, 2019",
+  "desc": "I’ve been playing with CSS transforms for over five years and one thing that has always bugged me was that I couldn’t animate the components of a transform chain individually. This article is going to explain the problem, the old workaround, the new magic Houdini solution and, finally, will offer you a feast of eye candy through better looking examples than those used to illustrate concepts.",
+  "tags": ["properties and values"],
+  "author": {
+    "name": "Ana Tudor",
+    "url": "https://twitter.com/anatudor",
+    "image": "https://secure.gravatar.com/avatar/bee436794e066a5423040cf673c7506f?s=400"
+  }
+}
