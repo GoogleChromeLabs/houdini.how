@@ -80,9 +80,9 @@
 .compat li.unsupported {
   opacity: 0.4;
 }
-.compat li.canary,
-.compat li.polyfilled {
-  color: #888;
+.compat li.canary span,
+.compat li.polyfilled span {
+  opacity: 0.6;
 }
 .compat img {
   width: 32px;
