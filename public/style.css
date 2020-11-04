@@ -80,3 +80,26 @@ p {
     font: 90%/1.2 var(--monoType);
   }
 }
+
+body::before {
+  content: '';
+	display: block;
+	position: fixed;
+	left: 0;
+	top: -2px;
+	width: 100%;
+  height: 2px;
+  background: var(--skyBlue);
+  transform: translate(-100%, 0);
+  opacity: 0;
+  z-index: 99;
+}
+body.loading::before {
+  animation: loading 2s forwards 1;
+}
+@keyframes loading {
+	0% { transform: translate(-100%, 0); opacity: 0; }
+	20% { transform: translate(-80%, 2px); opacity: 1; }
+	95% { transform: translate(-5%, 2px); opacity: 1; }
+	100% { transform: translate(0, 0); opacity:0; }
+}
