@@ -57,6 +57,7 @@ async function build() {
     }
     return data;
   });
+  list.sort(() => Math.random() - 0.5);
   fs.writeFileSync('../public/worklet-data.js', `// this file is auto-generated\nexport default ${JSON5.stringify(list, null, 2)}`);
 }
 
