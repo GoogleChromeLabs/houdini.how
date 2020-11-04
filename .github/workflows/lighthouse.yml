@@ -17,6 +17,6 @@ jobs:
       - name: Install
         run: npm ci
       - name: Build
-        run: npm run ci
+        run: npm run build
       - name: LHCI
         run: lhci autorun --upload.target=temporary-public-storage --collect.url="http://localhost:8080" --collect.startServerCommand="npm run serve:prod" --upload.githubAppToken=${{ secrets.LHCI_GITHUB_APP_TOKEN }}
