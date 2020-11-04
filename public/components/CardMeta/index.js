@@ -34,7 +34,7 @@ export default class CardLinks extends Component {
   render(props) {
     return (
     <div class={style.meta} metaType={props.type}>
-      <img class={style.author} src={props.authorImg} alt="" />
+      <img class={style.author} src={props.authorImg} alt="" width="60" height="60" />
       <div class={style.title}>
         <h2 class={style.name}>{props.packageName}</h2>
     <p>by <a href={props.authorLink}>{props.authorName}</a></p>

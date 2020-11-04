@@ -72,7 +72,7 @@ function Browser({ browser, version, supported, polyfillVersion }) {
   }
   return (
     <li class={cl} title={tip}>
-      <img src={logos[browser]} />
+      <img src={logos[browser]} width="32" height="32" />
       <h6>{version}</h6>
     </li>
   )
