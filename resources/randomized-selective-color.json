@@ -1,0 +1,13 @@
+{
+  "url": "https://una.im/random-selective-colors/",
+  "type": "article",
+  "title": "Randomized Selective Color: A Post List Study",
+  "pubDate": "April 27, 2020",
+  "desc": "This post is a study on selective color, by using CSS custom properties, a little bit of JavaScript, and some progressive enhancement with CSS Houdini.",
+  "tags": ["properties and values", "paint"],
+  "author": {
+    "name": "@Una",
+    "url": "https://twitter.com/una",
+    "image": "https://webdev.imgix.net/images/authors/una@2x.jpg"
+  }
+}
