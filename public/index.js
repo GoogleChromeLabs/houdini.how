@@ -20,4 +20,11 @@ self.registerPaint = function(name, painter) {
 	CSS.paintWorklet.addModule(URL.createObjectURL(new Blob([code], {type:'application/javascript'})));
 };
 
-render(<App />, document.body);
+if (typeof window !== 'undefined') {
+  render(<App />, document.body);
+}
+
+export async function prerender(data) {
+  const { prerender } = await import('./lib/prerender.js');
+  return await prerender(<App {...data} />);
+}
