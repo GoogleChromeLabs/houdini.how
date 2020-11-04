@@ -199,7 +199,7 @@ PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
       </span>
       <span class={CardStyle.rangeInputWrap}>
         <input
-          id={id}
+          id={id + '_range'}
           class={CardStyle.rangeSlider}
           type="range"
           min={definition.range && definition.range[0]}
