@@ -33,10 +33,10 @@ export default class Resource extends Component {
         tags={tags}
         type="resource"
       >
-       <a class={style.link} href={url}>
+       <a class={style.link} href={url} target="_blank" title={title}>
          <div class={CardStyle.resourceContainer}>
             <p>{desc && desc}</p>
-            <a href={url} class={style.button}>View {type}</a>
+            <a href={url} class={style.button} target="_blank" title={title}>View {type}</a>
           </div>
         </a>
       </Card>
