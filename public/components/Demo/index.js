@@ -50,11 +50,13 @@ function injectWorkletScript(url) {
   let p = injected.get(url)
   if (p) return p
   p = new Promise((resolve, reject) => {
-    const script = document.createElement("script")
-    script.src = url
-    script.onload = resolve
-    script.onerror = reject
-    document.body.appendChild(script)
+    (window.requestIdleCallback || setTimeout)(() => {
+      const script = document.createElement("script")
+      script.src = url
+      script.onload = resolve
+      script.onerror = reject
+      document.body.appendChild(script)
+    })
   })
   injected.set(url, p)
   return p
