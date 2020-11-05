@@ -184,7 +184,7 @@ const PROPERTY_TYPES = {};
 
 PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
   <li>
-    <label htmlFor={id}>{propName}:</label>
+    <label htmlFor={id} id={id + '_label'}>{propName}:</label>
     <div class={CardStyle.input}>
       <span>
         <input
@@ -200,6 +200,7 @@ PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
       <span class={CardStyle.rangeInputWrap}>
         <input
           id={id + '_range'}
+          aria-labelledby={id + '_label'}
           class={CardStyle.rangeSlider}
           type="range"
           min={definition.range && definition.range[0]}
