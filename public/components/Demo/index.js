@@ -50,11 +50,13 @@ function injectWorkletScript(url) {
   let p = injected.get(url)
   if (p) return p
   p = new Promise((resolve, reject) => {
-    const script = document.createElement("script")
-    script.src = url
-    script.onload = resolve
-    script.onerror = reject
-    document.body.appendChild(script)
+    (window.requestIdleCallback || setTimeout)(() => {
+      const script = document.createElement("script")
+      script.src = url
+      script.onload = resolve
+      script.onerror = reject
+      document.body.appendChild(script)
+    })
   })
   injected.set(url, p)
   return p
@@ -184,7 +186,7 @@ const PROPERTY_TYPES = {};
 
 PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
   <li>
-    <label htmlFor={id}>{propName}:</label>
+    <label htmlFor={id} id={id + '_label'}>{propName}:</label>
     <div class={CardStyle.input}>
       <span>
         <input
@@ -199,7 +201,8 @@ PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
       </span>
       <span class={CardStyle.rangeInputWrap}>
         <input
-          id={id}
+          id={id + '_range'}
+          aria-labelledby={id + '_label'}
           class={CardStyle.rangeSlider}
           type="range"
           min={definition.range && definition.range[0]}

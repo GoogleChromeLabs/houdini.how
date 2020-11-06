@@ -14,7 +14,7 @@
 import Demo from '../components/Demo/index.js'
 import workletData from '../worklet-data.js'
 
-const worklets = Object.values(workletData).sort(() => Math.random()-.5);
+const worklets = Object.values(workletData);
 
 export default function Home() {
   return (

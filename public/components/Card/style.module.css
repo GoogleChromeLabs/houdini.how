@@ -59,18 +59,20 @@
 }
 
 .compat {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 0.5rem 0.4rem;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(34px, 48px));
+  padding: 0.3rem 0.4rem;
   margin: 0;
   list-style: none;
   line-height: 1.4;
 }
 .compat li {
-  flex: 1;
-  color: #555;
+  padding: 0.2rem 0;
+  color: #333;
   font-size: 0.7rem;
+  font-weight: 500;
+  text-align: center;
 }
 .compat li.supported {
   color: #000;
@@ -80,23 +82,33 @@
 }
 .compat li.canary,
 .compat li.polyfilled {
-  color: #888;
+  color: #626262;
 }
 .compat img {
   width: 32px;
   height: 32px;
   margin: 0 .35rem;
 }
-.compat h6 {
-  margin: 0;
-  text-align: center;
-  font-size: 100%;
-  font-weight: 500;
+.compat span {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .compat img {
+    width: 28px;
+    height: 28px;
+    margin: 0 .2rem;
+  }
+  .compat li {
+    font-size: 0.6rem;
+  }
 }
 
 .links {
   margin: 0;
+  flex: 1;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 10px;
   justify-content: flex-end;

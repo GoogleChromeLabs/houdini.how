@@ -13,6 +13,7 @@
 
 import {Component} from 'preact'
 import style from './style.module.css'
+import webdev from 'url:../../img/webdev.svg'
 import { Link, useLoc } from '../../lib/loc.js'
 import { routes } from '../routes.js';
 
@@ -24,7 +25,7 @@ export default class Nav extends Component {
     return (
       <div class={`${style.head} ${style[route.color]}`}>
         <div>
-          <p class={style.superHeader}>Brought to you by <img class={style.webdev} src="img/webdev.svg" alt="web.dev"></img></p>
+          <p class={style.superHeader}>Brought to you by <img class={style.webdev} src={webdev} width="70" height="16" alt="web.dev"></img></p>
           <h1 class={style.logo}>Houdini.how</h1>
           <h2>{route.title}</h2>
         </div>
