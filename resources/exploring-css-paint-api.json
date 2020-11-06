@@ -1,0 +1,13 @@
+{
+  "url": "https://bobrov.dev/blog/exploring-the-css-paint-api/",
+  "type": "article",
+  "title": "Exploring the CSS Paint API",
+  "pubDate": "March 18, 2018",
+  "desc": "CSS Paint API is the first part of the Houdini project that is available in the stable version of the browser. It Google Chrome team added it to Chrome 65 on March 6th. That is why it is an excellent time to try it out and start experimenting. I want you to get started and start own experimenting with it.",
+  "tags": ["paint"],
+  "author": {
+    "name": "Vitalii Bobrov",
+    "url": "https://bobrov.dev/",
+    "image": "https://bobrov.dev/images/authors/bobrov/avatar@2x.webp"
+  }
+}

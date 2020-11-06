@@ -12,9 +12,17 @@
  */
 
 import { Loc, Router } from '../lib/loc.js';
+import { ErrorBoundary } from '../lib/lazy.js';
 import { routes } from './routes.js';
 import Footer from './Footer/index.js';
 import Nav from './Nav/index.js';
+
+function showSpinner() {
+  document.body.classList.add('loading')
+}
+function hideSpinner() {
+  document.body.classList.remove('loading')
+}
 
 export default function App() {
 	return (
@@ -22,11 +30,13 @@ export default function App() {
 			<div class="app">
 				<div>
 					<Nav />
-					<Router>
-						{routes.map(({ Route, url }) => (
-							<Route path={url} />
-						))}
-					</Router>
+          <ErrorBoundary>
+            <Router onLoadStart={showSpinner} onLoadEnd={hideSpinner}>
+              {routes.map(({ Route, url }) => (
+                <Route path={url} />
+              ))}
+            </Router>
+          </ErrorBoundary>
 					<Footer />
 				</div>
 			</div>

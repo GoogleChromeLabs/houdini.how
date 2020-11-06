@@ -1,0 +1,13 @@
+{
+  "url": "https://danielcwilson.com/blog/2018/02/houdini-quickstart/",
+  "type": "article",
+  "title": "A Houdini Quickstart: registerProperty",
+  "pubDate": "February 12, 2018",
+  "desc": "Houdini has been discussed here and there for a few years now, always with the promise that it will open doors we have never had. Want to make a new way to do layout? Houdini. Want to create a new kind of gradient? Houdini.",
+  "tags": ["properties and values"],
+  "author": {
+    "name": "Dan Wilson",
+    "url": "https://danielcwilson.com/",
+    "image": "https://pbs.twimg.com/profile_images/1114319552224157697/YzLjRWop_400x400.png"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
   "scripts": {
-    "build": "npm run -s worklets && npm run -s resources && wmr build",
+    "build": "npm run -s worklets && npm run -s resources && wmr build --prerender",
     "start": "wmr & npm run -s worklets:watch & npm run -s resources:watch",
     "serve:prod": "wmr serve",
     "worklets": "node ./worklets/_build.js",
@@ -10,8 +10,8 @@
     "resources:watch": "node ./resources/_build.js watch"
   },
   "dependencies": {
-    "css-paint-polyfill": "^3.0.1",
-    "wmr": "0.0.10"
+    "css-paint-polyfill": "^3.1.0",
+    "wmr": "0.0.11"
   },
   "devDependencies": {
     "clsx": "^1.1.1",
