@@ -1,0 +1,13 @@
+{
+  "url": "https://developers.google.com/web/updates/2018/03/cssom",
+  "type": "article",
+  "title": "Working with the new CSS Typed Object Model",
+  "pubDate": "March 1, 2018",
+  "desc": "The new CSS Typed Object Model (Typed OM), part of the Houdini effort, expands this worldview by adding types, methods, and a proper object model to CSS values. And in this article Eric explane it through some great examples and comparing it with the current CSSOM.",
+  "tags": ["typed object model"],
+  "author": {
+    "name": "Eric Bidelman",
+    "url": "https://twitter.com/ebidel",
+    "image": "https://developers.google.com/web/images/contributors/ericbidelman.jpg"
+  }
+}
