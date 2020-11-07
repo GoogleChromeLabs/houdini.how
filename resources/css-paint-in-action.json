@@ -1,0 +1,13 @@
+{
+  "url": "https://bobrov.dev/blog/css-paint-in-action-bar-chart/",
+  "type": "article",
+  "title": "CSS Paint in Action: Bar Chart",
+  "pubDate": "Apr 13, 2018",
+  "desc": "Today, with this knowledge arsenal we are going to create data visualizations that could be used in production projects – bar chart. More than 65% of humans are visual learners. Visualization makes it easier to understand, compare, and analyze data. Using CSS Paint API, we can encapsulate all logic related to drawing charts on canvas and expose the high-level declarative interface.",
+  "tags": ["paint"],
+  "author": {
+    "name": "Vitalii Bobrov",
+    "url": "https://bobrov.dev/",
+    "image": "https://bobrov.dev/images/authors/bobrov/avatar@2x.webp"
+  }
+}
