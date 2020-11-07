@@ -1,0 +1,13 @@
+{
+  "url": "https://developers.google.com/web/updates/2016/05/houdini",
+  "type": "article",
+  "title": "CSS Paint API",
+  "pubDate": "January 1, 2018",
+  "desc": "CSS Paint API allows you to programmatically generate an image whenever a CSS property expects an image. Properties like background-image or border-image are usually used with url() to load an image file or with CSS built-in functions like linear-gradient(). Instead of using those, you can now use paint(myPainter) to reference a paint worklet.", 
+  "tags": ["paint"],
+  "author": {
+    "name": "Surma",
+    "url": "https://twitter.com/DasSurma",
+    "image": "https://webdev.imgix.net/images/authors/surma@2x.jpg"
+  }
+}
