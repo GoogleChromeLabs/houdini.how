@@ -1,0 +1,13 @@
+{
+  "url": "https://blog.logrocket.com/new-horizons-in-css-houdini-and-the-paint-api-8b307cf387bb/",
+  "type": "article",
+  "title": "New horizons in CSS: Houdini and the Paint API",
+  "pubDate": "January 9, 2019",
+  "desc": "The way we write CSS is about to change. No, I don’t mean you have to change how you write your styles, but we as developers are about to get a lot more control.", 
+  "tags": ["paint"],
+  "author": {
+    "name": "@Una",
+    "url": "https://twitter.com/una",
+    "image": "https://webdev.imgix.net/images/authors/una@2x.jpg"
+  }
+}
