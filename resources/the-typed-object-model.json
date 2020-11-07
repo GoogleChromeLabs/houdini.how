@@ -1,0 +1,13 @@
+{
+  "url": "https://css-tricks.com/the-typed-object-model/",
+  "type": "article",
+  "title": "The Typed Object Model",
+  "pubDate": "Nov 20, 2019",
+  "desc": "I help write technical documentation and one feature I’ve been writing about this year that has really stood out is the Typed Object Model (or Typed OM). If you haven’t come across it yet you would be forgiven as it’s pretty new.",
+  "tags": ["typed object model"],
+  "author": {
+    "name": "Ruth John",
+    "url": "https://twitter.com/rumyra",
+    "image": "https://pbs.twimg.com/profile_images/820304800478658562/V20lAtva_400x400.jpg"
+  }
+}
