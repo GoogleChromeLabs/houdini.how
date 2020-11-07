@@ -2,7 +2,6 @@
   "url": "https://codersblock.com/blog/say-hello-to-houdini-and-the-css-paint-api/",
   "type": "demo",
   "title": "Hello Houdini",
-  "pubDate": "Mar 7, 2018",
   "desc": "Some demos using Houdini's CSS Paint API.",
   "tags": ["properties and values", "paint"],
   "author": {
