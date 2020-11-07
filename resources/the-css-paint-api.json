@@ -1,0 +1,13 @@
+{
+  "url": "https://css-tricks.com/the-css-paint-api/",
+  "type": "article",
+  "title": "The CSS Paint API",
+  "pubDate": "Jun 12, 2019",
+  "desc": "The CSS Paint API is extremely exciting, not only for what it is, but what it represents, which is the beginning of a very exciting time for CSS. Let’s go over what it is, why we have it and how to start using it.", 
+  "tags": ["paint"],
+  "author": {
+    "name": "Ruth John",
+    "url": "https://twitter.com/rumyra",
+    "image": "https://pbs.twimg.com/profile_images/820304800478658562/V20lAtva_400x400.jpg"
+  }
+}
