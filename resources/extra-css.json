@@ -1,0 +1,12 @@
+{
+  "url": "https://extra-css.netlify.app/",
+  "type": "website",
+  "title": "extra.css",
+  "desc": "A CSS Houdini library for making your site a little more #extra",
+  "tags": ["paint", "properties and values"],
+  "author": {
+    "name": "@Una",
+    "url": "https://twitter.com/una",
+    "image": "https://webdev.imgix.net/images/authors/una@2x.jpg"
+  }
+}
