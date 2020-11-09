@@ -1,0 +1,13 @@
+{
+  "url": "https://aysha.me/2019/08/css-houdini-properties-values-and-the-paint-api/",
+  "type": "article",
+  "title": "CSS Houdini: Properties, Values, and the Paint API",
+  "pubDate": "August 28, 2019",
+  "desc": "You’ve probably heard a lot about the future of Javascript and in this subject, CSS doesn’t really get much love. But exploring CSS Houdini actually gives you more than a glimpse into the future of CSS. One of the most talked about feature of Houdini is its ability to ‘polyfill’ CSS correctly. But after exploring the APIs, I believe Houdini’s potential extends further than that.",
+  "tags": ["properties and values", "paint"],
+  "author": {
+    "name": "Aysha Anggraini",
+    "url": "https://twitter.com/RenettaRenula",
+    "image": "https://pbs.twimg.com/profile_images/1165899229895651328/fdtKNYxK_400x400.jpg"
+  }
+}
