@@ -2,7 +2,7 @@
     "workletName": "Super Underline",
     "packageName": "extra-underline",
     "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/superUnderline/worklet.js",
-    "cdnUrl": "https://unpkg.com/extra-underline@1.2.1/worklet.js",
+    "cdnUrl": "https://unpkg.com/extra-underline/worklet.js",
     "npmUrl": "https://www.npmjs.com/package/extra-underline",
     "demoUrl": "https://codepen.io/una/pen/YMgzzx",
     "tags": ["paint"],

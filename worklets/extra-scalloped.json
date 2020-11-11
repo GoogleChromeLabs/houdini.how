@@ -2,7 +2,7 @@
     "workletName": "Scalloped Border",
     "packageName": "extra-scalloped-border",
     "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/extra-scalloped-border/worklet.js",
-    "cdnUrl": "https://unpkg.com/extra-scalloped-border@1.1.2/worklet.js",
+    "cdnUrl": "https://unpkg.com/extra-scalloped-border/worklet.js",
     "npmUrl": "https://www.npmjs.com/package/extra-scalloped-border",
     "demoUrl": "https://codepen.io/una/pen/MRxWgN",
     "tags": ["paint"],
@@ -19,10 +19,10 @@
       "--extra-scallopWeight": {
         "type": "number",
         "default": "2",
-        "range": [0, 20]
+        "range": [0, 10]
       }
     },
-    "html": "<h2 style='padding: 1rem 1.5rem;'>Scalloped</h2>",
+    "html": "<h2 style='padding: 1.5rem 1.75rem;'>Scalloped</h2>",
     "usage": "background: paint(extra-scallopedBorder);",
     "author": {
       "name": "@Una",
