@@ -87,6 +87,10 @@ export default class Demo extends Component {
   }
 
   componentDidMount() {
+    if (typeof IntersectionObserver === 'undefined') {
+      (window.requestIdleCallback || setTimeout)(this.loadWorklet.bind(this))
+      return
+    }
     this.obs = new IntersectionObserver(entries => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
