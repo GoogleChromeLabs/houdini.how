@@ -2,7 +2,7 @@
   "url": "https://css-houdini-experiments.netlify.app/",
   "type": "website",
   "title": "CSS Houdini Experiments",
-  "desc": "A set of CSS Houdini experiments, including som interactive samples with CSS Paint API and Animation Worklet.",
+  "desc": "A set of CSS Houdini experiments, including some interactive samples with CSS Paint API and Animation Worklet.",
   "tags": ["paint", "animation"],
   "author": {
     "name": "Joan Leon",
