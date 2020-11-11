@@ -22,8 +22,11 @@ export default class Resource extends Component {
 
 	  return (
       <Card
-        name={title}
-        type={type}
+        name={
+          <a href={url} class={style.link} target="_blank">{title}</a>
+        }
+        type="resource"
+        subType={type}
         date={pubDate}
         authorName={author.name}
         authorLink={author.url}
@@ -31,14 +34,15 @@ export default class Resource extends Component {
         url={url}
         desc={desc}
         tags={tags}
-        type="resource"
       >
-       <a class={style.link} href={url} target="_blank" title={title}>
-         <div class={CardStyle.resourceContainer}>
-            <p>{desc && desc}</p>
-            <a href={url} class={style.button} target="_blank" title={title}>View {type}</a>
-          </div>
-        </a>
+        <div class={CardStyle.resourceContainer}>
+          {desc && (
+            <p>
+              <a href={url} class={style.link} target="_blank" title={title}>{desc}</a>
+            </p>
+          )}
+          <a href={url} class={style.button} target="_blank" title={title}>View {type}</a>
+        </div>
       </Card>
 	  )
   }
