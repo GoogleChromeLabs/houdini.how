@@ -1,0 +1,13 @@
+{
+  "url": "https://developers.google.com/web/updates/2018/10/animation-worklet",
+  "type": "article",
+  "title": "Houdini's Animation Worklet",
+  "pubDate": "Octiber 1, 2018",
+  "desc": "Animation Worklet allows you to write imperative animations that run at the device's native frame rate for that extra buttery jank-free smoothness™, make your animations more resilient against main thread jank and are linkable to scroll instead of time.", 
+  "tags": ["animation"],
+  "author": {
+    "name": "Surma",
+    "url": "https://twitter.com/DasSurma",
+    "image": "https://webdev.imgix.net/images/authors/surma@2x.jpg"
+  }
+}
