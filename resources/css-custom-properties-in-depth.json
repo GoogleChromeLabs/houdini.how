@@ -1,0 +1,13 @@
+{
+  "url": "https://bobrov.dev/blog/css-custom-properties-in-depth/",
+  "type": "article",
+  "title": "CSS Custom Properties in Depth",
+  "pubDate": "May 30, 2018",
+  "desc": "CSS Properties and Values API is the part of Houdini project that allows you as developer create own variables to use later in your styles. The idea behind them is pretty similar to variables we have for many years in SASS, LESS or Stylus.",
+  "tags": ["properties and values"],
+  "author": {
+    "name": "Vitalii Bobrov",
+    "url": "https://bobrov.dev/",
+    "image": "https://bobrov.dev/images/authors/bobrov/avatar@2x.webp"
+  }
+}
