@@ -1,0 +1,13 @@
+{
+  "url": "https://css-tricks.com/simple-interactive-pie-chart-with-css-variables-and-houdini-magic/",
+  "type": "article",
+  "title": "Simple Interactive Pie Chart with CSS Variables and Houdini Magic",
+  "pubDate": "August 13, 2018",
+  "desc": "I got the idea for doing something of the kind when I stumbled across this interactive SVG pie chart. While the SVG code is as compact as it gets (a single <circle></circle> element!), using strokes for creating pie chart slices is problematic as we run into rendering issues on Windows for Firefox and Edge.",
+  "tags": ["properties and values"],
+  "author": {
+    "name": "Ana Tudor",
+    "url": "https://twitter.com/anatudor",
+    "image": "https://secure.gravatar.com/avatar/bee436794e066a5423040cf673c7506f?s=400"
+  }
+}
