@@ -19,6 +19,7 @@
 .link {
   text-decoration: none;
   color: initial;
+  display: inline-block;
 }
 
 .resource {

@@ -11,7 +11,8 @@
  * limitations under the License.
  */
 
-import { html as parseHtml } from 'htm/preact';
+import { createRef } from 'preact'
+import { html as parseHtml } from 'htm/preact'
 import { Component } from 'preact'
 import Card from '../Card/index.js'
 import DemoLinks from '../DemoLinks/index.js'
@@ -50,13 +51,11 @@ function injectWorkletScript(url) {
   let p = injected.get(url)
   if (p) return p
   p = new Promise((resolve, reject) => {
-    (window.requestIdleCallback || setTimeout)(() => {
-      const script = document.createElement("script")
-      script.src = url
-      script.onload = resolve
-      script.onerror = reject
-      document.body.appendChild(script)
-    })
+    const script = document.createElement("script")
+    script.src = url
+    script.onload = resolve
+    script.onerror = reject
+    document.body.appendChild(script)
   })
   injected.set(url, p)
   return p
@@ -65,6 +64,8 @@ function injectWorkletScript(url) {
 export default class Demo extends Component {
   constructor(props) {
     super(props)
+
+    this.demoRoot = createRef()
 
     // Set up state values for each custom property
     const propValues = {}
@@ -85,9 +86,36 @@ export default class Demo extends Component {
     })
   }
 
-  componentDidMount () {
+  componentDidMount() {
+    if (typeof IntersectionObserver === 'undefined') {
+      (window.requestIdleCallback || setTimeout)(this.loadWorklet.bind(this))
+      return
+    }
+    this.obs = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          this.loadWorklet()
+          return
+        }
+      }
+    })
+    this.obs.observe(this.demoRoot.current)
+  }
+
+  componentWillUnmount() {
+    if (this.obs) {
+      this.obs.unobserve(this.demoRoot.current)
+      this.obs = null
+    }
+  }
+
+  loadWorklet() {
     const { worklet } = this.props
     injectWorkletScript(worklet.cdnUrl || worklet.workletUrl)
+    if (this.obs) {
+      this.obs.unobserve(this.demoRoot.current)
+      this.obs = null
+    }
   }
 
   render() {
@@ -120,7 +148,7 @@ export default class Demo extends Component {
       for (let p in propValues) {
         props.style += ` ${p}: ${propValues[p]};`
       }
-      props.style = `${props.style ? props.style+'; ' : ''}${styleObjectToString(usageStyles)}`
+      props.style = `${props.style ? props.style.replace(/; *$/,'')+'; ' : ''}${styleObjectToString(usageStyles)}`
       preview = (
         <div class={CardStyle.demoArea}>
           {customPreview}
@@ -142,7 +170,7 @@ export default class Demo extends Component {
         tags={tags}
         type='demo'
       >
-          <div class={CardStyle.demoContainer}>
+          <div ref={this.demoRoot} class={CardStyle.demoContainer}>
             {preview}
             <ol class={CardStyle.customProps}>
               <li>.demo &#123;</li>
