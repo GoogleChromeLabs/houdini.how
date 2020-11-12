@@ -148,7 +148,7 @@ export default class Demo extends Component {
       for (let p in propValues) {
         props.style += ` ${p}: ${propValues[p]};`
       }
-      props.style = `${props.style ? props.style+'; ' : ''}${styleObjectToString(usageStyles)}`
+      props.style = `${props.style ? props.style.replace(/; *$/,'')+'; ' : ''}${styleObjectToString(usageStyles)}`
       preview = (
         <div class={CardStyle.demoArea}>
           {customPreview}

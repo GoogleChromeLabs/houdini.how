@@ -14,14 +14,17 @@
 import { render } from 'preact';
 import App from './components/app.js';
 
-// So... sometimes we load paint worklets on the main thread, which is bad, but this hack copies them into a worklet.
-self.registerPaint = function(name, painter) {
-	const code = `registerPaint(${JSON.stringify(name)}, ${Function.prototype.toString.call(painter)})`;
-	CSS.paintWorklet.addModule(URL.createObjectURL(new Blob([code], {type:'application/javascript'})));
-};
-
 if (typeof window !== 'undefined') {
-  render(<App />, document.body);
+  // So... sometimes we load paint worklets on the main thread, which is bad, but this hack copies them into a worklet.
+  self.registerPaint = function(name, painter) {
+    const code = `registerPaint(${JSON.stringify(name)}, ${Function.prototype.toString.call(painter)})`;
+    CSS.paintWorklet.addModule(URL.createObjectURL(new Blob([code], {type:'application/javascript'})));
+  };
+
+  // ensure the paint polyfill is loaded before rendering:
+  const init = () => render(<App />, document.body);
+  if (self.CSS && self.CSS.paintWorklet) init();
+  else import('css-paint-polyfill').then(init);
 }
 
 export async function prerender(data) {
