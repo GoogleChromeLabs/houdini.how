@@ -1,0 +1,42 @@
+{
+  "workletName": "Parallelo Wow",
+  "packageName": "parallelowow",
+  "workletUrl": "https://raw.githubusercontent.com/malchata/parallelowow/main/parallelowow.js",
+  "cdnUrl": "https://unpkg.com/parallelowow/parallelowow.js",
+  "npmUrl": "https://www.npmjs.com/package/parallelowow",
+  "demoUrl": "http://paintlets.herokuapp.com/",
+  "tags": ["paint"],
+  "customProps": {
+    "--parallelowow-tile-width" : {
+      "type": "number",
+      "default": "40",
+      "range": [10, 100]
+    },
+    "--parallelowow-base-color": {
+      "type": "color",
+      "default": "#cc99ff"
+    },
+    "--parallelowow-color-step" : {
+      "type": "number",
+      "default": "-3",
+      "range": [-20, 20]
+    },
+    "--parallelowow-probability": {
+      "type": "number",
+      "default": "0.25",
+      "range": [0, 1]
+    },
+    "--parallelowow-stroke-weight": {
+      "type": "number",
+      "default": "0.5",
+      "range": [0, 10]
+    }
+  },
+  "html": "",
+  "usage": "background-image: paint(parallelowow);",
+  "author": {
+    "name": "@malchata",
+    "url": "https://twitter.com/malchata",
+    "image": "https://pbs.twimg.com/profile_images/1317503130486132736/Jp5QONa1_400x400.jpg"
+  }
+}
