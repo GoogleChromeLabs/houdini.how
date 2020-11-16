@@ -4,7 +4,7 @@
   "workletUrl": "https://raw.githubusercontent.com/malchata/parallelowow/main/parallelowow.js",
   "cdnUrl": "https://unpkg.com/parallelowow/parallelowow.js",
   "npmUrl": "https://www.npmjs.com/package/parallelowow",
-  "demoUrl": "",
+  "demoUrl": "http://paintlets.herokuapp.com/",
   "tags": ["paint"],
   "customProps": {
     "--parallelowow-tile-width" : {
