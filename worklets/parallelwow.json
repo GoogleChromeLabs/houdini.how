@@ -1,5 +1,5 @@
 {
-  "workletName": "Parallelo Wow",
+  "workletName": "Parallel-o-wow",
   "packageName": "parallelowow",
   "workletUrl": "https://raw.githubusercontent.com/malchata/parallelowow/main/parallelowow.js",
   "cdnUrl": "https://unpkg.com/parallelowow/parallelowow.js",
@@ -14,12 +14,12 @@
     },
     "--parallelowow-base-color": {
       "type": "color",
-      "default": "#cc99ff"
+      "default": "#ff5566"
     },
     "--parallelowow-color-step" : {
       "type": "number",
-      "default": "-3",
-      "range": [-20, 20]
+      "default": "-5",
+      "range": [-10, 10]
     },
     "--parallelowow-probability": {
       "type": "number",
@@ -33,7 +33,7 @@
     }
   },
   "html": "",
-  "usage": "background-image: paint(parallelowow);",
+  "usage": "background: paint(parallelowow), var(--parallelowow-base-color);",
   "author": {
     "name": "@malchata",
     "url": "https://twitter.com/malchata",
