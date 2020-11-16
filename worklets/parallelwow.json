@@ -24,7 +24,8 @@
     "--parallelowow-probability": {
       "type": "number",
       "default": "0.25",
-      "range": [0, 1]
+      "range": [0, 1],
+      "step": "0.05"
     },
     "--parallelowow-stroke-weight": {
       "type": "number",
