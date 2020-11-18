@@ -23,8 +23,9 @@
     },
     "--bytemare-probability": {
       "type": "number",
-      "default": "0.375",
-      "range": [0, 1]
+      "default": "0.4",
+      "range": [0, 0.95],
+      "step": "0.05"
     }
   },
   "html": "",

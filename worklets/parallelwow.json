@@ -18,13 +18,13 @@
     },
     "--parallelowow-color-step" : {
       "type": "number",
-      "default": "-5",
+      "default": "7",
       "range": [-10, 10]
     },
     "--parallelowow-probability": {
       "type": "number",
-      "default": "0.25",
-      "range": [0, 1],
+      "default": "0.6",
+      "range": [0, 0.95],
       "step": "0.05"
     },
     "--parallelowow-stroke-weight": {
