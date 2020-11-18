@@ -19,7 +19,9 @@ import DemoLinks from '../DemoLinks/index.js'
 import CardStyle from '../Card/style.module.css'
 import Compat from '../Compat/index.js'
 
-const normalizeValue = s => s.trim().replace(/;+$/g, '');
+const normalizeValue = s => s.trim().replace(/;+$/g, '')
+
+const toCssPropertyName = s => s[0]=='-' ? s : s.replace(/-[a-z]/, s => s[1].toUpperCase())
 
 function formatUsage(usage) {
   if(typeof usage === "string") {
@@ -33,13 +35,15 @@ function formatUsage(usage) {
 function usageToStyleObject(usage) {
   // If `usage` is an object, we are already done
   if(typeof usage === "object") {
-    return usage;
+    let out = {}
+    for (let i in usage) out[toCssPropertyName(i)] = usage[i]
+    return out
   }
   // If it’s a string, we need to do a bit of processing
   const [prop, ...rest] = usage.split(":")
   return {
-    [prop]: normalizeValue(rest.join(":"))
-  };
+    [toCssPropertyName(prop)]: normalizeValue(rest.join(":"))
+  }
 }
 
 function styleObjectToString(styleObj) {
@@ -52,10 +56,11 @@ function injectWorkletScript(url) {
   if (p) return p
   p = new Promise((resolve, reject) => {
     const script = document.createElement("script")
+    script.async = true;
     script.src = url
     script.onload = resolve
     script.onerror = reject
-    document.body.appendChild(script)
+    document.head.appendChild(script)
   })
   injected.set(url, p)
   return p
@@ -94,7 +99,7 @@ export default class Demo extends Component {
     this.obs = new IntersectionObserver(entries => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          this.loadWorklet()
+          setTimeout(this.loadWorklet.bind(this))
           return
         }
       }
@@ -124,7 +129,7 @@ export default class Demo extends Component {
 
     const usageStyles = usageToStyleObject(usage)
     const demoStyle = {
-      ...propValues,
+      ...usageToStyleObject(propValues),
       ...usageStyles,
     }
 

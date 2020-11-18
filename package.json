@@ -10,8 +10,8 @@
     "resources:watch": "node ./resources/_build.js watch"
   },
   "dependencies": {
-    "css-paint-polyfill": "^3.1.1",
-    "wmr": "0.0.11"
+    "css-paint-polyfill": "^3.1.3",
+    "wmr": "0.0.12"
   },
   "devDependencies": {
     "clsx": "^1.1.1",

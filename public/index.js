@@ -11,23 +11,30 @@
  * limitations under the License.
  */
 
-import { render } from 'preact';
-import App from './components/app.js';
+import { render, hydrate } from 'preact'
+import App from './components/app.js'
 
 if (typeof window !== 'undefined') {
   // So... sometimes we load paint worklets on the main thread, which is bad, but this hack copies them into a worklet.
   self.registerPaint = function(name, painter) {
-    const code = `registerPaint(${JSON.stringify(name)}, ${Function.prototype.toString.call(painter)})`;
-    CSS.paintWorklet.addModule(URL.createObjectURL(new Blob([code], {type:'application/javascript'})));
-  };
+    const code = `registerPaint(${JSON.stringify(name)}, ${Function.prototype.toString.call(painter)})`
+    CSS.paintWorklet.addModule(URL.createObjectURL(new Blob([code], {type:'application/javascript'})))
+  }
 
+  const init = () => {
+    // hydrate if the page was pre-rendered: (in prod)
+    if (document.querySelector('.app')) {
+      hydrate(<App />, document.body)
+    } else {
+      render(<App />, document.body)
+    }
+  }
   // ensure the paint polyfill is loaded before rendering:
-  const init = () => render(<App />, document.body);
-  if (self.CSS && self.CSS.paintWorklet) init();
-  else import('css-paint-polyfill').then(init);
+  if (self.CSS && self.CSS.paintWorklet) init()
+  else import('css-paint-polyfill').then(init)
 }
 
 export async function prerender(data) {
-  const { prerender } = await import('./lib/prerender.js');
-  return await prerender(<App {...data} />);
+  const { prerender } = await import('./lib/prerender.js')
+  return await prerender(<App {...data} />)
 }
