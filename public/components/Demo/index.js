@@ -229,6 +229,7 @@ PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
           min={definition.range && definition.range[0]}
           max={definition.range && definition.range[1]}
           value={value}
+          step={definition.step ? definition.step : 1}
           onChange={setValue}
         />
       </span>
@@ -241,6 +242,7 @@ PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
           min={definition.range && definition.range[0]}
           max={definition.range && definition.range[1]}
           value={value}
+          step={definition.step ? definition.step : 1}
           onInput={setValue}
         />
       </span>

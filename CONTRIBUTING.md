@@ -27,8 +27,9 @@ To contribute a Houdini worklet, create a new file within `worklets/`. The infor
   "customProps": {
     "<propertyName>" : {
       "type": "number",  // property type (string, number, color, percentage, etc.)
-      "default": 30,  // default property value
-      "range": [0, 100]  // array of property range
+      "default": "30",  // default property value
+      "range": [0, 100],  // array of property range
+      "step": "0.5" // if type is number you can define the step value (optional, default value is 1)
       }
       // ...
   },
