@@ -124,7 +124,7 @@ export default class Demo extends Component {
   }
 
   render() {
-    const { packageName, author, demoUrl, npmUrl, cdnUrl, customProps, usage, tags, html: demoHtml } = this.props.worklet
+    const { packageName, author, demoUrl, npmUrl, cdnUrl, customProps, usage, tags, html: demoHtml, note } = this.props.worklet
     const { propValues } = this.state
 
     const usageStyles = usageToStyleObject(usage)
@@ -174,6 +174,7 @@ export default class Demo extends Component {
         authorImg={author.image}
         tags={tags}
         type='demo'
+        note={note}
       >
           <div ref={this.demoRoot} class={CardStyle.demoContainer}>
             {preview}
@@ -209,6 +210,7 @@ export default class Demo extends Component {
             <Compat {...this.props.worklet.compat} />
             <DemoLinks name={packageName} demoUrl={demoUrl} npmUrl={npmUrl} cdnUrl={cdnUrl}/>
           </footer>
+          {note && <span class={CardStyle.note} dangerouslySetInnerHTML={{ __html: note }}></span>}
       </Card>
       )
     }

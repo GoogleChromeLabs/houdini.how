@@ -6,6 +6,7 @@
   "cdnUrl": "https://unpkg.com/angled-corners",
   "demoUrl": "https://glitch.com/~angled-corners",
   "tags": ["paint"],
+  "note": "Note: Partial demo for compatibility. For full effect using arguments, view <a href='https://glitch.com/~angled-corners'>Demo</a> with Experimental Web Platform Features flag on.",
   "customProps": {
     "--corner-radius": {
       "type": "string",
@@ -19,11 +20,6 @@
       "type": "number",
       "default": "4",
       "range": [0, 15]
-    },
-    "--fill-type": {
-      "type": "string",
-      "default": "outlined",
-      "options": ["filled", "outlined"]
     }
   },
   "usage": {

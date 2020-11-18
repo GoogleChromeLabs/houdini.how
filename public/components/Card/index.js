@@ -17,7 +17,7 @@ import CardMeta from '../CardMeta/index.js'
 export default function Card(props) {
   return (
     <div class={style.container} type={props.type} >
-      <CardMeta authorImg={props.authorImg} authorName={props.authorName} authorLink={props.authorLink} packageName={props.name} type={props.type} tags={props.tags} date={props.date}/>
+      <CardMeta authorImg={props.authorImg} authorName={props.authorName} authorLink={props.authorLink} packageName={props.name} type={props.type} tags={props.tags} date={props.date} note={props.note}/>
       <div class={style.card}>
         {props.children}
       </div>
