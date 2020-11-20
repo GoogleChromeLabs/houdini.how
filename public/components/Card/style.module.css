@@ -291,6 +291,18 @@
   max-width: 46ch;;
 }
 
+.note {
+  position: absolute;
+  font-size: 14px;
+  text-align: right;
+  top: calc(100% + 0.5rem);
+  right: 0.5rem;
+  max-width: 450px;
+  color:dimgray;
+  font-style: italic;
+  line-height: 1;
+}
+
 @media (max-width: 900px) {
   [type="demo"] .card {
     width: calc(100% - 4rem);
