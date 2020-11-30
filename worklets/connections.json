@@ -1,0 +1,48 @@
+{
+  "workletName": "Connections",
+  "packageName": "css-houdini-connections",
+  "npmUrl": "https://www.npmjs.com/package/css-houdini-connections",
+  "workletUrl": "https://unpkg.com/css-houdini-connections/dist/connections.js",
+  "cdnUrl": "https://unpkg.com/css-houdini-connections/dist/connections.js",
+  "demoUrl": "https://codepen.io/nucliweb/pen/yLJdroy",
+  "tags": ["paint"],
+  "customProps": {
+    "--connections-particleColor": {
+      "type": "color",
+      "default": "#96b4c8"
+    },
+    "--connections-lineColor": {
+      "type": "color",
+      "default": "#96b4c8"
+    },
+    "--connections-particleAmount": {
+      "type": "number",
+      "default": "100",
+      "range": [80, 400],
+      "step": "10"
+    },
+    "--connections-defaultRadius": {
+      "type": "number",
+      "default": 2,
+      "range": [1, 5],
+      "step": "1"
+    },
+    "--connections-variantRadius": {
+      "type": "number",
+      "default": 3,
+      "range": [1, 5],
+      "step": "1"
+    },
+    "--connections-linkRadius": {
+      "type": "number",
+      "default": 60,
+      "range": [0, 120]
+    }
+  },
+  "usage": "background: paint(connections)",
+  "author": {
+    "name": "@nucliweb",
+    "url": "https://twitter.com/nucliweb",
+    "image": "https://user-images.githubusercontent.com/1307927/98723604-e6d75080-2392-11eb-9511-dac2fb1040ba.JPG"
+  }
+}
