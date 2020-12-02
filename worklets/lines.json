@@ -1,0 +1,35 @@
+{
+  "workletName": "Lines",
+  "packageName": "css-houdini-lines",
+  "npmUrl": "https://www.npmjs.com/package/css-houdini-lines",
+  "workletUrl": "https://unpkg.com/css-houdini-lines/dist/lines.js",
+  "cdnUrl": "https://unpkg.com/css-houdini-lines/dist/lines.js",
+  "demoUrl": "https://codepen.io/nucliweb/pen/abmzjjK",
+  "tags": ["paint"],
+  "customProps": {
+    "--lines-colors": {
+      "type": "string",
+      "default": "#f94144, #f3722c, #f8961e, #f9844a, #f9c74f, #90be6d, #43aa8b, #4d908e, #577590, #277da1"
+    },
+    "--lines-widths": {
+      "type": "string",
+      "default": "10, 2, 3, 8"
+    },
+    "--lines-gaps": {
+      "type": "string",
+      "default": "20, 4, 3, 7"
+    },
+    "--lines-rotate": {
+      "type": "number",
+      "default": 78,
+      "range": [0, 360],
+      "step": "1"
+    }
+  },
+  "usage": "background: paint(lines)",
+  "author": {
+    "name": "@nucliweb",
+    "url": "https://twitter.com/nucliweb",
+    "image": "https://user-images.githubusercontent.com/1307927/98723604-e6d75080-2392-11eb-9511-dac2fb1040ba.JPG"
+  }
+}
