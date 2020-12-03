@@ -46,6 +46,8 @@ To contribute a Houdini worklet, create a new file within `worklets/`. The infor
       "name": "author name to appear on site",
       "url": "link to author's website or other social page",
       "image": "link to author's avatar image"
+      // Copy the avatar image to `public/assets/images` folder
+      // e.g. "image": "/assets/images/una.jpg"
   }
 }
 ```
@@ -70,6 +72,8 @@ To contribute a Houdini resource, create a new file within `resources/`. The inf
     "name": "<author name to appear on site>",
     "url": "<link to author's website or other social page>",
     "image": "<link to author's avatar image>"
+    // Copy the avatar image to `public/assets/images` folder
+    // e.g. "image": "/assets/images/una.jpg"
   }
 }
 ```
