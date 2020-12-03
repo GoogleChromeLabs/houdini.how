@@ -21,7 +21,7 @@
     },
     "--lines-rotate": {
       "type": "number",
-      "default": 78,
+      "default": 200,
       "range": [0, 360],
       "step": "1"
     }
