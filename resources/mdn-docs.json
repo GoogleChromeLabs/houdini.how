@@ -3,11 +3,11 @@
   "type": "article",
   "title": "CSS Houdini MDN Web Docs",
   "pubDate": "October 2, 2019",
-  "desc": "An overview of CSS Houdini capabilities and APIs on the Mozilla Developer Network. This series of articles goes over the advantages of Houdini, its various APIs, and other topics.", 
+  "desc": "An overview of CSS Houdini capabilities and APIs on the Mozilla Developer Network. This series of articles goes over the advantages of Houdini, its various APIs, and other topics.",
   "tags": ["typed object model", "properties and values", "paint", "layout"],
   "author": {
     "name": "Estelle Weyl",
     "url": "https://twitter.com/estellevw",
-    "image": "https://avatars0.githubusercontent.com/u/69888?v=4"
+    "image": "/assets/images/estellevw.png"
   }
 }

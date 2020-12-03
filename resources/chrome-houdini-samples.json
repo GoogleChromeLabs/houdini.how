@@ -2,11 +2,11 @@
   "url": "https://googlechromelabs.github.io/houdini-samples/",
   "type": "demo",
   "title": "Chrome Labs Houdini Samples",
-  "desc": "Sample repo of Houdini paint, layout, and animation demos from the Google Chrome Labs team.", 
+  "desc": "Sample repo of Houdini paint, layout, and animation demos from the Google Chrome Labs team.",
   "tags": ["properties and values", "paint", "layout", "animation"],
   "author": {
     "name": "Surma",
     "url": "https://twitter.com/DasSurma",
-    "image": "https://webdev.imgix.net/images/authors/surma@2x.jpg"
+    "image": "/assets/images/DasSurma.jpg"
   }
 }

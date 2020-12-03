@@ -3,11 +3,11 @@
   "type": "article",
   "title": "@property: giving superpowers to CSS variables",
   "pubDate": "July 21, 2020",
-  "desc": "The Properties and Values API supercharges your CSS custom properties (also commonly referred to as CSS variables) by giving them semantic meaning (defined by a syntax) and even fallback values, enabling CSS testing.", 
+  "desc": "The Properties and Values API supercharges your CSS custom properties (also commonly referred to as CSS variables) by giving them semantic meaning (defined by a syntax) and even fallback values, enabling CSS testing.",
   "tags": ["typed object model", "properties and values"],
   "author": {
     "name": "@Una",
     "url": "https://twitter.com/una",
-    "image": "https://webdev.imgix.net/images/authors/una@2x.jpg"
+    "image": "/assets/images/una.jpg"
   }
 }

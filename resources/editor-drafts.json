@@ -3,11 +3,17 @@
   "type": "article",
   "title": "CSSWG Houdini Editor Drafts",
   "pubDate": "March 19, 2020",
-  "desc": "The full set of CSS-TAG Houdini Editor Drafts. Current drafts include Box Tree API 1, Animation Worklet 1, Layout API 1, Painting API 1, Parser API 1, Properties and Values API 1, Typed OM 1, Typed OM 2, Font Metrics API 1, and Worklets 1.", 
-  "tags": ["typed object model", "properties and values", "paint", "layout", "animation"],
+  "desc": "The full set of CSS-TAG Houdini Editor Drafts. Current drafts include Box Tree API 1, Animation Worklet 1, Layout API 1, Painting API 1, Parser API 1, Properties and Values API 1, Typed OM 1, Typed OM 2, Font Metrics API 1, and Worklets 1.",
+  "tags": [
+    "typed object model",
+    "properties and values",
+    "paint",
+    "layout",
+    "animation"
+  ],
   "author": {
     "name": "W3C",
     "url": "https://www.w3.org/",
-    "image": "https://kma.global/wp-content/uploads/2020/02/w3c-logo-1200x802.png"
+    "image": "/assets/images/w3c.jpg"
   }
 }

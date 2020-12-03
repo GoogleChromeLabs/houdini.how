@@ -1,7 +1,8 @@
 {
   "version": "0.0.1",
   "scripts": {
-    "build": "npm run -s worklets && npm run -s resources && wmr build --prerender",
+    "assets": "cp -rf public/assets dist/",
+    "build": "npm run -s worklets && npm run -s resources && npm run -s assets && wmr build --prerender",
     "start": "wmr & npm run -s worklets:watch & npm run -s resources:watch",
     "serve:prod": "wmr serve",
     "worklets": "node ./worklets/_build.js",

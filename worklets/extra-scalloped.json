@@ -1,32 +1,32 @@
 {
-    "workletName": "Scalloped Border",
-    "packageName": "extra-scalloped-border",
-    "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/extra-scalloped-border/worklet.js",
-    "cdnUrl": "https://unpkg.com/extra-scalloped-border/worklet.js",
-    "npmUrl": "https://www.npmjs.com/package/extra-scalloped-border",
-    "demoUrl": "https://codepen.io/una/pen/MRxWgN",
-    "tags": ["paint"],
-    "customProps": {
-      "--extra-scallopColor": {
-        "type": "color",
-        "default": "#00eeff"
-      },
-      "--extra-scallopRadius": {
-        "type": "number",
-        "default": "5",
-        "range": [0, 20]
-      },
-      "--extra-scallopWeight": {
-        "type": "number",
-        "default": "2",
-        "range": [0, 10]
-      }
+  "workletName": "Scalloped Border",
+  "packageName": "extra-scalloped-border",
+  "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/extra-scalloped-border/worklet.js",
+  "cdnUrl": "https://unpkg.com/extra-scalloped-border/worklet.js",
+  "npmUrl": "https://www.npmjs.com/package/extra-scalloped-border",
+  "demoUrl": "https://codepen.io/una/pen/MRxWgN",
+  "tags": ["paint"],
+  "customProps": {
+    "--extra-scallopColor": {
+      "type": "color",
+      "default": "#00eeff"
     },
-    "html": "<h2 style='padding: 1.5rem 1.75rem;'>Scalloped</h2>",
-    "usage": "background: paint(extra-scallopedBorder);",
-    "author": {
-      "name": "@Una",
-      "url": "https://twitter.com/una",
-      "image": "https://webdev.imgix.net/images/authors/una@2x.jpg"
+    "--extra-scallopRadius": {
+      "type": "number",
+      "default": "5",
+      "range": [0, 20]
+    },
+    "--extra-scallopWeight": {
+      "type": "number",
+      "default": "2",
+      "range": [0, 10]
     }
+  },
+  "html": "<h2 style='padding: 1.5rem 1.75rem;'>Scalloped</h2>",
+  "usage": "background: paint(extra-scallopedBorder);",
+  "author": {
+    "name": "@Una",
+    "url": "https://twitter.com/una",
+    "image": "/assets/images/una.jpg"
   }
+}

@@ -1,37 +1,37 @@
 {
-    "workletName": "Super Underline",
-    "packageName": "extra-underline",
-    "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/superUnderline/worklet.js",
-    "cdnUrl": "https://unpkg.com/extra-underline/worklet.js",
-    "npmUrl": "https://www.npmjs.com/package/extra-underline",
-    "demoUrl": "https://codepen.io/una/pen/YMgzzx",
-    "tags": ["paint"],
-    "customProps": {
-      "--extra-underlineNumber": {
-        "type": "number",
-        "default": "3",
-        "range": [0, 30]
-      },
-      "--extra-underlineColor": {
-        "type": "color",
-        "default": "#fa8072"
-      },
-      "--extra-underlineWidth": {
-        "type": "number",
-        "default": "1",
-        "range": [0, 15]
-      },
-      "--extra-underlineSpread": {
-        "type": "number",
-        "default": "15",
-        "range": [0, 30]
-      }
+  "workletName": "Super Underline",
+  "packageName": "extra-underline",
+  "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/superUnderline/worklet.js",
+  "cdnUrl": "https://unpkg.com/extra-underline/worklet.js",
+  "npmUrl": "https://www.npmjs.com/package/extra-underline",
+  "demoUrl": "https://codepen.io/una/pen/YMgzzx",
+  "tags": ["paint"],
+  "customProps": {
+    "--extra-underlineNumber": {
+      "type": "number",
+      "default": "3",
+      "range": [0, 30]
     },
-    "html": "<h2 style='padding: 1rem 1.5rem;'>Underlined</h2>",
-    "usage": "background: paint(extra-superUnderline);",
-    "author": {
-      "name": "@Una",
-      "url": "https://twitter.com/una",
-      "image": "https://webdev.imgix.net/images/authors/una@2x.jpg"
+    "--extra-underlineColor": {
+      "type": "color",
+      "default": "#fa8072"
+    },
+    "--extra-underlineWidth": {
+      "type": "number",
+      "default": "1",
+      "range": [0, 15]
+    },
+    "--extra-underlineSpread": {
+      "type": "number",
+      "default": "15",
+      "range": [0, 30]
     }
+  },
+  "html": "<h2 style='padding: 1rem 1.5rem;'>Underlined</h2>",
+  "usage": "background: paint(extra-superUnderline);",
+  "author": {
+    "name": "@Una",
+    "url": "https://twitter.com/una",
+    "image": "/assets/images/una.jpg"
   }
+}

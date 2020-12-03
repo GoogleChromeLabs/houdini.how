@@ -3,11 +3,11 @@
   "type": "article",
   "title": "Houdini: Demystifying CSS",
   "pubDate": "May 19, 2016",
-  "desc": "The Houdini task force consists of engineers from Mozilla, Apple, Opera, Microsoft, HP, Intel and Google working together to expose certain parts of the CSS engine to web developers with the goal to get them accepted by the W3C to become actual web standards.", 
+  "desc": "The Houdini task force consists of engineers from Mozilla, Apple, Opera, Microsoft, HP, Intel and Google working together to expose certain parts of the CSS engine to web developers with the goal to get them accepted by the W3C to become actual web standards.",
   "tags": ["typed object model", "paint"],
   "author": {
     "name": "Surma",
     "url": "https://twitter.com/DasSurma",
-    "image": "https://webdev.imgix.net/images/authors/surma@2x.jpg"
+    "image": "/assets/images/DasSurma.jpg"
   }
 }
