@@ -1,0 +1,36 @@
+{
+    "workletName": "Avatar Polygon",
+    "packageName": "houdini-avatar-polygon",
+    "cdnUrl": "https://unpkg.com/houdini-avatar-polygon",
+    "npmUrl": "https://www.npmjs.com/package/houdini-avatar-polygon",
+    "demoUrl": "https://css-houdini.rocks/avatar-polygons",
+    "tags": ["paint"],
+    "customProps": {
+      "--polygon-bg": {
+        "type": "color",
+        "default": "#a8e1ff"
+      },
+      "--avatar-sides": {
+        "type": "number",
+        "default": "6",
+        "range": [3, 12]
+      },
+      "--avatar-angle": {
+        "type": "number",
+        "default": "0",
+        "range": [0, 360]
+      }
+    },
+    "html": "<h2>Hello!</h2>",
+    "usage": {
+      "padding": "3rem",
+      "background": "var(--polygon-bg)",
+      "-webkit-mask-image": "paint(avatar-polygon)",
+      "mask-image": "paint(avatar-polygon)"
+    },
+    "author": {
+      "name": "@iamvdo",
+      "url": "https://twitter.com/iamvdo",
+      "image": "https://pbs.twimg.com/profile_images/430504040682631168/5DOoz-Yx_400x400.png"
+    }
+  }
