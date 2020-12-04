@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "css-paint-polyfill": "^3.1.4",
-    "wmr": "0.0.12"
+    "preact-iso": "^0.2.0",
+    "wmr": "^1.0.0"
   },
   "devDependencies": {
     "clsx": "^1.1.1",

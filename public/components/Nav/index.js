@@ -11,11 +11,12 @@
  * limitations under the License.
  */
 
-import {Component} from 'preact'
+import { Component } from 'preact'
 import style from './style.module.css'
 import webdev from 'url:../../img/webdev.svg'
-import { Link, useLoc } from '../../lib/loc.js'
-import { routes } from '../routes.js';
+import { useLoc } from 'preact-iso/router'
+import { Link } from '../link.js'
+import { routes } from '../routes.js'
 
 export default class Nav extends Component {
   render(props) {

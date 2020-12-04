@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 
-import { render, hydrate } from 'preact'
+import hydrate from 'preact-iso/hydrate'
 import App from './components/app.js'
 
 if (typeof window !== 'undefined') {
@@ -21,20 +21,16 @@ if (typeof window !== 'undefined') {
     CSS.paintWorklet.addModule(URL.createObjectURL(new Blob([code], {type:'application/javascript'})))
   }
 
-  const init = () => {
-    // hydrate if the page was pre-rendered: (in prod)
-    if (document.querySelector('.app')) {
-      hydrate(<App />, document.body)
-    } else {
-      render(<App />, document.body)
-    }
+  function init() {
+    hydrate(<App />)
   }
+
   // ensure the paint polyfill is loaded before rendering:
   if (self.CSS && self.CSS.paintWorklet) init()
   else import('css-paint-polyfill').then(init)
 }
 
 export async function prerender(data) {
-  const { prerender } = await import('./lib/prerender.js')
-  return await prerender(<App {...data} />)
+  const { default: prerender } = await import('preact-iso/prerender')
+  return prerender(<App {...data} />)
 }
