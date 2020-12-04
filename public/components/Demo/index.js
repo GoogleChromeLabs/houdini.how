@@ -21,12 +21,12 @@ import Compat from '../Compat/index.js'
 
 const normalizeValue = s => s.trim().replace(/;+$/g, '')
 
-const cssToJsProperty = s => s[0]==='-' ? s : s.replace(/-[a-z]/, s => s[1].toUpperCase())
+const cssToJsProperty = s => s[0] === '-' ? s : s.replace(/-[a-z]/, s => s[1].toUpperCase())
 
-const jsToCssProperty = s => s[0]==='-' ? s : s.replace(/([A-Z])/g, '-$1').toLowerCase()
+const jsToCssProperty = s => s[0] === '-' ? s : s.replace(/([A-Z])/g, '-$1').toLowerCase();
 
 function formatUsage(usage) {
-  if(typeof usage === "string") {
+  if (typeof usage === "string") {
     return <li>{usage}</li>
   }
   return <>
@@ -36,14 +36,8 @@ function formatUsage(usage) {
 
 function usageToStyleObject(usage) {
   // If `usage` is an object, we are already done
-  if(typeof usage === "object") {
-<<<<<<< HEAD
-    let out = {}
-    for (let i in usage) out[cssToJsProperty(i)] = usage[i]
-    return out
-=======
+  if (typeof usage === "object") {
     return usage
->>>>>>> add tooltip worklet and fix mmultiline usage
   }
   // If it’s a string, we need to do a bit of processing
   const [prop, ...rest] = usage.split(":")
@@ -62,14 +56,14 @@ function injectWorkletScript(url, type = 'worklet') {
   if (p) return p
   switch (type) {
     case 'script':
-        p = new Promise((resolve, reject) => {
-          const script = document.createElement("script")
-          script.async = true;
-          script.src = url
-          script.onload = resolve
-          script.onerror = reject
-          document.head.appendChild(script)
-        })
+      p = new Promise((resolve, reject) => {
+        const script = document.createElement("script")
+        script.async = true;
+        script.src = url
+        script.onload = resolve
+        script.onerror = reject
+        document.head.appendChild(script)
+      })
       break;
 
     case 'worklet':
@@ -173,7 +167,7 @@ export default class Demo extends Component {
       for (let p in propValues) {
         props.style += ` ${jsToCssProperty(p)}: ${propValues[p]};`
       }
-      props.style = `${props.style ? props.style.replace(/; *$/,'')+'; ' : ''}${styleObjectToString(usageStyles)}`
+      props.style = `${props.style ? props.style.replace(/; *$/, '') + '; ' : ''}${styleObjectToString(usageStyles)}`
       preview = (
         <div class={CardStyle.demoArea}>
           {customPreview}
@@ -196,44 +190,44 @@ export default class Demo extends Component {
         type='demo'
         note={note}
       >
-          <div ref={this.demoRoot} class={`${CardStyle.demoContainer}${isLoaded ? '' : ` ${CardStyle.loading}`}`}>
-            {preview}
-            <ol class={CardStyle.customProps}>
-              <li>.demo &#123;</li>
-              {Object.keys(customProps).map(propName => {
-                const definition = customProps[propName]
-                const currentValue = propValues[propName]
-                const id = packageName + propName; // avoids collisions between worklets
-                const setValue = value => {
-                  if (value instanceof Event) value = value.target[/check|rad/.test(value.target.type)?'checked':'value']
-                  this.setPropValue(propName, value)
-                }
+        <div ref={this.demoRoot} class={CardStyle.demoContainer}>
+          {preview}
+          <ol class={CardStyle.customProps}>
+            <li>.demo &#123;</li>
+            {Object.keys(customProps).map(propName => {
+              const definition = customProps[propName]
+              const currentValue = propValues[propName]
+              const id = packageName + propName; // avoids collisions between worklets
+              const setValue = value => {
+                if (value instanceof Event) value = value.target[/check|rad/.test(value.target.type) ? 'checked' : 'value']
+                this.setPropValue(propName, value)
+              }
 
-                let EditorComponent = PROPERTY_TYPES[definition.type] || PROPERTY_TYPES.default
-                if (definition.options) EditorComponent = PROPERTY_TYPES.options;
+              let EditorComponent = PROPERTY_TYPES[definition.type] || PROPERTY_TYPES.default
+              if (definition.options) EditorComponent = PROPERTY_TYPES.options;
 
-                return (
-                  <EditorComponent
-                    id={id}
-                    propName={propName}
-                    value={currentValue}
-                    setValue={setValue}
-                    definition={definition}
-                  />
-                )
-              })}
-              {formatUsage(usage)}
-              <li>&#125;</li>
-            </ol>
-          </div>
-          <footer class={CardStyle.footer}>
-            <Compat {...this.props.worklet.compat} />
-            <DemoLinks name={packageName} demoUrl={demoUrl} npmUrl={npmUrl} cdnUrl={cdnUrl}/>
-          </footer>
-          {note && <span class={CardStyle.note} dangerouslySetInnerHTML={{ __html: note }}></span>}
+              return (
+                <EditorComponent
+                  id={id}
+                  propName={propName}
+                  value={currentValue}
+                  setValue={setValue}
+                  definition={definition}
+                />
+              )
+            })}
+            {formatUsage(usage)}
+            <li>&#125;</li>
+          </ol>
+        </div>
+        <footer class={CardStyle.footer}>
+          <Compat {...this.props.worklet.compat} />
+          <DemoLinks name={packageName} demoUrl={demoUrl} npmUrl={npmUrl} cdnUrl={cdnUrl} />
+        </footer>
+        {note && <span class={CardStyle.note} dangerouslySetInnerHTML={{ __html: note }}></span>}
       </Card>
-      )
-    }
+    )
+  }
 }
 
 // components for each CSS property type
@@ -277,14 +271,14 @@ PROPERTY_TYPES.options = ({ id, propName, value, setValue, definition }) => (
     <label htmlFor={id}>{propName}:</label>
     <div class={CardStyle.input}>
       <select
-          id={id}
-          class={CardStyle.inputVal}
-          value={value}
-          onInput={setValue}
-        >
-          {definition.options.map(option => (
-            <option value={option}>{option}</option>
-          ))}
+        id={id}
+        class={CardStyle.inputVal}
+        value={value}
+        onInput={setValue}
+      >
+        {definition.options.map(option => (
+          <option value={option}>{option}</option>
+        ))}
       </select>
     </div>
   </li>
