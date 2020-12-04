@@ -21,14 +21,16 @@ import Compat from '../Compat/index.js'
 
 const normalizeValue = s => s.trim().replace(/;+$/g, '')
 
-const toCssPropertyName = s => s[0]=='-' ? s : s.replace(/-[a-z]/, s => s[1].toUpperCase())
+const cssToJsProperty = s => s[0]==='-' ? s : s.replace(/-[a-z]/, s => s[1].toUpperCase())
+
+const jsToCssProperty = s => s[0]==='-' ? s : s.replace(/([A-Z])/g, '-$1').toLowerCase();
 
 function formatUsage(usage) {
   if(typeof usage === "string") {
     return <li>{usage}</li>
   }
   return <>
-    {Object.entries(usage).map(([key, value]) => <li>{key}: {normalizeValue(value)};</li>)}
+    {Object.entries(usage).map(([key, value]) => <li>{jsToCssProperty(key)}: {normalizeValue(value)};</li>)}
   </>
 }
 
@@ -36,18 +38,18 @@ function usageToStyleObject(usage) {
   // If `usage` is an object, we are already done
   if(typeof usage === "object") {
     let out = {}
-    for (let i in usage) out[toCssPropertyName(i)] = usage[i]
+    for (let i in usage) out[cssToJsProperty(i)] = usage[i]
     return out
   }
   // If it’s a string, we need to do a bit of processing
   const [prop, ...rest] = usage.split(":")
   return {
-    [toCssPropertyName(prop)]: normalizeValue(rest.join(":"))
+    [cssToJsProperty(prop)]: normalizeValue(rest.join(":"))
   }
 }
 
 function styleObjectToString(styleObj) {
-  return Object.entries(styleObj).map(([key, value]) => `${key}: ${normalizeValue(value)};`).join("")
+  return Object.entries(styleObj).map(([key, value]) => `${jsToCssProperty(key)}: ${normalizeValue(value)};`).join("")
 }
 
 const injected = new Map()
@@ -151,7 +153,7 @@ export default class Demo extends Component {
       props.contenteditable = true;
       props.style = props.style || ''
       for (let p in propValues) {
-        props.style += ` ${p}: ${propValues[p]};`
+        props.style += ` ${jsToCssProperty(p)}: ${propValues[p]};`
       }
       props.style = `${props.style ? props.style.replace(/; *$/,'')+'; ' : ''}${styleObjectToString(usageStyles)}`
       preview = (
