@@ -1,0 +1,44 @@
+{
+    "workletName": "Houdini Tooltip",
+    "packageName": "houdini-tooltip",
+    "cdnUrl": "https://unpkg.com/houdini-tooltip",
+    "npmUrl": "https://www.npmjs.com/package/houdini-tooltip",
+    "demoUrl": "https://css-houdini.rocks/tooltip",
+    "tags": ["paint"],
+    "customProps": {
+      "--tooltip-bg": {
+        "type": "color",
+        "default": "#63efff"
+      },
+      "--tooltip-position": {
+        "type": "percentage",
+        "default": "50%"
+      },
+      "--tooltip-size": {
+        "type": "string",
+        "default": "15px",
+        "range": [0, 30]
+      },
+      "--border-width": {
+        "type": "string",
+        "default": "20px",
+        "range": [0, 30]
+      }
+    },
+    "html": "<h2>Hello!</h2>",
+    "usage": {
+      "padding": "1rem",
+      "background": "var(--tooltip-bg)",
+      "border-bottom": "1px solid transparent",
+      "border-image-slice": "0 0 100% 0",
+      "border-image-width": "var(--border-width)",
+      "border-image-outset": "var(--border-width)",
+      "border-image-source": "paint(tooltip)"
+    },
+    "author": {
+      "name": "@iamvdo",
+      "url": "https://twitter.com/iamvdo",
+      "image": "https://pbs.twimg.com/profile_images/430504040682631168/5DOoz-Yx_400x400.png"
+    }
+  }
+    
