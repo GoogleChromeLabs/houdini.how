@@ -11,11 +11,11 @@
  * limitations under the License.
  */
 
-import lazy from '../lib/lazy.js';
-const HomePage = lazy(() => import('../pages/home.js'));
-const AboutPage = lazy(() => import('../pages/about/index.js'));
-const UsagePage = lazy(() => import('../pages/usage/index.js'));
-const ResourcesPage = lazy(() => import('../pages/resources/index.js'));
+import lazy from 'preact-iso/lazy'
+const HomePage = lazy(() => import('../pages/home.js'))
+const AboutPage = lazy(() => import('../pages/about/index.js'))
+const UsagePage = lazy(() => import('../pages/usage/index.js'))
+const ResourcesPage = lazy(() => import('../pages/resources/index.js'))
 
 
 export const routes = [
@@ -47,4 +47,4 @@ export const routes = [
 		label: 'Resources',
 		Route: ResourcesPage
 	}
-];
+]

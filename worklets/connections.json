@@ -9,15 +9,15 @@
   "customProps": {
     "--connections-particleColor": {
       "type": "color",
-      "default": "#96b4c8"
+      "default": "#142c92"
     },
     "--connections-lineColor": {
       "type": "color",
-      "default": "#96b4c8"
+      "default": "#297bff"
     },
     "--connections-particleAmount": {
       "type": "number",
-      "default": "100",
+      "default": "140",
       "range": [80, 400],
       "step": "10"
     },

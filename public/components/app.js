@@ -11,8 +11,8 @@
  * limitations under the License.
  */
 
-import { Loc, Router } from '../lib/loc.js';
-import { ErrorBoundary } from '../lib/lazy.js';
+import { LocationProvider, Router } from 'preact-iso/router';
+import { ErrorBoundary } from 'preact-iso/lazy';
 import { routes } from './routes.js';
 import Footer from './Footer/index.js';
 import Nav from './Nav/index.js';
@@ -26,7 +26,7 @@ function hideSpinner() {
 
 export default function App() {
 	return (
-		<Loc>
+		<LocationProvider>
 			<div class="app">
 				<div>
 					<Nav />
@@ -40,6 +40,6 @@ export default function App() {
 					<Footer />
 				</div>
 			</div>
-		</Loc>
+		</LocationProvider>
 	);
 }
