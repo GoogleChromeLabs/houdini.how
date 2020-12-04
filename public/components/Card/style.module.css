@@ -271,11 +271,23 @@
 }
 
 .demoContainer {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr;
   border-left: 1px solid #b8b8b8;
   border-right: 1px solid #b8b8b8;
   border-top: 1px solid #b8b8b8;
+}
+
+.demoContainer.loading:before {
+  content: 'Loading...';
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 2px 5px;
+  color: #fff;
+  background: rgba(50,50,50,0.5);
+  z-index: 2;
 }
 
 .resourceContainer {

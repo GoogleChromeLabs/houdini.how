@@ -23,7 +23,7 @@ const normalizeValue = s => s.trim().replace(/;+$/g, '')
 
 const cssToJsProperty = s => s[0]==='-' ? s : s.replace(/-[a-z]/, s => s[1].toUpperCase())
 
-const jsToCssProperty = s => s[0]==='-' ? s : s.replace(/([A-Z])/g, '-$1').toLowerCase();
+const jsToCssProperty = s => s[0]==='-' ? s : s.replace(/([A-Z])/g, '-$1').toLowerCase()
 
 function formatUsage(usage) {
   if(typeof usage === "string") {
@@ -79,7 +79,10 @@ export default class Demo extends Component {
     for (let name in props.worklet.customProps) {
       propValues[name] = props.worklet.customProps[name].default
     }
-    this.state = { propValues }
+    this.state = {
+      propValues,
+      isLoaded: injected.get(props.worklet.cdnUrl || props.worklet.workletUrl)
+    }
 
     this.setPropValue = this.setPropValue.bind(this)
   }
@@ -118,7 +121,9 @@ export default class Demo extends Component {
 
   loadWorklet() {
     const { worklet } = this.props
-    injectWorkletScript(worklet.cdnUrl || worklet.workletUrl)
+    injectWorkletScript(worklet.cdnUrl || worklet.workletUrl).catch(String).then(() => {
+      this.setState({ isLoaded: true })
+    })
     if (this.obs) {
       this.obs.unobserve(this.demoRoot.current)
       this.obs = null
@@ -127,7 +132,7 @@ export default class Demo extends Component {
 
   render() {
     const { packageName, author, demoUrl, npmUrl, cdnUrl, customProps, usage, tags, html: demoHtml, note } = this.props.worklet
-    const { propValues } = this.state
+    const { propValues, isLoaded } = this.state
 
     const usageStyles = usageToStyleObject(usage)
     const demoStyle = {
@@ -178,7 +183,7 @@ export default class Demo extends Component {
         type='demo'
         note={note}
       >
-          <div ref={this.demoRoot} class={CardStyle.demoContainer}>
+          <div ref={this.demoRoot} class={`${CardStyle.demoContainer}${isLoaded ? '' : ` ${CardStyle.loading}`}`}>
             {preview}
             <ol class={CardStyle.customProps}>
               <li>.demo &#123;</li>
