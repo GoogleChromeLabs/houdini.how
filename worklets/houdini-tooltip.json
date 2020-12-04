@@ -11,17 +11,17 @@
         "default": "#63efff"
       },
       "--tooltip-position": {
-        "type": "percentage",
-        "default": "50%"
+        "type": "number",
+        "default": "50"
       },
       "--tooltip-size": {
-        "type": "string",
-        "default": "15px",
+        "type": "number",
+        "default": "15",
         "range": [0, 30]
       },
       "--border-width": {
-        "type": "string",
-        "default": "20px",
+        "type": "number",
+        "default": "20",
         "range": [0, 30]
       }
     },
