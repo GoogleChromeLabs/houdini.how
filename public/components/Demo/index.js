@@ -37,9 +37,13 @@ function formatUsage(usage) {
 function usageToStyleObject(usage) {
   // If `usage` is an object, we are already done
   if(typeof usage === "object") {
+<<<<<<< HEAD
     let out = {}
     for (let i in usage) out[cssToJsProperty(i)] = usage[i]
     return out
+=======
+    return usage
+>>>>>>> add tooltip worklet and fix mmultiline usage
   }
   // If it’s a string, we need to do a bit of processing
   const [prop, ...rest] = usage.split(":")
