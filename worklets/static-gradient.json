@@ -7,12 +7,12 @@
   "demoUrl": "https://glitch.com/edit/#!/houdini-static-gradient",
   "tags": ["paint"],
   "customProps": {
-    "--static-gradient-direction" : {
+    "--static-gradient-direction": {
       "type": "string",
       "default": "to-top",
       "options": ["to-bottom", "to-top", "to-right", "to-left"]
     },
-    "--static-gradient-color" : {
+    "--static-gradient-color": {
       "type": "color",
       "default": "#ff69b4"
     },
@@ -26,6 +26,6 @@
   "author": {
     "name": "@argyleink",
     "url": "https://twitter.com/argyleink",
-    "image": "https://webdev.imgix.net/images/authors/adamargyle@2x.jpg"
+    "image": "/assets/images/argyleink.jpg"
   }
 }

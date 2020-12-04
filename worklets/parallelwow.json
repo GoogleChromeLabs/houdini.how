@@ -7,7 +7,7 @@
   "demoUrl": "http://paintlets.herokuapp.com/",
   "tags": ["paint"],
   "customProps": {
-    "--parallelowow-tile-width" : {
+    "--parallelowow-tile-width": {
       "type": "number",
       "default": "40",
       "range": [10, 100]
@@ -16,7 +16,7 @@
       "type": "color",
       "default": "#ff5566"
     },
-    "--parallelowow-color-step" : {
+    "--parallelowow-color-step": {
       "type": "number",
       "default": "7",
       "range": [-10, 10]
@@ -38,6 +38,6 @@
   "author": {
     "name": "@malchata",
     "url": "https://twitter.com/malchata",
-    "image": "https://pbs.twimg.com/profile_images/1330908129710714885/dxamMY-g_400x400.jpg"
+    "image": "/assets/images/malchata.jpg"
   }
 }

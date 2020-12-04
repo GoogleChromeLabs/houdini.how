@@ -1,33 +1,33 @@
 {
-    "workletName": "Confetti",
-    "packageName": "extra-confetti",
-    "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/confetti/worklet.js",
-    "cdnUrl": "https://unpkg.com/extra-confetti/worklet.js",
-    "npmUrl": "https://www.npmjs.com/package/extra-confetti",
-    "demoUrl": "https://codepen.io/una/pen/mgoXMO",
-    "tags": ["paint"],
-    "customProps": {
-      "--extra-confettiNumber" : {
-        "type": "number",
-        "default": "30",
-        "range": [0, 500]
-      },
-      "--extra-confettiLengthVariance" : {
-        "type": "number",
-        "default": "15",
-        "range": [0, 100]
-      },
-      "--extra-confettiWeightVariance": {
-        "type": "number",
-        "default": "4",
-        "range": [0, 100]
-      }
+  "workletName": "Confetti",
+  "packageName": "extra-confetti",
+  "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/confetti/worklet.js",
+  "cdnUrl": "https://unpkg.com/extra-confetti/worklet.js",
+  "npmUrl": "https://www.npmjs.com/package/extra-confetti",
+  "demoUrl": "https://codepen.io/una/pen/mgoXMO",
+  "tags": ["paint"],
+  "customProps": {
+    "--extra-confettiNumber": {
+      "type": "number",
+      "default": "30",
+      "range": [0, 500]
     },
-    "html": "",
-    "usage": "background: paint(extra-confetti)",
-    "author": {
-      "name": "@Una",
-      "url": "https://twitter.com/una",
-      "image": "https://webdev.imgix.net/images/authors/una@2x.jpg"
+    "--extra-confettiLengthVariance": {
+      "type": "number",
+      "default": "15",
+      "range": [0, 100]
+    },
+    "--extra-confettiWeightVariance": {
+      "type": "number",
+      "default": "4",
+      "range": [0, 100]
     }
+  },
+  "html": "",
+  "usage": "background: paint(extra-confetti)",
+  "author": {
+    "name": "@Una",
+    "url": "https://twitter.com/una",
+    "image": "/assets/images/una.jpg"
   }
+}

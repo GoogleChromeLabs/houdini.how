@@ -7,12 +7,12 @@
   "demoUrl": "https://glitch.com/edit/#!/houdini-powdered-gradient",
   "tags": ["paint"],
   "customProps": {
-    "--powdered-gradient-direction" : {
+    "--powdered-gradient-direction": {
       "type": "string",
       "default": "to-top",
       "options": ["to-bottom", "to-top", "to-right", "to-left"]
     },
-    "--powdered-gradient-color" : {
+    "--powdered-gradient-color": {
       "type": "color",
       "default": "#ffffff"
     },
@@ -26,6 +26,6 @@
   "author": {
     "name": "@argyleink",
     "url": "https://twitter.com/argyleink",
-    "image": "https://webdev.imgix.net/images/authors/adamargyle@2x.jpg"
+    "image": "/assets/images/argyleink.jpg"
   }
 }
