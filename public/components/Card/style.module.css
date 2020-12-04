@@ -279,14 +279,13 @@
   border-top: 1px solid #b8b8b8;
 }
 
-.demoContainer.loading:before {
+.loading:before {
   content: 'Loading...';
   position: absolute;
-  left: 0;
-  top: 0;
-  padding: 2px 5px;
-  color: #fff;
-  background: rgba(50,50,50,0.5);
+  font-family: var(--monoType);
+  padding: 0.25rem 0.5rem;
+  color: white;
+  background-color: #221;
   z-index: 2;
 }
 
