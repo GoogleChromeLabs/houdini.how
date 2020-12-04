@@ -1,6 +1,7 @@
 .container {
   max-width: var(--cardMax);
   margin: 0 auto 4rem;
+  position: relative;
 }
 
 [type="demo"] .card {
