@@ -18,7 +18,6 @@ To contribute a Houdini worklet, create a new file within `worklets/`. The infor
   "workletName": "title of worklet",
   "packageName": "name of npm package",
   "npmURL": "url of npm package",
-  "workletUrl": "url of raw worklet file",
   "cdnUrl": "url of cdn-hosted package",  // if hosted on npm, use unpkg
   "demoUrl": "url of worklet demo",
   // which type(s) of worklets this uses

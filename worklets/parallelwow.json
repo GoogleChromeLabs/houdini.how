@@ -1,7 +1,6 @@
 {
   "workletName": "Parallel-o-wow",
   "packageName": "parallelowow",
-  "workletUrl": "https://raw.githubusercontent.com/malchata/parallelowow/main/parallelowow.js",
   "cdnUrl": "https://unpkg.com/parallelowow/parallelowow.js",
   "npmUrl": "https://www.npmjs.com/package/parallelowow",
   "demoUrl": "http://paintlets.herokuapp.com/",

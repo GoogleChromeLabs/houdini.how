@@ -1,7 +1,6 @@
 {
   "workletName": "Confetti",
   "packageName": "extra-confetti",
-  "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/confetti/worklet.js",
   "cdnUrl": "https://unpkg.com/extra-confetti/worklet.js",
   "npmUrl": "https://www.npmjs.com/package/extra-confetti",
   "demoUrl": "https://codepen.io/una/pen/mgoXMO",

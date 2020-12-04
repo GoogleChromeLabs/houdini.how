@@ -1,7 +1,6 @@
 {
   "workletName": "Sparkles",
   "packageName": "extra-sparkles",
-  "workletUrl": "https://raw.githubusercontent.com/una/extra.css/master/lib/sparkles/worklet.js",
   "cdnUrl": "https://unpkg.com/extra-sparkles/worklet.js",
   "npmUrl": "https://www.npmjs.com/package/extra-sparkles",
   "demoUrl": "https://codepen.io/una/pen/MRxgNN",

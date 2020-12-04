@@ -2,7 +2,6 @@
   "workletName": "Powdered Gradient",
   "packageName": "houdini-powdered-gradient",
   "npmUrl": "https://www.npmjs.com/package/houdini-powdered-gradient",
-  "workletUrl": "https://unpkg.com/houdini-powdered-gradient/worklet.js",
   "cdnUrl": "https://unpkg.com/houdini-powdered-gradient/worklet.js",
   "demoUrl": "https://glitch.com/edit/#!/houdini-powdered-gradient",
   "tags": ["paint"],

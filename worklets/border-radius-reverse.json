@@ -2,7 +2,6 @@
   "workletName": "border-radius-reverse",
   "packageName": "@houdini-modules/border-radius-reverse",
   "npmUrl": "",
-  "workletUrl": "https://raw.githubusercontent.com/GoogleChromeLabs/houdini-samples/master/paint-worklet/border-radius-reverse/border-radius-reverse.js",
   "cdnUrl": "https://unpkg.com/@houdini-modules/border-radius-reverse@0.0.1/border-radius-reverse.js",
   "demoUrl": "https://googlechromelabs.github.io/houdini-samples/paint-worklet/border-radius-reverse/",
   "tags": ["paint"],

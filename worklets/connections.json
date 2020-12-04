@@ -2,7 +2,6 @@
   "workletName": "Connections",
   "packageName": "css-houdini-connections",
   "npmUrl": "https://www.npmjs.com/package/css-houdini-connections",
-  "workletUrl": "https://unpkg.com/css-houdini-connections/dist/connections.js",
   "cdnUrl": "https://unpkg.com/css-houdini-connections/dist/connections.js",
   "demoUrl": "https://codepen.io/nucliweb/pen/yLJdroy",
   "tags": ["paint"],

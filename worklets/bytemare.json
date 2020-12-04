@@ -1,7 +1,6 @@
 {
   "workletName": "Bytemare",
   "packageName": "bytemare",
-  "workletUrl": "https://raw.githubusercontent.com/malchata/bytemare/main/bytemare.js",
   "cdnUrl": "https://unpkg.com/bytemare/bytemare.js",
   "npmUrl": "https://www.npmjs.com/package/bytemare",
   "demoUrl": "http://paintlets.herokuapp.com/",

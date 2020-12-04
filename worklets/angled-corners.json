@@ -2,7 +2,6 @@
   "workletName": "Angled Corners",
   "packageName": "angled-corners",
   "npmUrl": "https://www.npmjs.com/package/angled-corners",
-  "workletUrl": "https://raw.githubusercontent.com/una/angled-corners/master/angled-corners.js",
   "cdnUrl": "https://unpkg.com/angled-corners",
   "demoUrl": "https://glitch.com/~angled-corners",
   "tags": ["paint"],
