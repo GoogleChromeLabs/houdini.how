@@ -53,7 +53,7 @@ export default function UsagePage() {
 
           <div>
             <h4>Option 2: Register directly from unpkg</h4>
-              <p>When registering from unpkg, you can link directly to the <code>worklet.js</code> file without needing to locally install the worklet. Unpkg will resolve to the <code>worklet.js</code> as the main script, or you can specify it yourself. Unpkg will not cause CORS issues, as it is served over HTTPS.</p>
+              <p>When registering from unpkg, you can link directly to the worklet file without needing to locally install the worklet. Unpkg will resolve to the main script, or you can specify it yourself (i.e. <code>worklet.js</code>). Unpkg will not cause CORS issues, as it is served over HTTPS.</p>
 
               <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
                 `CSS.paintWorklet.addModule("https://
