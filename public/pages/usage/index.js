@@ -23,7 +23,7 @@ export default function UsagePage() {
 
         <p><b>Note: </b>Houdini worklets must either be run via a server locally, or on HTTPS in production. In order to work with a Houdini worklet, you will need to either install it locally or use a content delivery network (CDN) like <a href="http://unpkg.com/">unpkg</a> to serve the files.</p>
 
-        <p class={style.callout}>There are three steps required to use a Houdini paint worklet:</p>
+        <p class={style.callout}>There are four steps required to use a Houdini paint worklet:</p>
 
         <ol class={style.steps}>
           <li><span class={style.install}>Install</span> the worklet to your file system (either via an <a href="https://www.npmjs.com/">npm</a> module or linked through a <a href="http://unpkg.com/">CDN</a>).</li>
