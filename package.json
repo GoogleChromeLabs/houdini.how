@@ -10,12 +10,12 @@
     "resources:watch": "node ./resources/_build.js watch"
   },
   "dependencies": {
-    "css-paint-polyfill": "^3.1.4",
+    "clsx": "^1.1.1",
+    "css-paint-polyfill": "^3.2.0",
     "preact-iso": "^0.2.0",
     "wmr": "^1.0.0"
   },
   "devDependencies": {
-    "clsx": "^1.1.1",
     "json5": "^2.1.3"
   }
 }
