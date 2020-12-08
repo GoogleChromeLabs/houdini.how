@@ -1,11 +1,19 @@
+:root {
+  --installBg: #ffe6e6;
+  --registerBg: #fcffbd;
+  --useBg: #d4f5ff;
+  --polyfillBg: #ead7ff;
+}
+
 .html::after,
 .js::after,
-.sh::after {
+.sh::after,
+.css::after {
   display: block;
   position: absolute;
   right: 0;
   top: 0;
-  background: var(--brightBlue);
+  background: var(--codeBorder);
   padding: 0.25rem;
   border-radius: 0 5px;
 }
@@ -20,4 +28,69 @@
 
 .sh::after {
   content: '.sh';
+}
+
+.css::after {
+  content: '.css';
+}
+
+.steps {
+  max-width: 45ch;
+  margin-left: 4rem;
+}
+
+.steps li::marker {
+  font-weight: 800;
+}
+
+.steps li {
+  margin: 0.5em 0;
+}
+
+p code,
+ol code {
+  background: var(--codeBg);
+  padding: 0.1rem 0.2rem;
+  border: 1px solid var(--codeBorder);
+  border-radius: 5px;
+}
+
+.callout {
+  background: var(--brightBlue);
+  padding: 0 0.5rem;
+  display: inline-block;
+}
+
+.installation {
+  display: grid;
+  gap: 0 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+span.register,
+span.install,
+span.use,
+span.polyfill {
+  font-weight: 700;
+  padding: 0.2rem;
+}
+
+.install {
+  background: var(--installBg);
+}
+
+.register {
+  background: var(--registerBg);
+}
+
+.use {
+  background: var(--useBg);
+}
+
+.polyfill {
+  background: var(--polyfillBg);
+}
+
+.small {
+  text-transform: none;
 }
