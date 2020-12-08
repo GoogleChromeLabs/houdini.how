@@ -63,7 +63,7 @@ ol code {
 
 .installation {
   display: grid;
-  gap: 3rem;
+  gap: 0 3rem;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
@@ -89,4 +89,8 @@ span.polyfill {
 
 .polyfill {
   background: var(--polyfillBg);
+}
+
+.small {
+  text-transform: none;
 }

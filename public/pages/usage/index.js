@@ -68,15 +68,34 @@ export default function UsagePage() {
             </div>
         </div>
 
-        <h4>Installation in Bundlers</h4>
+        <h3 class={style.small}>Installation in Bundlers</h3>
 
         <p>Here is an example of how to use Houdini in modern bundlers:</p>
 
-        <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
-          `import "&lt;package-name&gt;/properties.js"; // optionally register properties
-import workletURL from "url:&lt;package-name&gt;";
+        <div class={style.installation}>
+          <div>
+          <h4>Parcel and WMR</h4>
+
+          <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
+            `import workletURL from "url:&lt;package-name&gt/worklet.js"
+
+          CSS.paintWorklet.addModule(workletURL);`}}></code></pre>
+          </div>
+          <div>
+            <h4>Webpack 4 and 5</h4>
+            <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
+          `import workletURL from "url-loader!&lt;package-name&gt/worklet.js"
 
 CSS.paintWorklet.addModule(workletURL);`}}></code></pre>
+          </div>
+          <div>
+            <h4>Rollup</h4>
+            <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
+          `import workletURL from "omt:&lt;package-name&gt/worklet.js"; 
+
+CSS.paintWorklet.addModule(workletURL);`}}></code></pre>
+          </div>
+        </div>
 
         <h3>3. <span class={style.use}>Use</span> in CSS</h3>
 
