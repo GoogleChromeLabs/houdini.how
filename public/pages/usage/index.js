@@ -90,6 +90,8 @@ CSS.paintWorklet.addModule(workletURL);`}}></code></pre>
           </div>
           <div>
             <h4>Rollup</h4>
+            <p>Install <a href="https://www.npmjs.com/package/@surma/rollup-plugin-off-main-thread">rollup-plugin-off-main-thread
+</a> plugin. Then:</p>
             <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
           `import workletURL from "omt:&lt;package-name&gt/worklet.js"; 
 

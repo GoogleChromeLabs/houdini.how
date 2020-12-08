@@ -8,7 +8,7 @@
     "customProps": {
       "--tooltip-bg": {
         "type": "color",
-        "default": "#63efff"
+        "default": "#b1d8dd"
       },
       "--tooltip-position": {
         "type": "number",
