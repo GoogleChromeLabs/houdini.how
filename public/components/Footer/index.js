@@ -31,6 +31,7 @@ export default class Footer extends Component {
             <li><a href="/usage">Usage</a></li>
             <li><a href="/resources">Resources</a></li>
             <li><a href="/">Worklets</a></li>
+            <li><a href="https://github.com/GoogleChromeLabs/houdini.how">Contribute</a></li>
           </ul>
         </nav>
       </div>
