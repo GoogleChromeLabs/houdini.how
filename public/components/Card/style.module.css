@@ -359,4 +359,16 @@
   .customProps li:before {
     content: none;
   }
+
+  .customProps li {
+    grid-template-columns: 1fr;
+  }
+
+  .inputVal {
+    width: 100%;
+  }
+
+  .rangeSlider {
+    max-width: 90%;
+  }
 }
