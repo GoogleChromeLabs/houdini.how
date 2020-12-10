@@ -11,6 +11,24 @@
   --monoType: 'Roboto Mono', 'Source Code Pro', Menlo, Monaco, monospace;
   --pageMax: 1100px;
   --cardMax: 800px;
+  --bg: white;
+  --demoBorder: #b8b8b8;
+  --cardBg: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brightBlue: #128a9c;
+    --pink: #cc0b96;
+    --yellow: #e66e22;
+    --green: #008800;
+    --bg: #2f2f39;
+    --demoBorder: #4c4c4c;
+    --skyBlue: #76c2ff;
+    --codeBg: #41667f;
+    --codeBorder: #697e9a;
+    --cardBg: #4e525d;
+  }
 }
 
 /**
@@ -40,6 +58,10 @@ h3 {
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 0.025em;
+}
+
+iframe {
+  background: white
 }
 
 pre {
@@ -101,3 +123,24 @@ body.loading::before {
 	95% { transform: translate(-5%, 2px); opacity: 1; }
 	100% { transform: translate(0, 0); opacity:0; }
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--bg);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  code {
+    color: white;
+  }
+
+  p,
+  li,
+  aside {
+    color: #e2e5ea;
+  }
+}
+

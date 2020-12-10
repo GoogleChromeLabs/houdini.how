@@ -89,3 +89,19 @@
     font-size: 1rem;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .superHeader {
+    color: #bec6d0;
+  }
+
+  .superHeader img {
+    filter: brightness(2)
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav a {
+    color: white;
+  }
+}

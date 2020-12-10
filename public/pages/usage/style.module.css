@@ -73,6 +73,7 @@ span.use,
 span.polyfill {
   font-weight: 700;
   padding: 0.2rem;
+  color: initial;
 }
 
 .install {

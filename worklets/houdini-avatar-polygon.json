@@ -8,7 +8,7 @@
     "customProps": {
       "--polygon-bg": {
         "type": "color",
-        "default": "#a8e1ff"
+        "default": "#6f9fb8"
       },
       "--avatar-sides": {
         "type": "number",
