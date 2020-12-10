@@ -13,7 +13,7 @@
     },
     "--paint-color": {
       "type": "color",
-      "default": "#6200ee"
+      "default": "#a675ea"
     },
     "--stroke-weight": {
       "type": "number",

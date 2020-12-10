@@ -20,7 +20,7 @@
 [type="resource"] {
   box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
-  background-color: #f5f5f5;
+  background-color: var(--cardBg);
   border-radius: 10px;
   width: calc(100% - 4rem);
   transition: transform 0.5s;
@@ -56,7 +56,7 @@
   width: 100%;
   background: #e1e1e1;
   border-radius: 0 0 10px 10px;
-  border: 1px solid #b8b8b8;
+  border: 1px solid var(--demoBorder)
 }
 
 .compat {
@@ -274,9 +274,10 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  border-left: 1px solid #b8b8b8;
-  border-right: 1px solid #b8b8b8;
-  border-top: 1px solid #b8b8b8;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-color: var(--demoBorder);
 }
 
 .loading:before {
@@ -370,5 +371,11 @@
 
   .rangeSlider {
     max-width: 90%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .demoArea {
+    background: var(--cardBg);
   }
 }
