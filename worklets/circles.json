@@ -1,0 +1,51 @@
+{
+  "workletName": "Circles",
+  "packageName": "css-houdini-circles",
+  "npmUrl": "https://www.npmjs.com/package/css-houdini-circles",
+  "workletUrl": "https://unpkg.com/css-houdini-circles/dist/circles.js",
+  "cdnUrl": "https://unpkg.com/css-houdini-circles/dist/circles.js",
+  "demoUrl": "https://codepen.io/bramus/pen/PoGbbzL",
+  "tags": ["paint"],
+  "customProps": {
+    "--colors": {
+      "type": "string",
+      "default": "gold, plum, skyblue"
+    },
+    "--min-radius": {
+      "type": "number",
+      "default": "10",
+      "range": [5, 40],
+      "step": "5"
+    },
+    "--max-radius": {
+      "type": "number",
+      "default": "75",
+      "range": [75, 100],
+      "step": "5"
+    },
+    "--min-opacity": {
+      "type": "number",
+      "default": "20",
+      "range": [10, 50],
+      "step": "5"
+    },
+    "--max-opacity": {
+      "type": "number",
+      "default": "60",
+      "range": [60, 80],
+      "step": "5"
+    },
+    "--num-circles": {
+      "type": "number",
+      "default": "15",
+      "range": [5, 50],
+      "step": "1"
+    }
+  },
+  "usage": "background: paint(circles)",
+  "author": {
+    "name": "@bramus",
+    "url": "https://twitter.com/bramus",
+    "image": "/assets/images/bramus.jpg"
+  }
+}
