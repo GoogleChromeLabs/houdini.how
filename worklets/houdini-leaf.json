@@ -1,0 +1,26 @@
+{
+  "workletName": "Houdini Leaf",
+  "packageName": "houdini-leaf",
+  "cdnUrl": "https://unpkg.com/houdini-leaf",
+  "npmUrl": "https://www.npmjs.com/package/houdini-leaf",
+  "demoUrl": "https://codepen.io/zhua/pen/LYRxxJK",
+  "tags": ["paint"],
+  "customProps": {
+    "--leaf-color": {
+      "type": "color",
+      "default": "black"
+    },
+    "--leaf-size": {
+      "type": "number",
+      "default": "16",
+      "range": [8, 32]
+    }
+  },
+  "html": "<div style='width: 100%; height: 100px; background-color: wheat; display: flex; justify-content: center; align-items: center;'>Leaf and Vine</div>",
+  "usage": "background-image: paint(leaf);",
+  "author": {
+    "name": "@zhenyanghua",
+    "url": "https://twitter.com/zhenyanghua",
+    "image": "/assets/images/zhenyang.jpg"
+  }
+}
