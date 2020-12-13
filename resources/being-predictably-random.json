@@ -1,0 +1,13 @@
+{
+  "url": "https://jakearchibald.com/2020/css-paint-predictably-random/",
+  "type": "article",
+  "title": "CSS paint API: Being predictably random",
+  "pubDate": "Dec 11, 2020",
+  "desc": "If you're using a browser that supports the CSS paint API (which you are), the element will have a 'random' pixel-art gradient in the background. But it turns out, doing random in CSS isn't as easy as it seems...",
+  "tags": ["paint"],
+  "author": {
+    "name": "Jake Archibald",
+    "url": "https://twitter.com/jaffathecake",
+    "image": "/assets/images/jaffathecake.jpg"
+  }
+}
