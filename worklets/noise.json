@@ -1,0 +1,36 @@
+{
+  "workletName": "noise",
+  "packageName": "houdini-noise",
+  "npmUrl": "https://www.npmjs.com/package/houdini-noise",
+  "cdnUrl": "https://unpkg.com/houdini-noise",
+  "demoUrl": "https://codepen.io/jh3y/pen/LYRxQrQ",
+  "tags": ["paint"],
+  "customProps": {
+    "--noise-cell-size" : {
+      "type": "number",
+      "default": "2",
+      "range": [1, 10]
+    },
+    "--noise-hue" : {
+      "type": "string",
+      "default": "0 359"
+    },
+    "--noise-saturation" : {
+      "type": "string",
+      "default": "0 50"
+    },
+    "--noise-lightness" : {
+      "type": "string",
+      "default": "0 50"
+    }
+  },
+  "html": "<button style='border-radius: 0.5rem; color: hsl(0, 0%, 100%); font-weight: bold; font-size: 2rem; padding: 1rem 2rem;'>Click Me!</button>",
+  "usage": {
+    "background": "paint(noise)"
+  },
+  "author": {
+      "name": "Jhey Tompkins",
+      "url": "https://twitter.com/jh3yy",
+      "image": "/assets/images/jheytompkins.jpg"
+  }
+}
