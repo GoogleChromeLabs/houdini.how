@@ -8,19 +8,18 @@
   "customProps": {
     "--leaf-color": {
       "type": "color",
-      "default": "black"
+      "default": "#73ce8f"
     },
     "--leaf-size": {
       "type": "number",
       "default": "16",
-      "range": [8, 32]
+      "range": [5, 50]
     }
   },
-  "html": "<div style='width: 100%; height: 100px; background-color: wheat; display: flex; justify-content: center; align-items: center;'>Leaf and Vine</div>",
   "usage": "background-image: paint(leaf);",
   "author": {
-    "name": "@zhenyanghua",
-    "url": "https://twitter.com/zhenyanghua",
-    "image": "/assets/images/zhenyang.jpg"
+    "name": "Zhenyang",
+    "url": "https://leafyjava.com",
+    "image": "/assets/images/zhenyang.webp"
   }
 }
