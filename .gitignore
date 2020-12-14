@@ -4,3 +4,4 @@
 node_modules
 /public/worklet-data.js
 /public/resource-data.js
+package-lock.json
