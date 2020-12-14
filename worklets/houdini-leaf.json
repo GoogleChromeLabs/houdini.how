@@ -1,0 +1,25 @@
+{
+  "workletName": "Houdini Leaf",
+  "packageName": "houdini-leaf",
+  "cdnUrl": "https://unpkg.com/houdini-leaf",
+  "npmUrl": "https://www.npmjs.com/package/houdini-leaf",
+  "demoUrl": "https://codepen.io/zhua/pen/LYRxxJK",
+  "tags": ["paint"],
+  "customProps": {
+    "--leaf-color": {
+      "type": "color",
+      "default": "#73ce8f"
+    },
+    "--leaf-size": {
+      "type": "number",
+      "default": "16",
+      "range": [5, 50]
+    }
+  },
+  "usage": "background-image: paint(leaf);",
+  "author": {
+    "name": "Zhenyang",
+    "url": "https://leafyjava.com",
+    "image": "/assets/images/zhenyang.jpg"
+  }
+}
