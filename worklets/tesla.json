@@ -1,0 +1,54 @@
+{
+  "workletName": "tesla",
+  "packageName": "houdini-tesla",
+  "npmUrl": "https://www.npmjs.com/package/houdini-tesla",
+  "cdnUrl": "https://unpkg.com/houdini-tesla",
+  "demoUrl": "https://codepen.io/jh3y/pen/MWjpjpq",
+  "tags": ["paint"],
+  "customProps": {
+    "--tesla-segments" : {
+      "type": "number",
+      "default": "5",
+      "range": [1, 100]
+    },
+    "--tesla-angle" : {
+      "type": "number",
+      "default": "45",
+      "range": [0, 120]
+    },
+    "--tesla-blur" : {
+      "type": "number",
+      "default": "5",
+      "range": [0, 100]
+    },
+    "--tesla-width" : {
+      "type": "number",
+      "default": "4",
+      "range": [1, 30]
+    },
+    "--tesla-hue" : {
+      "type": "number",
+      "default": "180",
+      "range": [0, 360]
+    },
+    "--tesla-saturation" : {
+      "type": "number",
+      "default": "100",
+      "range": [0, 100]
+    },
+    "--tesla-lightness" : {
+      "type": "number",
+      "default": "50",
+      "range": [0, 100]
+    }
+  },
+  "html": "<button style='background-color: #000 !important; border-radius: 0.5rem; color: hsl(0, 0%, 100%); font-weight: bold; font-size: 2rem; padding: 1rem 2rem;'>It's Alive!</button>",
+  "usage": {
+    "background": "paint(tesla-coil)"
+  },
+  "author": {
+      "name": "Jhey Tompkins",
+      "url": "https://twitter.com/jh3yy",
+      "image": "/assets/images/jheytompkins.jpg"
+  }
+}
