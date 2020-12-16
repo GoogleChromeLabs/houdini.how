@@ -64,7 +64,7 @@ To contribute a Houdini resource, create a new file within `resources/`. The inf
   "url": "<resource URL>",
   "type": "article",  // A resource type. One of: "article", "website", "demo"
   "title": "<resource title>",
-  "pubDate": "<publish date>", // format: "Apr 20, 2020"
+  "pubDate": "<publish date>", // format: "Apr 20, 2020". Only needed for the types "article"
   "desc": "<short description>",
   "tags": ["paint"], // tags related to the resource. Options: "typed object model", "properties and values", "paint", "layout", "animation"
   "author": {
