@@ -14,6 +14,11 @@
       "type": "number",
       "default": "16",
       "range": [5, 50]
+    },
+    "--leaf-variance": {
+      "type": "string",
+      "default": "left",
+      "options": ["left", "around"]
     }
   },
   "usage": "background-image: paint(leaf);",
