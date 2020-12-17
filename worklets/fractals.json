@@ -2,20 +2,19 @@
   "workletName": "Fractals",
   "packageName": "css-houdini-fractals",
   "npmUrl": "https://www.npmjs.com/package/css-houdini-fractals",
-  "workletUrl": "https://unpkg.com/css-houdini-fractals@1.0.0/fractals.js",
-  "cdnUrl": "https://unpkg.com/css-houdini-fractals@1.0.0/fractals.js",
+  "workletUrl": "https://unpkg.com/css-houdini-fractals@1.1.0/fractals.js",
+  "cdnUrl": "https://unpkg.com/css-houdini-fractals@1.1.0/fractals.js",
   "demoUrl": "https://conradsollitt.github.io/css-houdini-fractals/",
   "tags": ["paint"],
   "customProps": {
     "--colors": {
       "type": "string",
-      "default": "red green blue cyan magenta yellow",
-      "options": [
-        "red green blue cyan magenta yellow",
-        "red green blue",
-        "black",
-        "#000 #222 #444 #666 #888 #aaa #ccc"
-      ]
+      "default": "red green blue cyan magenta yellow"
+    },
+    "--shape": {
+      "type": "string",
+      "default": "line",
+      "options": ["line", "circle", "square"]
     },
     "--angle": {
       "type": "number",
@@ -33,19 +32,7 @@
       "type": "number",
       "default": "0.8",
       "range": [0.1, 0.9],
-      "step": "0.1"
-    },
-    "--max-draw-count": {
-      "type": "number",
-      "default": "100000",
-      "range": [0, 2000000],
-      "step": "1"
-    },
-    "--debug-to-console": {
-      "type": "number",
-      "default": "0",
-      "range": [0, 1],
-      "step": "1"
+      "step": "0.05"
     }
   },
   "usage": "background-image: paint(fractals)",
