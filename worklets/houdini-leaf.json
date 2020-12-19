@@ -1,6 +1,7 @@
 {
   "workletName": "Houdini Leaf",
   "packageName": "houdini-leaf",
+  "cdnUrlType": "script",
   "cdnUrl": "https://unpkg.com/houdini-leaf",
   "npmUrl": "https://www.npmjs.com/package/houdini-leaf",
   "demoUrl": "https://codepen.io/zhua/pen/LYRxxJK",
