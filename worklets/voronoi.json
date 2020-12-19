@@ -1,0 +1,59 @@
+{
+  "workletName": "Voronoi",
+  "packageName": "css-houdini-voronoi",
+  "npmUrl": "https://www.npmjs.com/package/css-houdini-voronoi",
+  "workletUrl": "https://unpkg.com/css-houdini-voronoi/dist/worklet.js",
+  "cdnUrl": "https://unpkg.com/css-houdini-voronoi/dist/worklet.js",
+  "demoUrl": "https://codepen.io/bramus/full/mdrWrGm",
+  "tags": ["paint"],
+  "customProps": {
+    "--voronoi-cell-colors": {
+      "type": "string",
+      "default": "#66ccff, #99ffcc, #00ffcc, #33ccff, #99ff99, #66ff99, #00ffff"
+    },
+    "--voronoi-number-of-cells": {
+      "type": "number",
+      "default": "25",
+      "range": [2, 100],
+      "step": "1"
+    },
+    "--voronoi-margin": {
+      "type": "number",
+      "default": "0",
+      "range": [-49, 49],
+      "step": "0"
+    },
+    "--voronoi-line-color": {
+      "type": "color",
+      "default": "#000000"
+    },
+    "--voronoi-line-width": {
+      "type": "number",
+      "default": "1",
+      "range": [1, 5],
+      "step": "1"
+    },
+    "--voronoi-dot-color": {
+      "type": "color",
+      "default": "#000000"
+    },
+    "--voronoi-dot-size": {
+      "type": "number",
+      "default": "0",
+      "range": [0, 5],
+      "step": "1"
+    },
+    "--voronoi-seed": {
+      "type": "number",
+      "default": "123456",
+      "range": [1, 999999],
+      "step": "1"
+    }
+  },
+  "usage": "background: paint(voronoi)",
+  "author": {
+    "name": "@bramus",
+    "url": "https://twitter.com/bramus",
+    "image": "/assets/images/bramus.jpg"
+  }
+}
