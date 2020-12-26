@@ -1,0 +1,36 @@
+{
+  "workletName": "Curved Line",
+  "packageName": "curved-line",
+  "cdnUrl": "https://unpkg.com/curved-line/curved-line.js",
+  "npmUrl": "https://www.npmjs.com/package/curved-line",
+  "demoUrl": "https://codepen.io/hazmi/pen/VwKreoq",
+  "tags": ["paint"],
+  "customProps": {
+    "--curved-lineHeight": {
+      "type": "number",
+      "default": "20",
+      "range": [1, 50]
+    },
+    "--curved-lineWidth": {
+      "type": "number",
+      "default": "5",
+      "range": [1, 15]
+    },
+    "--curved-lineColor": {
+      "type": "color",
+      "default": "#e75480"
+    },
+    "--curved-lineSpread": {
+      "type": "number",
+      "default": "20",
+      "range": [1, 100]
+    }
+  },
+  "html": "<hr style='height: 100px; border: 0; width: 90%;' />",
+  "usage": "background: paint(curved-line);",
+  "author": {
+    "name": "@Hazmi",
+    "url": "https://twitter.com/hazmi",
+    "image": "/assets/images/hazmi.jpg"
+  }
+}
