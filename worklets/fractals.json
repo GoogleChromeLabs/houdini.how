@@ -1,0 +1,44 @@
+{
+  "workletName": "Fractals",
+  "packageName": "css-houdini-fractals",
+  "npmUrl": "https://www.npmjs.com/package/css-houdini-fractals",
+  "workletUrl": "https://unpkg.com/css-houdini-fractals@1.1.0/fractals.js",
+  "cdnUrl": "https://unpkg.com/css-houdini-fractals@1.1.0/fractals.js",
+  "demoUrl": "https://conradsollitt.github.io/css-houdini-fractals/",
+  "tags": ["paint"],
+  "customProps": {
+    "--colors": {
+      "type": "string",
+      "default": "red green blue cyan magenta yellow"
+    },
+    "--shape": {
+      "type": "string",
+      "default": "line",
+      "options": ["line", "circle", "square"]
+    },
+    "--angle": {
+      "type": "number",
+      "default": "30",
+      "range": [0, 360],
+      "step": "1"
+    },
+    "--starting-length-percent": {
+      "type": "number",
+      "default": "22",
+      "range": [5, 95],
+      "step": "1"
+    },
+    "--next-line-size": {
+      "type": "number",
+      "default": "0.8",
+      "range": [0.1, 0.9],
+      "step": "0.05"
+    }
+  },
+  "usage": "background-image: paint(fractals)",
+  "author": {
+    "name": "Conrad Sollitt",
+    "url": "https://conradsollitt.com",
+    "image": "/assets/images/conrad_sollitt.jpg"
+  }
+}
