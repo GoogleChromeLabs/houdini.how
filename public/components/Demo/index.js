@@ -53,17 +53,26 @@ function styleObjectToString(styleObj) {
 }
 
 const injected = new Map()
-function injectWorkletScript(url) {
+function injectWorkletScript(url, type = 'worklet') {
   let p = injected.get(url)
   if (p) return p
-  p = new Promise((resolve, reject) => {
-    const script = document.createElement("script")
-    script.async = true;
-    script.src = url
-    script.onload = resolve
-    script.onerror = reject
-    document.head.appendChild(script)
-  })
+  switch (type) {
+    case 'script':
+        p = new Promise((resolve, reject) => {
+          const script = document.createElement("script")
+          script.async = true;
+          script.src = url
+          script.onload = resolve
+          script.onerror = reject
+          document.head.appendChild(script)
+        })
+      break;
+
+    case 'worklet':
+    default:
+      p = CSS.paintWorklet.addModule(url)
+      break;
+  }
   injected.set(url, p)
   return p
 }
@@ -121,7 +130,7 @@ export default class Demo extends Component {
 
   loadWorklet() {
     const { worklet } = this.props
-    injectWorkletScript(worklet.cdnUrl || worklet.workletUrl).catch(String).then(() => {
+    injectWorkletScript(worklet.cdnUrl || worklet.workletUrl, worklet.cdnUrlType).catch(String).then(() => {
       this.setState({ isLoaded: true })
     })
     if (this.obs) {
