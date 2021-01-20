@@ -17,12 +17,6 @@
       "range": [2, 100],
       "step": "1"
     },
-    "--voronoi-margin": {
-      "type": "number",
-      "default": "0",
-      "range": [-49, 49],
-      "step": "0"
-    },
     "--voronoi-line-color": {
       "type": "color",
       "default": "#000000"
@@ -41,12 +35,6 @@
       "type": "number",
       "default": "0",
       "range": [0, 5],
-      "step": "1"
-    },
-    "--voronoi-seed": {
-      "type": "number",
-      "default": "123456",
-      "range": [1, 999999],
       "step": "1"
     }
   },
