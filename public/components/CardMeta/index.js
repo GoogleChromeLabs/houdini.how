@@ -12,25 +12,10 @@
  */
 
 import {Component} from 'preact'
+import Tag from '../Tag'
 import style from './style.module.css'
 
-const buildTag = (tag) => {
-  if (tag === 'paint') {
-    return (<li class={style.paint}><a href="#">Paint</a></li>)
-  } else if (tag === 'properties and values') {
-    return (<li class={style.props}><a href="#">Properties & Values</a></li>)
-  } else if (tag === 'typed object model') {
-    return (<li class={style.typed}><a href="#">Typed Object Model</a></li>)
-  } else if (tag === 'layout') {
-    return (<li class={style.layout}><a href="#">Layout</a></li>)
-  } else if (tag === 'animation') {
-    return (<li class={style.animation}><a href="#">Animation</a></li>)
-  }
-  else return
-}
-
 export default class CardLinks extends Component {
-
   render(props) {
     return (
     <div class={style.meta} metaType={props.type}>
@@ -42,7 +27,7 @@ export default class CardLinks extends Component {
       <div class={style.tags}>
         <ul>
           {props.tags.map((tag) =>
-            buildTag(tag)
+            <Tag label={tag} setFilter={props.setFilter} selected={tag === props.selectedTag}/>
           )}
         </ul>
       </div>

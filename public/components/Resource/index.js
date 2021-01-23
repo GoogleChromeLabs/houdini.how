@@ -34,6 +34,8 @@ export default class Resource extends Component {
         url={url}
         desc={desc}
         tags={tags}
+        selectedTag={this.props.selectedTag}
+        setFilter={this.props.setFilter}
       >
         <div class={CardStyle.resourceContainer}>
           {desc && (
