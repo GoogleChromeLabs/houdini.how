@@ -36,7 +36,6 @@
       "range": [0, 20]
     }
   },
-  "html": "<button style='border-radius: 0.5rem; color: white; padding: 2rem 3rem;'>Watch out!</button>",
   "usage": {
     "background": "paint(bullet)"
   },
