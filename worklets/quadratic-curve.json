@@ -1,0 +1,48 @@
+{
+  "workletName": "Quadratic Curve",
+  "packageName": "quadratic-curve",
+  "cdnUrl": "https://unpkg.com/@houdini-css-paint/quadratic-curve/index.js",
+  "npmUrl": "https://www.npmjs.com/package/@houdini-css-paint/quadratic-curve",
+  "demoUrl": "https://css-houdini-dojo.georgi-nikolov.com/",
+  "tags": ["paint"],
+  "customProps": {
+    "--quadratic-curve-number-points": {
+      "type": "number",
+      "default": "6",
+      "range": [1, 50]
+    },
+    "--quadratic-curve-stroke-width": {
+      "type": "number",
+      "default": "3",
+      "range": [1, 50]
+    },
+    "--quadratic-curve-stroke-color": {
+      "type": "color",
+      "default": "#d35400"
+    },
+    "--quadratic-curve-helper-stroke-color": {
+      "type": "color",
+      "default": "#5e5e5e"
+    },
+    "--quadratic-curve-helper-radius": {
+      "type": "number",
+      "default": "5",
+      "range": [1, 30]
+    },
+    "--quadratic-curve-helper-background-color": {
+      "type": "color",
+      "default": "#c0392b"
+    },
+    "--quadratic-curve-helper-accent-color": {
+      "type": "color",
+      "default": "#f1c40f"
+    }
+  },
+  "html": "",
+  "usage": "background: paint(quadratic-curve);",
+  "author": {
+    "name": "@georgiNikoloff",
+    "url": "https://twitter.com/georgiNikoloff",
+    "image": "/assets/images/georgi-nikolov.jpg"
+  }
+}
