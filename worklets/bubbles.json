@@ -9,7 +9,7 @@
     "customProps": {
       "--bubbles-colors": {
         "type": "string",
-        "default": "#007C8E, #7940c1"
+        "default": "teal, blueviolet"
       },
       "--bubbles-min-radius": {
         "type": "number",
@@ -19,13 +19,13 @@
       },
       "--bubbles-max-radius": {
         "type": "number",
-        "default": "60",
+        "default": "50",
         "range": [30, 80],
         "step": "2"
       },
       "--bubbles-total-num": {
         "type": "number",
-        "default": "20",
+        "default": "12",
         "range": [5, 30],
         "step": "1"
       },
