@@ -82,6 +82,15 @@ export default function UsagePage() {
           CSS.paintWorklet.addModule(workletURL);`}}></code></pre>
           </div>
           <div>
+            <h4>Vite</h4>
+
+            <pre class={style.js}><code dangerouslySetInnerHTML={{
+              __html:
+                `import workletURL from "&lt;package-name&gt/worklet.js?url"
+
+            CSS.paintWorklet.addModule(workletURL);`}}></code></pre>
+          </div>
+          <div>
             <h4>Webpack 4 and 5</h4>
             <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
           `import workletURL from "url-loader!&lt;package-name&gt/worklet.js"
