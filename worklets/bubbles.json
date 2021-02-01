@@ -1,0 +1,45 @@
+{
+    "workletName": "Bubbles",
+    "packageName": "css-houdini-bubbles",
+    "npmUrl": "https://www.npmjs.com/package/css-houdini-bubbles",
+    "workletUrl": "https://unpkg.com/css-houdini-bubbles/dist/bubbles.js",
+    "cdnUrl": "https://unpkg.com/css-houdini-bubbles/dist/bubbles.js",
+    "demoUrl": "https://codepen.io/spanion/full/rNMgerx",
+    "tags": ["paint"],
+    "customProps": {
+      "--bubbles-colors": {
+        "type": "string",
+        "default": "teal, blueviolet"
+      },
+      "--bubbles-min-radius": {
+        "type": "number",
+        "default": "10",
+        "range": [6, 30],
+        "step": "2"
+      },
+      "--bubbles-max-radius": {
+        "type": "number",
+        "default": "50",
+        "range": [30, 80],
+        "step": "2"
+      },
+      "--bubbles-total-num": {
+        "type": "number",
+        "default": "12",
+        "range": [5, 30],
+        "step": "1"
+      },
+      "--bubbles-is-dark": {
+        "type": "string",
+        "default": "no",
+        "options": ["yes", "no"]
+      }
+    },
+    "usage": "background: paint(bubbles)",
+    "author": {
+      "name": "@AKAspanion",
+      "url": "https://github.com/AKAspanion",
+      "image": "/assets/images/akaspanion.jpg"
+    }
+  }
+  
