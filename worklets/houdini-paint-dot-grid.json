@@ -1,0 +1,31 @@
+{
+  "workletName": "Dot Grid",
+  "packageName": "houdini-paint-dot-grid",
+  "npmUrl": "https://www.npmjs.com/package/houdini-paint-dot-grid",
+  "cdnUrl": "https://unpkg.com/houdini-paint-dot-grid/dist/dot-grid-worklet.js",
+  "demoUrl": "https://codepen.io/arnellebalane/pen/yLVOOgW",
+  "tags": ["paint"],
+  "customProps": {
+    "--dot-size" : {
+      "type": "number",
+      "default": "3",
+      "range": [1, 100]
+    },
+    "--dot-spacing" : {
+      "type": "number",
+      "default": "6",
+      "range": [1, 100]
+    },
+    "--dot-color" : {
+      "type": "color",
+      "default": "#d2d6db"
+    }
+  },
+  "html": "",
+  "usage": "background: paint(dot-grid);",
+  "author": {
+      "name": "@arnellebalane",
+      "url": "https://arnellebalane.com/",
+      "image": "/assets/images/arnellebalane.jpg"
+  }
+}
