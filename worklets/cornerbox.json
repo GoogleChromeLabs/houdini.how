@@ -1,0 +1,33 @@
+{
+    "workletName": "cornerbox",
+    "packageName": "cornerbox",
+    "npmUrl": "https://www.npmjs.com/package/cornerbox",
+    "cdnUrl": "https://unpkg.com/cornerbox@0.0.1/CornerBox.js",
+    "demoUrl": "https://jerosoler.github.io/cornerbox/",
+    "tags": ["paint"],
+    "customProps": {
+      "--cornerbox-color": {
+        "type": "color",
+        "default": "#F000E8"
+      },
+      "--cornerbox-line": {
+        "type": "number",
+        "default": 100,
+        "range": [1, 270],
+        "step": "1"
+      },
+      "--cornerbox-lenght": {
+        "type": "number",
+        "default": 5,
+        "range": [1, 20],
+        "step": "1"
+      }
+    },
+    "usage": "background: paint(cornerbox)",
+    "author": {
+      "name": "@jerosoler",
+      "url": "https://twitter.com/jerosoler",
+      "image": "/assets/images/jerosoler.jpg"
+    }
+  }
+  
