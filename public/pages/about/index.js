@@ -24,9 +24,9 @@ export default function AboutPage() {
 				<p>CSS Houdini includes the following APIs, in order of support:</p>
 				<ul class={style.apiList}>
 					<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Typed_OM_API">Typed Object Model: </a>Enables the browser to understand CSS and typed Javascript objects instead of strings, enabling faster parse times and more semantic manipulation.</li>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Properties_and_Values_API">Properties and Values API: </a>Enables developers to define advanced CSS cutom properties with syntax (type checking), default values, and inheritance.</li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Properties_and_Values_API">Properties and Values API: </a>Enables developers to define advanced CSS custom properties with syntax (type checking), default values, and inheritance.</li>
 					<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API">Paint Worklet: </a>Enables developers to define canvas-like custom painting functions that can be used directly in CSS as backgrounds, borders, masks, and more.</li>
-					<li><a href="https://developers.google.com/web/updates/2018/10/animation-worklet">Animation Worklet: </a>Enables animations to hook into the GPU to avoid jank and not clog the main thread. The Animation Worklet also enables scoll-linked animations.</li>
+					<li><a href="https://developers.google.com/web/updates/2018/10/animation-worklet">Animation Worklet: </a>Enables animations to hook into the GPU to avoid jank and not clog the main thread. The Animation Worklet also enables scroll-linked animations.</li>
 					<li><a href="https://www.w3.org/TR/css-layout-api-1/">Layout Worklet: </a>Gives web developers the ability to write their own layout algorithms in addition to the native algorithms user agents ship with today.</li>
 					<li><a href="https://drafts.css-houdini.org/font-metrics-api/">Font Metrics API: </a>Designed to provide basic font metrics for both in-document and out-of-document content</li>
 					<li><a href="https://github.com/WICG/css-parser-api">Parser API: </a>Allows developers to access the engine's parser (built on top of the Typed OM)</li>
