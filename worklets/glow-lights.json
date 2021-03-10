@@ -1,0 +1,27 @@
+{
+  "workletName": "Glow Lights",
+  "packageName": "houdini-glow-lights",
+  "npmUrl": "https://www.npmjs.com/package/houdini-glow-lights",
+  "cdnUrl": "https://unpkg.com/houdini-glow-lights/worklet.js",
+  "demoUrl": "https://codepen.io/twerske/pen/yLVjewJ",
+  "tags": ["paint"],
+  "customProps": {
+    "--lights" : {
+      "type": "number",
+      "default": "200",
+      "range": [10, 500]
+    },
+    "--light-radius" : {
+      "type": "number",
+      "default": "45",
+      "range": [10, 150]
+    }
+  },
+  "html": "",
+  "usage": "background: paint(glow-lights);",
+  "author": {
+      "name": "@twerske",
+      "url": "https://twitter.com/twerske",
+      "image": "/assets/images/twerske.jpg"
+  }
+}
