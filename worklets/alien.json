@@ -16,7 +16,7 @@
     },
     "--alien-grid-size": {
       "type": "length",
-      "default": "1px"
+      "default": "2"
     }
   },
   "usage": "background-image: paint(alien)",
