@@ -1,0 +1,32 @@
+{
+  "workletName": "Sunset",
+  "packageName": "houdini-sunset",
+  "npmUrl": "https://www.npmjs.com/package/houdini-sunset",
+  "cdnUrl": "https://unpkg.com/houdini-sunset@0.1.0/Sunset.js",
+  "demoUrl": "https://andreban.github.io/houdini-sunset/",
+  "tags": ["paint"],
+  "customProps": {
+    "--sunset-gradient-start": {
+      "type": "color",
+      "default": "#6df1d8"
+    },
+    "--sunset-gradient-end": {
+      "type": "color",
+      "default": "#d30cb8"
+    },
+    "--sunset-line-color": {
+      "type": "color",
+      "default": "#3c345c"
+    },
+    "--sunset-grid-size": {
+      "type": "length",
+      "default": "1"
+    }
+  },
+  "usage": "background-image: paint(sunset)",
+  "author": {
+    "name": "@andreban",
+    "url": "https://twitter.com/andreban",
+    "image": "/assets/images/andreban.jpg"
+  }
+}
