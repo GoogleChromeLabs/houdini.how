@@ -1,0 +1,28 @@
+{
+  "workletName": "AlienPainter",
+  "packageName": "houdini-alien",
+  "npmUrl": "https://www.npmjs.com/package/houdini-alien",
+  "cdnUrl": "https://unpkg.com/houdini-alien@0.1.1/AlienPainter.js",
+  "demoUrl": "https://andreban.github.io/houdini-alien/index.html",
+  "tags": ["paint"],
+  "customProps": {
+    "--alien-bg-color": {
+      "type": "color",
+      "default": "#000000"
+    },
+    "--alien-fg-color": {
+      "type": "color",
+      "default": "#FFFFFF"
+    },
+    "--alien-grid-size": {
+      "type": "length",
+      "default": "2"
+    }
+  },
+  "usage": "background-image: paint(alien)",
+  "author": {
+    "name": "@andreban",
+    "url": "https://twitter.com/andreban",
+    "image": "/assets/images/andreban.jpg"
+  }
+}
