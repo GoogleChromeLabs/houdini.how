@@ -7,7 +7,7 @@
   "tags": ["paint"],
   "customProps": {
     "--doomfire-pixel-size": {
-      "type": "length",
+      "type": "number",
       "default": "1"
     }
   },
