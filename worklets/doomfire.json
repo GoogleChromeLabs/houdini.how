@@ -1,0 +1,20 @@
+{
+  "workletName": "Doom Fire",
+  "packageName": "houdini-doom-fire",
+  "npmUrl": "https://www.npmjs.com/package/houdini-doom-fire",
+  "cdnUrl": "https://unpkg.com/houdini-doom-fire@0.1.0/DoomFire.js",
+  "demoUrl": "https://andreban.github.io/houdini-doom-fire/",
+  "tags": ["paint"],
+  "customProps": {
+    "--doomfire-pixel-size": {
+      "type": "length",
+      "default": "1"
+    }
+  },
+  "usage": "background-image: paint(doomfire)",
+  "author": {
+    "name": "@andreban",
+    "url": "https://twitter.com/andreban",
+    "image": "/assets/images/andreban.jpg"
+  }
+}
