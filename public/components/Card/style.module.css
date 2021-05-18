@@ -278,6 +278,7 @@
   border-right: 1px solid;
   border-top: 1px solid;
   border-color: var(--demoBorder);
+  min-height: 210px;
 }
 
 .loading:before {
