@@ -8,7 +8,8 @@
   "customProps": {
     "--doomfire-pixel-size": {
       "type": "number",
-      "default": "1"
+      "default": "1",
+      "range": [1, 15]
     }
   },
   "usage": "background-image: paint(doomfire)",
