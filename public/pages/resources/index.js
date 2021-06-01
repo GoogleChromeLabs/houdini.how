@@ -10,15 +10,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+import {useState} from 'preact/hooks';
 import Resource from '../../components/Resource/index.js'
 import resources from '../../resource-data.js'
+import Filter from '../../components/Filter/index.js'
 
 export default function ResourcesPage() {
+  const [selectedTag, setFilter] = useState(null);
+
+  const tags = new Set();
+  resources.forEach(resource => {
+    resource.tags.forEach(tag => {
+      tags.add(tag);
+    })
+  });
+
+  const displayResources = (
+    selectedTag === null ?
+    resources :
+    resources.filter(resource => { return resource.tags.includes(selectedTag) })
+  );
+  
   return (
     <div>
-      {resources.map(resource => (
-        <Resource resource={resource} />
+      <Filter tags={Array.from(tags)} selectedTag={selectedTag} setFilter={setFilter} />
+      {displayResources.map(resource => (
+        <Resource resource={resource} selectedTag={selectedTag} setFilter={setFilter} />
       ))}
     </div>
   );

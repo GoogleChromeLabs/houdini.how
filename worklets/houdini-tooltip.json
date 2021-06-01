@@ -8,20 +8,20 @@
     "customProps": {
       "--tooltip-bg": {
         "type": "color",
-        "default": "#b1d8dd"
+        "default": "#63efff"
       },
       "--tooltip-position": {
-        "type": "number",
-        "default": "50"
+        "type": "percentage",
+        "default": "50%"
       },
       "--tooltip-size": {
-        "type": "number",
-        "default": "15",
+        "type": "string",
+        "default": "15px",
         "range": [0, 30]
       },
       "--border-width": {
-        "type": "number",
-        "default": "20",
+        "type": "string",
+        "default": "20px",
         "range": [0, 30]
       }
     },

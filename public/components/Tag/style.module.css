@@ -1,0 +1,67 @@
+.tag {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 48px;
+  padding: 0.5rem;
+  line-height: 1;
+  display: grid;
+}
+
+.tag a {
+  color: #222;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.paint {
+  border-color: #eb95a4;
+  background: #fff1ff;
+}
+
+.paint-active {
+  border-color: #eb95a4;
+  background: #eb95a4;
+}
+
+.props {
+  border-color: #da9a0b;
+  background: #ffefc8;
+}
+
+.props-active {
+  border-color: #da9a0b;
+  background: #da9a0b;
+}
+
+.layout {
+  border-color: #7eb8e4;
+  background: #e0edfe;
+}
+
+.layout-active {
+  border-color: #7eb8e4;
+  background: #7eb8e4;
+}
+
+.animation {
+  border-color: #7bbf95;
+  background: #ccebd1;
+}
+
+.animation-active {
+  border-color: #7bbf95;
+  background: #7bbf95;
+}
+
+.typed {
+  border-color: #c193e3;
+  background: #f1eaff;
+}
+
+.typed-active {
+  border-color: #c193e3;
+  background: #c193e3;
+}
