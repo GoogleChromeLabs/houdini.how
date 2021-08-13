@@ -14,19 +14,23 @@
 import Resource from '../../components/Resource/index.js'
 import Filter from '../../components/Filter/index';
 import FilterRenderer from '../../components/FilterRenderer';
+import NoItems from '../../components/NoItems';
 import resources from '../../resource-data.js'
 
 export default class ResourcesPage extends Filter {
   render(props) {
+    const filteredItems = this.filterList(resources);
     return (
       <div>
         <FilterRenderer
           onFilterTagClick={this.onFilterTagClick.bind(this)}
           isFilterTagSelected={this.isFilterTagSelected.bind(this)}
         />
-        {this.filterList(resources).map(resource => (
-          <Resource resource={resource}/>
-        ))}
+        {
+          filteredItems.length ? filteredItems.map(resource => (
+            <Resource resource={resource}/>
+          )) : <NoItems type={'resources'}/>
+        }
       </div>
     );
   }

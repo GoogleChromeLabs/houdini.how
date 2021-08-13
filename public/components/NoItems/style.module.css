@@ -1,0 +1,18 @@
+.noItems {
+  max-width: var(--pageMax);
+  margin: 15rem auto 15rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-family: var(--monoType);
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .noItems {
+    color: white;
+  }
+}
