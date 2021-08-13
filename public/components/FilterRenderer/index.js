@@ -26,6 +26,7 @@ export default class FilterRenderer extends Component {
             tags={tags}
             onFilterTagClick={props.onFilterTagClick}
             isFilterTagSelected={props.isFilterTagSelected}
+            inFilter={true}
           />
         </div>
       </div>

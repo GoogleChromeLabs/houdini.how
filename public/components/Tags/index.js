@@ -44,7 +44,7 @@ const validTags = {
 
 export default class Tags extends Component {
 
-  renderTag(tag, onClick, isFilterTagSelected) {
+  renderTag(tag, onClick, isFilterTagSelected, inFilter) {
     const tagConfig = validTags[tag];
     if (tagConfig) {
       const {style: styleName, link, label} = tagConfig;
@@ -58,7 +58,7 @@ export default class Tags extends Component {
         className={`${style.tag} ${tagStyle}`}
         onClick={() => onClick && onClick(tag)}
       >
-        <a href={link}>{label}</a>
+        <a href={inFilter ? link : '#'}>{label}</a>
       </li>
     }
     return null;
@@ -68,7 +68,7 @@ export default class Tags extends Component {
     return <div className={style.tags}>
       <ul>
         {props.tags.map((tag) =>
-          this.renderTag(tag, props.onFilterTagClick, props.isFilterTagSelected)
+          this.renderTag(tag, props.onFilterTagClick, props.isFilterTagSelected, props.inFilter)
         )}
       </ul>
     </div>

@@ -11,6 +11,14 @@
 .title {
   padding: 0.5rem 0.5rem;
   font-weight: 600;
+  font-family: var(--monoType);
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .title {
+    color: white;
+  }
 }
 
 .filterTags {

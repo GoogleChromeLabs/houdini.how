@@ -108,6 +108,14 @@
   opacity: 0.75;
 }
 
+@media (prefers-color-scheme: dark) {
+  .unSelectedTag {
+    border-color: rgba(128, 128, 128, 1);
+    background: rgba(128, 128, 128, 0.75);
+  }
+}
+
+
 @media (max-width: 800px) {
   .tags a {
     font-size: 11px;
