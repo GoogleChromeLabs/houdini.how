@@ -13,6 +13,7 @@
 
 import {Component} from 'preact'
 import style from './style.module.css'
+import classnames from 'clsx'
 
 const validTags = {
   'paint': {
@@ -55,7 +56,7 @@ export default class Tags extends Component {
         tagStyle = styleName;
       }
       return <li
-        className={`${style.tag} ${tagStyle}`}
+        className={classnames(style.tag, tagStyle)}
         onClick={() => onClick && onClick(tag)}
       >
         <a href={inFilter ? link : '#'}>{label}</a>
