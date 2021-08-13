@@ -11,23 +11,24 @@
  * limitations under the License.
  */
 
-import Resource from '../../components/Resource/index.js'
-import Filter from '../../components/Filter/index';
-import FilterRenderer from '../../components/FilterRenderer';
-import resources from '../../resource-data.js'
+import {Component} from 'preact'
+import style from './style.module.css'
+import Tags from '../Tags/index';
 
-export default class ResourcesPage extends Filter {
+export default class FilterRenderer extends Component {
   render(props) {
-    return (
-      <div>
-        <FilterRenderer
-          onFilterTagClick={this.onFilterTagClick.bind(this)}
-          isFilterTagSelected={this.isFilterTagSelected.bind(this)}
-        />
-        {this.filterList(resources).map(resource => (
-          <Resource resource={resource}/>
-        ))}
+    const tags = ['paint', 'layout', 'animation', 'properties and values', 'tools', 'typed object model'];
+    return <div>
+      <div className={style.filter}>
+        <div className={style.title}>Filter by Tags</div>
+        <div className={style.filterTags}>
+          <Tags
+            tags={tags}
+            onFilterTagClick={props.onFilterTagClick}
+            isFilterTagSelected={props.isFilterTagSelected}
+          />
+        </div>
       </div>
-    );
+    </div>
   }
 }
