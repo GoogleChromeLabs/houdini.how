@@ -16,3 +16,9 @@
     color: white;
   }
 }
+
+@media (max-width: 500px) {
+  .noItems {
+    margin: 4rem auto 4rem;
+  }
+}
