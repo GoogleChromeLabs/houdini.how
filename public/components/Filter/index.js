@@ -12,13 +12,14 @@
  */
 
 import {Component} from 'preact';
+import {validTags} from '../../components/Tags';
 
 export default class Filter extends Component {
   constructor(props) {
     super(props);
     this.state = {
       // Selected all tags by default.
-      selectedFilters: ["paint", "properties and values", "typed object model", "layout", "animation"]
+      selectedFilters: Object.keys(validTags)
     };
   }
 

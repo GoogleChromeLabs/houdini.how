@@ -15,7 +15,7 @@ import {Component} from 'preact'
 import style from './style.module.css'
 import classnames from 'clsx'
 
-const validTags = {
+export const validTags = {
   'paint': {
     style: style.paint,
     label: 'Paint',

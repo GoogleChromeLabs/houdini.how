@@ -13,11 +13,11 @@
 
 import {Component} from 'preact'
 import style from './style.module.css'
-import Tags from '../Tags/index';
+import Tags, {validTags} from '../Tags/index';
 
 export default class FilterRenderer extends Component {
   render(props) {
-    const tags = ['paint', 'layout', 'animation', 'properties and values', 'tools', 'typed object model'];
+    const tags = Object.keys(validTags);
     return <div>
       <div className={style.filter}>
         <div className={style.title}>Filter by Tags</div>
