@@ -1,0 +1,16 @@
+.iconContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon {
+  fill: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .icon {
+    fill: white;
+  }
+}
