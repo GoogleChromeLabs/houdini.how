@@ -34,6 +34,7 @@ export default class Resource extends Component {
         url={url}
         desc={desc}
         tags={tags}
+        showAnchor={false}
       >
         <div class={CardStyle.resourceContainer}>
           {desc && (

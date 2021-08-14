@@ -191,6 +191,7 @@ export default class Demo extends Component {
         tags={tags}
         type='demo'
         note={note}
+        showAnchor={true}
       >
           <div ref={this.demoRoot} class={`${CardStyle.demoContainer}${isLoaded ? '' : ` ${CardStyle.loading}`}`}>
             {preview}
