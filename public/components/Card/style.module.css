@@ -381,3 +381,31 @@
     background: var(--cardBg);
   }
 }
+
+/* Additional attributes button */
+
+.extraAttrBtn {
+  background: none;
+  color: white;
+  border-radius: 0 50% 50% 0;
+  margin: 0 0 0 -0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: var(--iconSize);
+  height: var(--iconSize);
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+.extraAttrBtn + .extraAttrBtn {
+  margin-left: 0.25rem;
+  border-radius: 50%;
+  background-color: #444;
+}
+
+.extraAttrBtn + .extraAttrBtn:hover {
+  border-color: var(--demoBorder);
+}
+
+.extraAttrBtn:hover,
+.extraAttrBtn:focus {
+  background-color: #444;
+}

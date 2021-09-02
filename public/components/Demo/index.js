@@ -335,10 +335,10 @@ PROPERTY_TYPES['color+'] = class extends Component {
                 onInput={this.onInput}
                 {...extraAttributes}
               />
-              <button data-index={i} onClick={this.onRemoveClick}>-</button>
+              <button class={CardStyle.extraAttrBtn} data-index={i} onClick={this.onRemoveClick}>-</button>
             </>
           })}
-          <button onClick={this.onAddClick}>+</button>
+          <button class={CardStyle.extraAttrBtn} onClick={this.onAddClick}>+</button>
         </div>
       </li>
     )
