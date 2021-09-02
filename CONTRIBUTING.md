@@ -31,7 +31,8 @@ To contribute a Houdini worklet, create a new file within `worklets/`. The infor
       "type": "number", // property type (string, number, color, percentage, etc.)
       "default": "30", // default property value
       "range": [0, 100], // array of property range
-      "step": "0.5" // if type is number you can define the step value (optional, default value is 1)
+      "step": "0.5", // if type is number you can define the step value (optional, default value is 1)
+      "unit": "px" // unit to add to the value (optional, the default is nothing)
     }
     // ...
   },
