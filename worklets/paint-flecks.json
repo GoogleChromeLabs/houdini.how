@@ -1,0 +1,23 @@
+{
+  "workletName": "Paint flecks",
+  "packageName": "houdini-paint-flecks",
+  "npmUrl": "https://www.npmjs.com/package/houdini-paint-flecks",
+  "cdnUrl": "https://unpkg.com/houdini-paint-flecks",
+  "cdnUrlType": "script",
+  "demoUrl": "https://static-misc-3.glitch.me/203-paint-worklet/unpkg-demo/",
+  "tags": ["paint"],
+  "customProps": {
+    "background-color": {
+      "type": "color",
+      "default": "#84dce2"
+    }
+  },
+  "usage": {
+    "background-image": "paint(fleck)"
+  },
+  "author": {
+    "name": "George Francis",
+    "url": "https://twitter.com/georgedoescode",
+    "image": "/assets/images/georgefrancis.png"
+  }
+}
