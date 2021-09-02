@@ -4,7 +4,7 @@
   position: relative;
 }
 
-[type="demo"] .card {
+[data-type="demo"] .card {
   box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
   border-radius: 10px;
@@ -13,11 +13,11 @@
   will-change: transform;
 }
 
-[type="demo"] .card:hover {
+[data-type="demo"] .card:hover {
   transform: translateY(-10px);
 }
 
-[type="resource"] {
+[data-type="resource"] {
   box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
   background-color: var(--cardBg);
@@ -27,7 +27,7 @@
   will-change: transform;
 }
 
-[type="resource"]:hover {
+[data-type="resource"]:hover {
   transform: translateY(-10px);
 }
 
@@ -56,7 +56,7 @@
   width: 100%;
   background: #e1e1e1;
   border-radius: 0 0 10px 10px;
-  border: 1px solid var(--demoBorder)
+  border: 1px solid var(--demoBorder);
 }
 
 .compat {
@@ -301,8 +301,8 @@
   max-width: 46ch;
 }
 
-[type="resource"] h2 {
-  max-width: 46ch;;
+[data-type="resource"] h2 {
+  max-width: 46ch;
 }
 
 .note {
@@ -318,7 +318,7 @@
 }
 
 @media (max-width: 900px) {
-  [type="demo"] .card {
+  [data-type="demo"] .card {
     width: calc(100% - 4rem);
   }
 }
