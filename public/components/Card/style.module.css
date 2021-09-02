@@ -172,6 +172,7 @@
 
 .input {
   display: flex;
+  flex-flow: row wrap;
 }
 
 .rangeInputWrap {
