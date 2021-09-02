@@ -323,8 +323,8 @@ PROPERTY_TYPES['color+'] = class extends Component {
         <label htmlFor={id}>{propName}:</label>
         <div class={CardStyle.input}>
           {value.map((value, i) => {
-            const additionalAttrs = {};
-            if (i === 0) additionalAttrs.id = id;
+            const extraAttributes = {};
+            if (i === 0) extraAttributes.id = id;
 
             return <>
               <input
@@ -333,7 +333,7 @@ PROPERTY_TYPES['color+'] = class extends Component {
                 type="color"
                 value={value}
                 onInput={this.onInput}
-                {...additionalAttrs}
+                {...extraAttributes}
               />
               <button data-index={i} onClick={this.onRemoveClick}>-</button>
             </>
