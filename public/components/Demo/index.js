@@ -34,11 +34,19 @@ function formatUsage(usage) {
   </>
 }
 
-function usageToStyleObject(usage) {
+function usageToStyleObject(usage, customProps) {
   // If `usage` is an object, we are already done
   if(typeof usage === "object") {
     let out = {}
-    for (let i in usage) out[cssToJsProperty(i)] = usage[i]
+    for (let i in usage) {
+      let values = Array.isArray(usage[i]) ? usage[i] : [usage[i]];
+
+      if (customProps && customProps[i] && customProps[i].unit) {
+        values = values.map(v => v + customProps[i].unit);
+      }
+      
+      out[cssToJsProperty(i)] = values.join(' ');
+    }
     return out
   }
   // If it’s a string, we need to do a bit of processing
@@ -145,7 +153,7 @@ export default class Demo extends Component {
 
     const usageStyles = usageToStyleObject(usage)
     const demoStyle = {
-      ...usageToStyleObject(propValues),
+      ...usageToStyleObject(propValues, customProps),
       ...usageStyles,
     }
 
@@ -250,6 +258,7 @@ PROPERTY_TYPES.number = ({ id, propName, value, setValue, definition }) => (
           step={definition.step ? definition.step : 1}
           onChange={setValue}
         />
+        { definition.unit }
       </span>
       <span class={CardStyle.rangeInputWrap}>
         <input
@@ -285,6 +294,58 @@ PROPERTY_TYPES.options = ({ id, propName, value, setValue, definition }) => (
     </div>
   </li>
 )
+
+PROPERTY_TYPES['color+'] = class extends Component {
+  onInput = (event) => {
+    const index = Number(event.target.dataset.index);
+    const newValue = event.target.value;
+    const newValues = this.props.value.slice();
+    newValues[index] = newValue;
+    this.props.setValue(newValues);
+  };
+
+  onRemoveClick = (event) => {
+    const index = Number(event.target.dataset.index);
+    const newValues = this.props.value.slice();
+    newValues.splice(index, 1);
+    this.props.setValue(newValues);
+  };
+
+  onAddClick = () => {
+    const newValues = this.props.value.slice();
+    newValues.push('#fff');
+    this.props.setValue(newValues);
+  };
+
+  render({ id, propName, value }) {
+    return (
+      <li>
+        <label htmlFor={id}>{propName}:</label>
+        <div class={CardStyle.input}>
+          {value.map((value, i) => {
+            const extraAttributes = {};
+            if (i === 0) extraAttributes.id = id;
+
+            return <>
+              <div class={CardStyle.btnSet}>
+                <input
+                  data-index={i}
+                  class={CardStyle.inputVal}
+                  type="color"
+                  value={value}
+                  onInput={this.onInput}
+                  {...extraAttributes}
+                />
+                <button class={CardStyle.extraAttrBtn} data-index={i} onClick={this.onRemoveClick}>-</button>
+              </div>
+            </>
+          })}
+          <button class={CardStyle.extraAttrBtn} onClick={this.onAddClick}>+</button>
+        </div>
+      </li>
+    )
+  }
+}
 
 // handles strings or anything else with no specific editing component.
 // It tries to use `definition.type` for the input type (works for things like "color")

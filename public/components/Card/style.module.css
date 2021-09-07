@@ -4,7 +4,7 @@
   position: relative;
 }
 
-[type="demo"] .card {
+[data-type="demo"] .card {
   box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
   border-radius: 10px;
@@ -13,11 +13,11 @@
   will-change: transform;
 }
 
-[type="demo"] .card:hover {
+[data-type="demo"] .card:hover {
   transform: translateY(-10px);
 }
 
-[type="resource"] {
+[data-type="resource"] {
   box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
   background-color: var(--cardBg);
@@ -27,7 +27,7 @@
   will-change: transform;
 }
 
-[type="resource"]:hover {
+[data-type="resource"]:hover {
   transform: translateY(-10px);
 }
 
@@ -56,7 +56,7 @@
   width: 100%;
   background: #e1e1e1;
   border-radius: 0 0 10px 10px;
-  border: 1px solid var(--demoBorder)
+  border: 1px solid var(--demoBorder);
 }
 
 .compat {
@@ -159,6 +159,7 @@
   border: 2px solid rgba(255, 255, 255, 0.05);
   border-bottom: dotted 2px magenta;
   outline: none;
+  min-width: 50px;
 }
 
 .inputVal[type="number"] {
@@ -172,6 +173,7 @@
 
 .input {
   display: flex;
+  flex-flow: row wrap;
 }
 
 .rangeInputWrap {
@@ -301,8 +303,8 @@
   max-width: 46ch;
 }
 
-[type="resource"] h2 {
-  max-width: 46ch;;
+[data-type="resource"] h2 {
+  max-width: 46ch;
 }
 
 .note {
@@ -318,7 +320,7 @@
 }
 
 @media (max-width: 900px) {
-  [type="demo"] .card {
+  [data-type="demo"] .card {
     width: calc(100% - 4rem);
   }
 }
@@ -379,4 +381,38 @@
   .demoArea {
     background: var(--cardBg);
   }
+}
+
+/* Additional attributes button */
+
+.btnSet {
+  display: inline-flex;
+}
+
+.extraAttrBtn {
+  background: none;
+  color: white;
+  border-radius: 0 50% 50% 0;
+  margin: 0 0 0 -0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: var(--iconSize);
+  height: var(--iconSize);
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+.btnSet + .extraAttrBtn {
+  border-radius: 50%;
+  background-color: #444;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.6rem;
+}
+
+.btnSet + .extraAttrBtn:hover {
+  border-color: var(--demoBorder);
+}
+
+.extraAttrBtn:hover,
+.extraAttrBtn:focus {
+  background-color: #444;
 }

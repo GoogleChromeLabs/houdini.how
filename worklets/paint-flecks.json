@@ -1,0 +1,56 @@
+{
+  "workletName": "Paint flecks",
+  "packageName": "houdini-paint-flecks",
+  "npmUrl": "https://www.npmjs.com/package/houdini-paint-flecks",
+  "cdnUrl": "https://unpkg.com/houdini-paint-flecks",
+  "cdnUrlType": "script",
+  "demoUrl": "https://static-misc-3.glitch.me/203-paint-worklet/unpkg-demo/",
+  "tags": ["paint"],
+  "customProps": {
+    "background-color": {
+      "type": "color",
+      "default": "#84dce2"
+    },
+    "--fleck-colors": {
+      "type": "color+",
+      "default": [
+        "#0193c1",
+        "#74d8e6",
+        "#0bc0e0",
+        "#3ddaf5",
+        "#e2f9fe",
+        "#02313f"
+      ]
+    },
+    "--fleck-density": {
+      "type": "number",
+      "default": 300,
+      "range": [20, 2000]
+    },
+    "--fleck-size-base": {
+      "type": "number",
+      "default": 4,
+      "range": [0.5, 20],
+      "unit": "px",
+      "step": 0.1
+    },
+    "--fleck-cell-size": {
+      "type": "number",
+      "default": 300,
+      "range": [20, 1000]
+    },
+    "--fleck-seed": {
+      "type": "number",
+      "default": 1,
+      "range": [0, 2147483647]
+    }
+  },
+  "usage": {
+    "background-image": "paint(fleck)"
+  },
+  "author": {
+    "name": "George Francis",
+    "url": "https://twitter.com/georgedoescode",
+    "image": "/assets/images/georgefrancis.png"
+  }
+}

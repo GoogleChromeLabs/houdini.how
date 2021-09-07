@@ -99,13 +99,18 @@
   padding: 2rem 0;
 }
 
-[type="resource"] .meta {
+.name {
+  color: #333;
+  text-decoration: none;
+}
+
+[data-type="resource"] .meta {
   padding: 2rem 2rem 0;
   grid-template-columns: 70px auto auto;
 }
 
 @media (min-width: 700px) {
-  [type="resource"] .meta {
+  [data-type="resource"] .meta {
     grid-template-columns: 70px 40ch auto;
   }
 }
@@ -132,7 +137,7 @@
     grid-template-columns: 70px auto auto;
   }
 
-  [type="resource"] .meta {
+  [data-type="resource"] .meta {
     padding: 1rem 1rem 0;
     margin-bottom: 0;
   }
