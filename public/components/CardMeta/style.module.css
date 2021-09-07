@@ -99,6 +99,11 @@
   padding: 2rem 0;
 }
 
+.name {
+  color: #333;
+  text-decoration: none;
+}
+
 [data-type="resource"] .meta {
   padding: 2rem 2rem 0;
   grid-template-columns: 70px auto auto;
