@@ -159,6 +159,7 @@
   border: 2px solid rgba(255, 255, 255, 0.05);
   border-bottom: dotted 2px magenta;
   outline: none;
+  min-width: 50px;
 }
 
 .inputVal[type="number"] {
@@ -384,6 +385,10 @@
 
 /* Additional attributes button */
 
+.btnSet {
+  display: inline-flex;
+}
+
 .extraAttrBtn {
   background: none;
   color: white;
@@ -395,13 +400,15 @@
   transition: background-color 0.25s, border-color 0.25s;
 }
 
-.extraAttrBtn + .extraAttrBtn {
-  margin-left: 0.25rem;
+.btnSet + .extraAttrBtn {
   border-radius: 50%;
   background-color: #444;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.6rem;
 }
 
-.extraAttrBtn + .extraAttrBtn:hover {
+.btnSet + .extraAttrBtn:hover {
   border-color: var(--demoBorder);
 }
 
