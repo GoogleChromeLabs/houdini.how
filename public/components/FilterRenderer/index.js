@@ -13,20 +13,23 @@
 
 import {Component} from 'preact'
 import style from './style.module.css'
-import Tags from '../Tags/index.js';
+import Tags, {validTags} from '../Tags/index';
 
-export default class CardLinks extends Component {
-
+export default class FilterRenderer extends Component {
   render(props) {
-    return (
-    <div class={style.meta} metaType={props.type}>
-      <img class={style.author} src={props.authorImg} alt={props.authorName} loading="lazy" width="60" height="60" />
-      <div class={style.title}>
-        <a href={`#demo-${props.packageName}`} class={style.name}><h2>{props.packageName}</h2></a>
-        <p>by <a href={props.authorLink} target="_blank" title={props.authorName}>{props.authorName}</a> {props.date && <span class={style.date}>{props.date}</span>}</p>
+    const tags = Object.keys(validTags);
+    return <div>
+      <div className={style.filter}>
+        <div className={style.title}>Filter by Tags</div>
+        <div className={style.filterTags}>
+          <Tags
+            tags={tags}
+            onFilterTagClick={props.onFilterTagClick}
+            isFilterTagSelected={props.isFilterTagSelected}
+            inFilter={true}
+          />
+        </div>
       </div>
-      <Tags tags={props.tags}/>
     </div>
-   )
   }
 }

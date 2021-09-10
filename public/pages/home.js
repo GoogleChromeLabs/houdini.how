@@ -12,16 +12,28 @@
  */
 
 import Demo from '../components/Demo/index.js'
+import Filter from '../components/Filter/index.js'
+import FilterRenderer from '../components/FilterRenderer/index.js'
+import NoItems from '../components/NoItems/index.js'
 import workletData from '../worklet-data.js'
 
 const worklets = Object.values(workletData);
 
-export default function Home() {
-  return (
-    <div>
-      {worklets.map(worklet => (
-        <Demo worklet={worklet} />
-      ))}
-    </div>
-  );
+export default class Home extends Filter {
+  render() {
+    const filteredItems = this.filterList(worklets);
+    return (
+      <div>
+        <FilterRenderer
+          onFilterTagClick={this.onFilterTagClick.bind(this)}
+          isFilterTagSelected={this.isFilterTagSelected.bind(this)}
+        />
+        {
+          filteredItems.length ? filteredItems.map(worklet => (
+            <Demo worklet={worklet}/>
+          )) : <NoItems type={'Worklets'}/>
+        }
+      </div>
+    );
+  }
 }

@@ -1,0 +1,146 @@
+.tags {
+  align-items: end;
+  display: grid;
+}
+
+.tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.tags li {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 48px;
+  padding: 0.5rem;
+  line-height: 1;
+  display: grid;
+}
+
+.tags a {
+  color: #222;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.meta {
+  padding: 2rem 0;
+}
+
+[type="resource"] .meta {
+  padding: 2rem 2rem 0;
+  grid-template-columns: 70px auto auto;
+}
+
+@media (min-width: 700px) {
+  [type="resource"] .meta {
+    grid-template-columns: 70px 40ch auto;
+  }
+}
+
+.meta .title {
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .meta {
+    padding: 2rem 2rem 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .tags a {
+    font-size: 11px;
+  }
+
+  .tags li {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tags {
+    grid-column: 1 / span 2;
+  }
+
+  .tags ul {
+    justify-content: start;
+    margin-top: 1rem;
+  }
+}
+
+.paint {
+  border-color: #eb95a4;
+  background: #fff1ff;
+}
+
+.props {
+  border-color: #DA9A0B;
+  background: #ffefc8;
+}
+
+.layout {
+  border-color: #7eb8e4;
+  background: #e0edfe;
+}
+
+.animation {
+  border-color: #7bbf95;
+  background: #ccebd1;
+}
+
+.typed {
+  border-color: #c193e3;
+  background: #f1eaff;
+}
+
+.unSelectedTag {
+  border-color: rgba(200, 200, 200, 1);
+  background: rgba(200, 200, 200, 0.75);
+  opacity: 0.75;
+}
+
+@media (prefers-color-scheme: dark) {
+  .unSelectedTag {
+    border-color: rgba(128, 128, 128, 1);
+    background: rgba(128, 128, 128, 0.75);
+  }
+}
+
+
+@media (max-width: 800px) {
+  .tags a {
+    font-size: 11px;
+  }
+
+  .tags li {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .meta {
+    grid-template-columns: 70px auto auto;
+  }
+
+  [type="resource"] .meta {
+    padding: 1rem 1rem 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .tags {
+    grid-column: 1 / span 2;
+  }
+
+  .tags ul {
+    justify-content: start;
+    margin-top: 1rem;
+  }
+}

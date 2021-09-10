@@ -1,5 +1,6 @@
 /.cache
 /.vscode
+/.idea
 /dist
 node_modules
 /public/worklet-data.js
