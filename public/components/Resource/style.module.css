@@ -1,7 +1,12 @@
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .button {
   text-align: right;
   padding: 0.25rem 0.5rem;
-  border: none;
   outline: none;
   background: white;
   border: 1px solid lightgray;
@@ -10,7 +15,6 @@
   text-decoration: none;
   color: #222;
   font-size: 14px;
-  text-decoration: none;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 0.05em;

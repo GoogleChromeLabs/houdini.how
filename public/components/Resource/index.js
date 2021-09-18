@@ -15,6 +15,7 @@ import { Component } from 'preact'
 import Card from '../Card/index.js'
 import CardStyle from '../Card/style.module.css'
 import style from './style.module.css'
+import ResourceType from '../ResourceType/index';
 
 export default class Resource extends Component {
 	render() {
@@ -41,7 +42,10 @@ export default class Resource extends Component {
               <a href={url} class={style.link} target="_blank" title={title}>{desc}</a>
             </p>
           )}
-          <a href={url} class={style.button} target="_blank" title={title}>View {type}</a>
+          <div class={style.footer}>
+            <ResourceType type={type}/>
+            <a href={url} class={style.button} target="_blank" title={title}>View {type}</a>
+          </div>
         </div>
       </Card>
 	  )
