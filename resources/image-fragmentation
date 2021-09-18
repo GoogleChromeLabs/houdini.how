@@ -1,15 +1,13 @@
 {
   "url": "https://css-tricks.com/exploring-the-css-paint-api-image-fragmentation-effect/",
-  "type": "article", // A resource type. One of: "article", "website", "demo"
+  "type": "article", 
   "title": "Exploring the CSS Paint API: Image Fragmentation Effect",
-  "pubDate": "Aug 9, 2021", // format: "Apr 20, 2020". Only needed for the types "article"
-  "desc": "<short description>",
-  "tags": ["paint,properties and values"], // tags related to the resource. Options: "typed object model", "properties and values", "paint", "layout", "animation"
+  "pubDate": "Aug 9, 2021", 
+  "desc": "Creating a fragementation effect using CSS mask",
+  "tags": ["paint","properties and values"], 
   "author": {
     "name": "Temani Afif",
     "url": "https://css-tricks.com/author/afiftemani/",
-    "image": "/assets/images/afif.jpg"
-    // Copy the avatar image to `public/assets/images` folder
-    // e.g. "image": "/assets/images/una.jpg"
+    "image": "https://secure.gravatar.com/avatar/2c12e74c8162614e08a31d704ed9e193?s=600&d=retro&r=pg"
   }
 }
