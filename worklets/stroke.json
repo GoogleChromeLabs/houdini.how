@@ -1,0 +1,44 @@
+{
+  "workletName": "Stroke",
+  "packageName": "css-houdini-stroke",
+  "npmUrl": "https://www.npmjs.com/package/css-houdini-stroke",
+  "workletUrl": "https://unpkg.com/css-houdini-stroke@1.0.0/index.js",
+  "cdnUrl": "https://unpkg.com/css-houdini-stroke@1.0.0/index.js",
+  "demoUrl": "https://lovekesh9896.github.io/css-houdini-stroke/",
+  "tags": ["paint"],
+  "customProps": {
+    "--color-of-stroke": {
+      "type": "string",
+      "default": "#567d46"
+    },
+    "--number-of-lines": {
+      "type": "number",
+      "default": "100",
+      "range": [6, 200],
+      "step": "2"
+    },
+    "--x-value-of-stroke": {
+      "type": "number",
+      "default": "100",
+      "range": [0, 200],
+      "step": "2"
+    },
+    "--y-value-of-stroke": {
+      "type": "number",
+      "default": "50",
+      "range": [1, 200],
+      "step": "2"
+    }
+  },
+  "html": "<div><h1>Hello World</h1></div>",
+  "usage": {
+    "background": "paint(brushstroke)",
+    "width": "100%",
+    "text-align": "center"
+  },
+  "author": {
+    "name": "@lovekesh9896",
+    "url": "https://github.com/AKAspanion",
+    "image": "/assets/images/loki.jpg"
+  }
+}
