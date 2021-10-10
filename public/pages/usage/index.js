@@ -74,12 +74,18 @@ export default function UsagePage() {
 
         <div class={style.installation}>
           <div>
-          <h4>Parcel and WMR</h4>
+          <h4>WMR</h4>
 
           <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
             `import workletURL from "url:&lt;package-name&gt/worklet.js"
 
           CSS.paintWorklet.addModule(workletURL);`}}></code></pre>
+          </div>
+          <div>
+          <h4>Parcel</h4>
+
+          <pre class={style.js}><code dangerouslySetInnerHTML={{ __html:
+            `CSS.paintWorklet.addModule(new URL("npm:&lt;package-name&gt/worklet.js", import.meta.url));`}}></code></pre>
           </div>
           <div>
             <h4>Vite</h4>
