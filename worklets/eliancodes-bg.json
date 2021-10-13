@@ -9,12 +9,10 @@
   "customProps": {
     "--color-for-bg": {
       "type": "color",
-      "default": "black",
+      "default": "lightgreen"
     }
   },
-  "html": "<button>example</button>",
   "usage": {
-    "--color-for-bg": "lightgreen",
     "background-image": "Paint(eliancodes-bg)"
   },
   "author": {
