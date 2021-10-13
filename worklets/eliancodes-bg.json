@@ -2,35 +2,24 @@
   "workletName": "ElianCodes-bg",
   "packageName": "eliancodes-bg",
   "npmUrl": "https://www.npmjs.com/package/eliancodes-bg",
-  "cdnUrl": "https://unpkg.com/eliancodes-bg", // if hosted on npm, use unpkg
-  // Should the cdnUrl script run in the page ("script") or entirely in a worklet ("worklet") (optional, default value is "worklet")
-  // If you use "script", then you need to call CSS.paintWorklet.addModule yourself.
+  "cdnUrl": "https://unpkg.com/eliancodes-bg",
   "cdnUrlType": "script",
   "demoUrl": "https://codepen.io/elianvancutsem/pen/wvqaXQV",
-  // which type(s) of worklets this uses
   "tags": ["paint"],
-  // CSS custom properties used by the worklet:
   "customProps": {
     "--color-for-bg": {
-      "type": "color", // property type (string, number, color, percentage, etc.)
-      "default": "black", // default property value
+      "type": "color",
+      "default": "black",
     }
-    // ...
   },
-  // optional HTML to use when showing the worklet:
   "html": "<button>example</button>",
-  // CSS to use worklet:
   "usage": {
-    // (multiple properties are supported)
     "--color-for-bg": "lightgreen",
     "background-image": "Paint(eliancodes-bg)"
   },
-  // Information about the author
   "author": {
     "name": "Elian Van Cutsem",
     "url": "https://www.elian.codes/",
-    "image": "/assets/images/elian.jpg"
-    // Copy the avatar image to `public/assets/images` folder
-    // e.g. "image": "/assets/images/una.jpg"
+    "image": "/assets/images/elian.png"
   }
 }
