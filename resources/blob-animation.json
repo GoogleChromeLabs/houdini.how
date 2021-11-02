@@ -1,0 +1,13 @@
+{
+  "url": "https://css-tricks.com/exploring-the-css-paint-api-blob-animation/",
+  "type": "article", 
+  "title": "Exploring the CSS Paint API: Blob Animation",
+  "pubDate": "Aug 30, 2021", 
+  "desc": "Creating blob shapes & blob animations using CSS mask",
+  "tags": ["paint","properties and values"], 
+  "author": {
+    "name": "Temani Afif",
+    "url": "https://css-tricks.com/author/afiftemani/",
+    "image": "https://secure.gravatar.com/avatar/2c12e74c8162614e08a31d704ed9e193?s=600&d=retro&r=pg"
+  }
+}
