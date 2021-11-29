@@ -1,0 +1,45 @@
+{
+    "workletName": "Perlin Noise",
+    "packageName": "houdini-perlin-noise",
+    "cdnUrl": "https://unpkg.com/houdini-perlin-noise@0.0.1/dist/worklet.js",
+    "workletUrl": "https://unpkg.com/houdini-perlin-noise@0.0.1/dist/worklet.js",
+    "npmUrl": "https://www.npmjs.com/package/houdini-perlin-noise",
+    "demoUrl": "https://mefody.github.io/houdini-perlin-noise/",
+    "tags": ["paint"],
+    "customProps": {
+      "--perlin-color": {
+        "type": "color",
+        "default": "#ecee81"
+      },
+      "--perlin-bg-color": {
+        "type": "color",
+        "default": "#ff6347"
+      },
+      "--perlin-x": {
+        "type": "number",
+        "default": "5",
+        "range": [1, 25]
+      },
+      "--perlin-y": {
+        "type": "number",
+        "default": "5",
+        "range": [1, 25]
+      },
+      "--perlin-z": {
+        "type": "number",
+        "default": "0",
+        "range": [0, 256]
+      },
+      "--perlin-line-width": {
+        "type": "number",
+        "default": "1",
+        "range": [1, 20]
+      }
+    },
+    "usage": "background: paint(perlin-noise)",
+    "author": {
+      "name": "@dark_mefody",
+      "url": "https://twitter.com/dark_mefody",
+      "image": "https://avatars.githubusercontent.com/u/1439919?v=4"
+    }
+  }
