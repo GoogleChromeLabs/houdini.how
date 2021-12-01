@@ -1,0 +1,93 @@
+{
+  "workletName": "Blobs",
+  "packageName": "css-houdini-blobs",
+  "npmUrl": "https://www.npmjs.com/package/@timbroddin/css-houdini-blobs",
+  "workletUrl": "https://unpkg.com/@timbroddin/css-houdini-blobs/dist/blobs.js",
+  "cdnUrl": "https://unpkg.com/@timbroddin/css-houdini-blobs/dist/blobs.js",
+  "demoUrl": "https://css-houdini-blobs.vercel.app/",
+  "tags": ["paint"],
+  "customProps": {
+    "--colors": {
+      "type": "string",
+      "default": "gold, plum, skyblue"
+    },
+    "--min-extra-points": {
+      "type": "number",
+      "default": "1",
+      "range": [0, 10],
+      "step": "1"
+    },
+    "--max-extra-points": {
+      "type": "number",
+      "default": "1",
+      "range": [0, 10],
+      "step": "1"
+    },
+    "--min-randomness": {
+      "type": "number",
+      "default": "20",
+      "range": [0, 50],
+      "step": "1"
+    },
+    "--max-randomness": {
+      "type": "number",
+      "default": "20",
+      "range": [0, 50],
+      "step": "1"
+    },
+    "--min-size": {
+      "type": "number",
+      "default": "20",
+      "range": [0, 1000],
+      "step": "1"
+    },
+    "--max-size": {
+      "type": "number",
+      "default": "200",
+      "range": [0, 1000],
+      "step": "1"
+    },
+    "--num-blobs": {
+      "type": "number",
+      "default": "15",
+      "range": [0, 100],
+      "step": "1"
+    },
+    "--offset-x": {
+      "type": "number",
+      "default": "0",
+      "range": [0, 1000],
+      "step": "1"
+    },
+    "--offset-y": {
+      "type": "number",
+      "default": "0",
+      "range": [0, 1000],
+      "step": "1"
+    },
+    "--min-opacity": {
+      "type": "number",
+      "default": "0.1",
+      "range": [0, 1],
+      "step": "0.01"
+    },
+    "--max-opacity": {
+      "type": "number",
+      "default": "0.5",
+      "range": [0, 1],
+      "step": "0.01"
+    },
+    "--seed": {
+      "type": "number",
+      "default": "123",
+      "range": [0, 1000],
+      "step": "1"
+    }
+  },
+  "usage": "background: paint(blobs)",
+  "author": {
+    "name": "@timbroddin",
+    "url": "https://twitter.com/timbroddin",
+    "image": "/assets/images/timbroddin.jpg"
+  }
+}
