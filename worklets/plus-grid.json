@@ -1,0 +1,47 @@
+{
+  "workletName": "Houdini Pattern Grid",
+  "packageName": "css-houdini-pattern-grid",
+  "npmUrl": "https://www.npmjs.com/package/css-houdini-pattern-grid",
+  "cdnUrl": "https://unpkg.com/css-houdini-pattern-grid/worklet.js",
+  "demoUrl": "https://codepen.io/tomquinonero/pen/VwMjxvw",
+  "tags": ["paint"],
+  "customProps": {
+    "--pattern-shape": {
+      "type": "string",
+      "default": "plus",
+      "options": ["plus", "square", "circle", "diamond", "half-square"]
+    },
+    "--pattern-spacing": {
+      "type": "number",
+      "default": 16,
+      "range": [4, 96]
+    },
+    "--pattern-size": {
+      "type": "number",
+      "default": 4,
+      "range": [2, 256]
+    },
+    "--pattern-spacing-y-ratio": {
+      "type": "number",
+      "default": 1,
+      "range": [0, 4],
+      "step": 0.1
+    },
+    "--pattern-ratio": {
+      "type": "number",
+      "default": 0.2,
+      "range": [0.05, 1],
+      "step": 0.05
+    },
+    "--pattern-color": {
+      "type": "color",
+      "default": "#2fb9b9"
+    }
+  },
+  "usage": "background: paint(pattern-grid)",
+  "author": {
+    "name": "Tom Quinonero",
+    "url": "twitter.com/tomquinonero",
+    "image": "/assets/images/tomquinonero.png"
+  }
+}
