@@ -1,0 +1,43 @@
+{
+  "workletName": "Angeld underline fill",
+  "packageName": "angled-underline-fill",
+  "npmUrl": "https://www.npmjs.com/package/angled-underline-fill",
+  "cdnUrl": "https://unpkg.com/angled-underline-fill/angled-underline-fill.js",
+  "demoUrl": "https://codepen.io/cacalo/pen/NWLmrmV",
+  "tags": ["paint"],
+  "customProps": {
+    "--lines-width": {
+      "type": "number",
+      "default": 3,
+      "range": [1, 8],
+      "step": "1"
+    },
+    "--lines-fill-color": {
+      "type": "color",
+      "default": "#AA5555"
+    },
+    "--lines-fill-height": {
+      "type": "number",
+      "default": "10",
+      "range": [1, 46],
+      "step": "1"
+    },
+    "--lines-border-color": {
+      "type": "color",
+      "default": "#000000"
+    },
+    "--lines-angle": {
+      "type": "--lines-angle",
+      "default": "35",
+      "range": [0, 89],
+      "step": "1"
+    }
+  },
+  "html":"<h2 style='padding: 0 35px 10px 5px;'>Underlined</h2>",
+  "usage": {"background": "paint(angled-underline-fill)"},
+  "author": {
+    "name": "@Cacalo",
+    "url": "https://puntojson.com",
+    "image": "/assets/images/cacalo.jpg"
+  }
+}
